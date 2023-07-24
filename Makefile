@@ -22,8 +22,14 @@ endif
 watch:
 	@bash scripts/watch.sh
 
-format:
+format-write:
 	@bash scripts/format.sh --write
+
+format-check:
+	@bash scripts/format.sh
+
+format-diff:
+	@bash scripts/format.sh
 
 clean:
 	rm -f $(TMPFILES)

@@ -15,15 +15,21 @@ jobs:
       with:
         packages: >
           latexindent
+    - uses: shogo82148/actions-setup-perl@v1
+      with:
+        perl-version: '5.36'
+    - run: cpanm YAML::Tiny File::HomeDir
 
     - name: Run format check
       id: format
       run: |
-        echo "OUTPUT=$(./scripts/format_tex.sh --print-diff | tee /dev/fd/2)" >> $GITHUB_OUTPUT
+        OUTPUT=$(./scripts/format.sh --print-diff | tee /dev/fd/2)
+        PROBLEMS=$(echo "$OUTPUT" | grep -oP 'Number of files with problems: \K\d+')
+        echo "problems=$PROBLEMS" >> $GITHUB_OUTPUT
 
     - name: Raise warning if there are problems
       run: |
-        count=$(echo "$OUTPUT" | grep -oP 'Number of files with problems: \K\d+')
+        count=${{ steps.format.outputs.problems }}
         if [ "$count" -ne 0 ]; then
           echo "::warning title=Format necessary!::There are $count files with problems"
         fi

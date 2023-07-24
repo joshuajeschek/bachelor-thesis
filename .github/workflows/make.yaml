@@ -10,14 +10,9 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
 
-    - name: Setup TeX Live
-      uses: zauguin/install-texlive@v2
+    - uses: xu-cheng/texlive-action/full@v1
       with:
-        packages: >
-          latex pdflatex biber
-
-    - name: Run make
-      run: make
+        run: VERBOSE=true make
 
     - name: Rename PDF
       run: mv main.pdf thesis.pdf
