@@ -1,0 +1,163 @@
+\documentclass[a4paper, 12pt, oneside, BCOR=1cm,toc=chapterentrywithdots]{scrbook}
+
+\usepackage{graphicx}                   % use for pdfLatex
+\usepackage{makeidx}                    % \printindex
+\usepackage[colorlinks=false]{hyperref}
+\usepackage{tocbibind}
+\usepackage{blindtext}
+\usepackage{subfigure}
+\usepackage{acronym}
+\usepackage[german]{babel}
+\usepackage[backend=biber,style=alphabetic]{biblatex}
+\addbibresource{bibliography.bib}
+
+\defbibfilter{papers}{
+  type=article or
+  type=inproceedings
+}
+
+\hypersetup{bookmarksnumbered=true,bookmarksopen=true, bookmarksopenlevel=1,pdfborder=0 0 0}
+
+\renewcommand*{\tableofcontents}{
+  \begingroup
+  \tocsection
+  \tocfile{\contentsname}{toc}
+  \endgroup
+}
+\renewcommand*{\listoffigures}{
+  \begingroup
+  \tocsection
+  \tocfile{\listfigurename}{lof}
+  \endgroup
+}
+\renewcommand{\listoftables}{
+  \begingroup
+  \tocsection
+  \tocfile{\listtablename}{lot}
+  \endgroup
+}
+
+% remove this later
+\setcounter{tocdepth}{4}
+
+\begin{document}
+\begin{titlepage}
+
+  \begin{center}
+    \raisebox{-1ex}{\includegraphics[scale=1.5]{assets/tuc.pdf}}\\
+  \end{center}
+  \vspace{0.5cm}
+
+  \begin{center}
+
+    \LARGE{\textbf{Title of the bachelor thesis}}\\
+    \vspace{1cm}
+
+
+    \Large{\textbf{Bachelor Thesis}}\\
+    \vspace{1cm}
+    Submitted in Fulfilment of the\\
+    Requirements for the Academic Degree\\
+    B.Sc.\\
+    \vspace{0.5cm}
+    Dept. of Computer Science\\
+    Chair of Computer Engineering
+  \end{center}
+  \vspace{3cm}
+  Eingereicht von: Joshua Jeschek\\
+  Matrikelnummer: 652272\\
+  Datum: 24.12.2023\\
+  \vspace{0.3cm}\\
+  Dr. Thomas Wilhelm-Stein \\
+  Dr. Heino Rudolf
+
+\end{titlepage}
+
+\addchap*{Abstract}
+\input{src/abstract}
+
+\tableofcontents
+\listoffigures
+\listoftables
+
+\twocolumn
+% \addchap{List of Abbreviations}
+% \begin{acronym}[Bash]
+% 	\acro{SQL}{Structured Query Language}
+% \end{acronym}
+
+\onecolumn
+
+\chapter{Einleitung}
+
+\section{Hintergrund und Motivation}
+\section{Ziele und Umfang}
+\section{Aufbau der Arbeit}
+
+\chapter{Theoretische Grundlagen}
+
+\section{envVisio}
+\subsection{Das Realitätsmodell}
+\subsection{Loaden und Konvertieren}
+
+\section{Formulare}
+Web Form Design: Filling in the blanks
+\subsection{Funktionsweise}
+\subsection{Designanfordungen}
+\cite{normanDesignEveryday2013} (auf Affordances, Signifiers und Mappings eingehen)
+\subsubsection{Affordances, Signifiers und Mappings}
+\subsubsection{Anordnung}
+\subsubsection{Kontrollelemente}
+\subsubsection{Bezeichnungen und Platzhalter}
+\subsubsection{Validierung}
+
+\section{Human-Centered Design}
+\subsection{Activity-Centered Design}
+
+\section{Usability Testing}
+\cite{barnumUsabilityTesting2021}
+\subsection{Testmethoden}
+\subsubsection{Quantitative vs Qualitative Tests}
+\subsubsection{Formative vs Summative Studien}
+\subsection{Teilnehmer:innen}
+\subsection{Fragebogen}
+\subsubsection{Standard-Fragebogen}
+
+\chapter{Implementierung}
+
+\section{Analyse und Vergleich von existierenden Projekten}
+\subsection{Home Assistant}
+\subsection{DBSnap}
+\url{https://www.semanticscholar.org/paper/DBSnap\%3A-Learning-Database-Queries-by-Snapping-Silva-Chon/aabf7791575f8cc62432ca5e6289862eec0f6845}
+\url{https://www.semanticscholar.org/paper/DBSnap-2\%3A-New-Features-to-Construct-Database-by-Silva-Loza/61c95757d7d4151f51ea848623c6839816756385}
+\subsection{SQheLper}
+\url{https://www.semanticscholar.org/paper/SQheLper\%3A-A-block-based-syntax-support-for-SQL-Jacobs-Jaschke/b4f6023a4ee72d0103ee521c4f9b35768d38810b}
+\subsection{Scratch}
+
+\section{Projekt}
+\subsection{Zielformulierung}
+\subsection{Lösungsvorstellung}
+
+\chapter{Studie}
+
+\section{Studienaufbau}
+\subsection{Auswahl von Teilnehmer:innen}
+\subsection{Studienablauf}
+\section{Ergebnisse und Analyse}
+\section{Schlussfolgerungen und Zukunftsaussicht}
+
+\chapter{Fazit}
+
+
+\nocite{*}
+\chapter*{Quellen}
+\begingroup
+\let\clearpage\relax
+\printbibliography[type=article, title=Arbeiten?, heading=subbibliography]
+\printbibliography[type=book, title=Bücher, heading=subbibliography]
+\printbibliography[type=misc, title=sonstige, heading=subbibliography]
+\endgroup
+
+\printindex
+
+\end{document}

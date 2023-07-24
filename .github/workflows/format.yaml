@@ -1,0 +1,29 @@
+name: Check format
+
+on: [push, pull_request]
+
+jobs:
+  check-format:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Setup TeX Live
+      uses: zauguin/install-texlive@v2
+      with:
+        packages: >
+          latexindent
+
+    - name: Run format check
+      id: format
+      run: |
+        echo "OUTPUT=$(./scripts/format_tex.sh --print-diff | tee /dev/fd/2)" >> $GITHUB_OUTPUT
+
+    - name: Raise warning if there are problems
+      run: |
+        count=$(echo "$OUTPUT" | grep -oP 'Number of files with problems: \K\d+')
+        if [ "$count" -ne 0 ]; then
+          echo "::warning title=Format necessary!::There are $count files with problems"
+        fi

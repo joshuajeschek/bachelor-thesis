@@ -1,0 +1,30 @@
+name: Compile thesis
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Setup TeX Live
+      uses: zauguin/install-texlive@v2
+      with:
+        packages: >
+          latex pdflatex biber
+
+    - name: Run make
+      run: make
+
+    - name: Rename PDF
+      run: mv main.pdf thesis.pdf
+
+    - name: Upload PDF
+      uses: actions/upload-artifact@v3
+      with:
+        name: thesis
+        path: ./thesis.pdf
+
