@@ -9,10 +9,10 @@
 \usepackage{acronym}
 \usepackage[german]{babel}
 \usepackage{csquotes}
-\usepackage[backend=biber,style=alphabetic]{biblatex}
+\usepackage[backend=biber,style=alphabetic,backref]{biblatex}
 \addbibresource{bibliography.bib}
 
-\defbibfilter{papers}{
+\defbibfilter{articles}{
   type=article or
   type=inproceedings
 }
@@ -21,6 +21,8 @@
 
 % remove this later
 \setcounter{tocdepth}{4}
+
+% \defcitealias{ISO924111}{\citefield{ISO924111}{shorttitle}}
 
 \begin{document}
 \begin{titlepage}
@@ -117,8 +119,9 @@
 \subsubsection{Bezeichnungen und Platzhalter}
 \subsubsection{Validierung}
 
+\clearpage
 \section{Usability Testing}
-\cite{barnumUsabilityTesting2021}
+\input{chapters/theory-usability.tex}
 \subsection{Testmethoden}
 \subsubsection{Quantitative vs Qualitative Tests}
 \subsubsection{Formative vs Summative Studien}
@@ -163,7 +166,7 @@
 \chapter*{Quellen}
 \begingroup
 \let\clearpage\relax
-\printbibliography[type=article, title=Arbeiten?, heading=subbibliography]
+\printbibliography[filter=articles, title=Artikel, heading=subbibliography]
 \printbibliography[type=book, title=Bücher, heading=subbibliography]
 \printbibliography[type=misc, title=sonstige, heading=subbibliography]
 \endgroup
