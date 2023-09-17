@@ -7,7 +7,7 @@
 \usepackage{blindtext}
 \usepackage{subfigure}
 \usepackage{acronym}
-\usepackage[german]{babel}
+\usepackage[shorthands=off,ngerman]{babel}
 \usepackage{csquotes}
 \usepackage[backend=biber,style=alphabetic,backref]{biblatex}
 \addbibresource{bibliography.bib}
@@ -22,7 +22,13 @@
 % remove this later
 \setcounter{tocdepth}{4}
 
-% \defcitealias{ISO924111}{\citefield{ISO924111}{shorttitle}}
+
+% könnte zu Problemen führen
+\MakeOuterQuote{"}
+
+\newcounter{todocounter}
+\setcounter{todocounter}{100}
+\newcommand{\todo}[1]{\refstepcounter{todocounter}\footnote[\thetodocounter]{TODO: #1}}
 
 \begin{document}
 \begin{titlepage}
@@ -75,11 +81,8 @@
 \endgroup
 
 \twocolumn
-% \addchap{List of Abbreviations}
-% \begin{acronym}[Bash]
-% 	\acro{SQL}{Structured Query Language}
-% \end{acronym}
-
+\addchap{Abkürzungsverzeichnis}
+\input{misc/acronyms}
 \onecolumn
 
 \chapter{Einleitung}
@@ -120,10 +123,8 @@
 \subsubsection{Validierung}
 
 \clearpage
-\input{chapters/theory-usability.tex}
-\subsection{Testmethoden}
-\subsubsection{Quantitative vs Qualitative Tests}
-\subsubsection{Formative vs Summative Studien}
+\input{chapters/theory-usability}
+\input{chapters/theory-usability-methods}
 \subsection{Teilnehmer:innen}
 \subsubsection{Wer wird ausgewählt?}
 \subsection{Aufgaben und Scenarios}
