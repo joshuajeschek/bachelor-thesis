@@ -10,6 +10,7 @@
 \usepackage[shorthands=off,ngerman]{babel}
 \usepackage{csquotes}
 \usepackage[backend=biber,style=alphabetic,backref]{biblatex}
+\usepackage{xcolor}
 \addbibresource{bibliography.bib}
 
 \defbibfilter{articles}{
@@ -28,7 +29,7 @@
 
 \newcounter{todocounter}
 \setcounter{todocounter}{100}
-\newcommand{\todo}[1]{\refstepcounter{todocounter}\footnote[\thetodocounter]{TODO: #1}}
+\newcommand{\todo}[1]{\refstepcounter{todocounter}\textcolor{red}{\footnote[\thetodocounter]{\textcolor{gray}{TODO: #1}}}}
 
 \begin{document}
 \begin{titlepage}
