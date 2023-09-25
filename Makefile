@@ -6,18 +6,28 @@ SHELL        = /bin/bash # fix for not running clean
 
 default: main
 
-main: main.tex bibliography.bib $(wildcard src/**/*) $(wildcard assets/**/*)
+%: %.tex bibliography.bib $(wildcard src/**/*) $(wildcard assets/**/*)
 ifdef VERBOSE
-	$(LATEX) main
-	$(BIB) main
-	$(LATEX) main
-	$(LATEX) main
+	$(LATEX) $@
+	$(BIB) $@
+	$(LATEX) $@
+	$(LATEX) $@
 else
-	$(LATEX) main 1> /dev/null
-	$(BIB) main 1> /dev/null
-	$(LATEX) main 1> /dev/null
-	$(LATEX) main 1> /dev/null
+	$(LATEX) $@ 1> /dev/null
+	$(BIB) $@ 1> /dev/null
+	$(LATEX) $@ 1> /dev/null
+	$(LATEX) $@ 1> /dev/null
 endif
+
+notes/%:
+	cp $@.tex notes/.note.tex
+ifdef VERBOSE
+	cd notes; $(LATEX) main
+else
+	cd notes; $(LATEX) main 1> /dev/null
+endif
+	mv notes/main.pdf $@.pdf
+	DIR=notes TMPONLY=true make clean
 
 watch:
 	@bash scripts/watch.sh
@@ -29,8 +39,17 @@ format-check:
 	@bash scripts/format.sh
 
 format-diff:
-	@bash scripts/format.sh
+	@bash scripts/format.sh --print-diff
 
 clean:
+ifdef DIR
+	cd $(DIR); rm -f $(TMPFILES)
+  ifndef TMPONLY
+	cd $(DIR); rm -f *.pdf
+  endif
+else
 	rm -f $(TMPFILES)
+  ifndef TMPONLY
 	rm -f *.pdf
+  endif
+endif

@@ -10,3 +10,4 @@
 *.xml
 main.lot
 !assets/*.pdf
+notes/.note.tex

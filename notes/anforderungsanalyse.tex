@@ -1,0 +1,55 @@
+\title{Anforderungsanalyse}
+\maketitle
+
+\section*{Gedankliche Modelle}
+\begin{itemize}
+  \item Raw Inputs und Final Outputs
+  \item Raw Outputs müssen aus Raw Inputs erstellt werden und konvertiert werden
+  \item Raw Inputs können mit Funktionen zu Outputs konvertiert werden
+  \item Raw Inputs können gleich Raw Outputs sein (\textrightarrow{} keine Konvertierung)
+  \item Funktionen bekommen Inputs übergeben und bilden Output
+  \item Inputs können sein: Raw Inputs, Outputs von anderen Funktionen, Konstanten
+\end{itemize}
+
+\section*{Konkrete Anwendungsfälle}
+\subsection*{Conversion}
+\begin{itemize}
+  \item Inputs (Tabellenspalten)
+  \item Outputs (Attribute)
+  \item statisch - Typ von Attributen steht vorher fest
+\end{itemize}
+
+\subsection*{Szenarios}
+\begin{itemize}
+  \item Inputs (Attribute von Objekten)
+  \item Outputs (Spalten)
+  \item dynamisch - Type "any"
+  \item wie werden Joins behandelt?
+        \begin{itemize}
+          \item Vorauswahl, was alles rangejoint werden soll, dann Verwendung in Formular?
+          \item könnte als zweistufiges Formular implementiert werden (Joins, dann Zuordnung und Auswahl)
+        \end{itemize}
+\end{itemize}
+
+\section*{Funktionen}
+\begin{itemize}
+  \item $0-n$ Inputs
+  \item $1$ Output
+  \item Inputs haben erlaubte Typen
+  \item Output hat einen Typ
+  \item Typen abhängig von Inputs? Oder Erstellen mehrerer Funktionen für unterschiedliche Typen?
+\end{itemize}
+
+\subsection*{Speicherung von Funktion}
+\begin{itemize}
+  \item Option zum Entwickeln: JSON
+  \item Speicherung von SQL Statement mit Platzhaltern
+  \item Metadaten zu Platzhaltern und deren Typen
+  \item Metadaten zu Output und dessen Typ
+\end{itemize}
+
+\section*{Technische Umsetzung}
+\begin{itemize}
+  \item JQuery für Frontend?
+  \item Relativ viel muss im Frontend passieren, Checken von Typen, Erstellen neuer Eingabefelder etc.
+\end{itemize}
