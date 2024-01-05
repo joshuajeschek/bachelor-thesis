@@ -1,25 +1,27 @@
 \subsection{Studiengröße}
 Wie in \ref{section:formative-summative} erwähnt, existieren Usability Tests in unterschiedlichen Umfängen. Formative Studien sind klein und werden meist während der Entwicklung durchgeführt, während summative Studien mehr Teilnehmer*innen umfassen und gegen Ende der Entwicklung stattfinden.
 
-Für diese Arbeit werden formative Studien von Relevanz sein. Dabei sollte die Anzahl der Teilnehmer*innen so klein wie möglich zu halten, während so viele Usability Probleme wie möglich entdeckt werden, denn eine höhere Anzahl an Testdurchläufen steigert die Kosten und den Zeitaufwand. \cite{faulknerFiveuserAssumption2003} \cite{nielsenWhyYou2000}
+Für diese Arbeit werden formative Studien von Relevanz sein. Dabei sollte die Anzahl der Teilnehmer*innen so klein wie möglich zu halten, während so viele Usability Probleme wie möglich entdeckt werden, denn eine höhere Anzahl an Testdurchläufen steigert die Kosten und den Zeitaufwand.
+\parencites{faulknerFiveuserAssumption2003, nielsenWhyYou2000}
 
-\citeauthor{nielsenMathematicalModel1993} beschreiben den Anteil an gefundenen Usability Problemen bei $n$ Teilnehmer*innen als wie folgt \cite{nielsenMathematicalModel1993}:
+\textcite{nielsenMathematicalModel1993} beschreiben den Anteil an gefundenen Usability Problemen bei $n$ Teilnehmer*innen als wie folgt:
 \begin{equation}
 \label{equation:finding-usability-problems}
   N(1-(1-\lambda{})^n),
 \end{equation}
-wobei $N$ die Gesamtanzahl der Probleme und $\lambda{}$ der Anteil der Probleme die bei einem einzigen Testdurchlauf gefunden werden. Mit dem von ihm über mehrere Projekte beobachtete Wert von $\lambda{}=31\%$ kommt \citeauthor{nielsenWhyYou2000} zum Resultat, dass mit fünf Teilnehmer*innen 85\% aller Probleme festgestellt werden können. \cite{nielsenWhyYou2000} Weitere Testdurchläufe sind weniger lohnenswert, da nicht genug neue Probleme aufgedeckt werden. Um alle Probleme mit einer Studie zu finden, wären 15 Teilnehmer*innen nötig, die gegen Ende jedoch nur noch vereinzelt neue Erkenntnisse liefern. Da Teilnehmer*innen oft die gleichen, oberflächlichen Fehler finden und dadurch abgelenkt werden, ist es von Vorteil nach den ersten fünf Durchläufen die gefundenen 85\% zu beheben, und dann eine weitere Studie durchzuführen. Eine dreifache Wiederholung der Tests mit fünf Durchläufen und einem verbesserten Produkt führt zu umfangreicheren Resultat als ein einziger Test mit 15 Durchläufen. \cite{nielsenWhyYou2000}
+wobei $N$ die Gesamtanzahl der Probleme und $\lambda{}$ der Anteil der Probleme die bei einem einzigen Testdurchlauf gefunden werden. Mit dem von ihm über mehrere Projekte beobachtete Wert von $\lambda{}=31\%$ kommt \textcite{nielsenWhyYou2000} zum Resultat, dass mit fünf Teilnehmer*innen 85\% aller Probleme festgestellt werden können. \cite{nielsenWhyYou2000} Weitere Testdurchläufe sind weniger lohnenswert, da nicht genug neue Probleme aufgedeckt werden. Um alle Probleme mit einer Studie zu finden, wären 15 Teilnehmer*innen nötig, die gegen Ende jedoch nur noch vereinzelt neue Erkenntnisse liefern. Da Teilnehmer*innen oft die gleichen, oberflächlichen Fehler finden und dadurch abgelenkt werden, ist es von Vorteil nach den ersten fünf Durchläufen die gefundenen 85\% zu beheben, und dann eine weitere Studie durchzuführen. Eine dreifache Wiederholung der Tests mit fünf Durchläufen und einem verbesserten Produkt führt zu umfangreicheren Resultat als ein einziger Test mit 15 Durchläufen.
+\parencite{nielsenWhyYou2000}
 \todo{vielleicht update von 2012 mit einbeziehen? \cite{nielsenHowMany2012}}
 
-Die als Faustregel adaptierte Zahl Fünf wurde in mehreren Publikationen untersucht. Während fünf Teilnehmer*innen durchschnittlich 85\% der Probleme (einer Studie) entdecken können, kann dieser Prozentsatz laut \citeauthor{faulknerFiveuserAssumption2003} jedoch bis auf 55\% sinken. Während die durchschnittliche Rate langsamer steigt, verringert sich die Varianz mit mehr Testdurchläufen. Außerdem ist anzumerken, dass die Frage, wie viele Teilnehmer*innen benötigt werden schwer zu  beantworten ist, und von vielen Faktoren abhängt. \footnote{genannt werden: Art und Erfahrung der Teilnehmer*innen, Wichtigkeit des Systems, mögliche Folgen von Usability Problemen}
-\cite{faulknerFiveuserAssumption2003}
+Die als Faustregel adaptierte Zahl Fünf wurde in mehreren Publikationen untersucht. Während fünf Teilnehmer*innen durchschnittlich 85\% der Probleme (einer Studie) entdecken können, kann dieser Prozentsatz laut \textcite{faulknerFiveuserAssumption2003} jedoch bis auf 55\% sinken. Während die durchschnittliche Rate langsamer steigt, verringert sich die Varianz mit mehr Testdurchläufen. Außerdem ist anzumerken, dass die Frage, wie viele Teilnehmer*innen benötigt werden schwer zu  beantworten ist, und von vielen Faktoren abhängt. \footnote{genannt werden: Art und Erfahrung der Teilnehmer*innen, Wichtigkeit des Systems, mögliche Folgen von Usability Problemen}
+\parencite{faulknerFiveuserAssumption2003}
 
-\citeauthor{spoolTestingWeb2001} fanden einen deutlich geringeren Wert von $\lambda{}=10\%$ bei unstrukturiertem Testen von E-Commerce-Webseiten. Somit würden mit 5 Testdurchläufen nur 35\% der Probleme gefunden werden. Als Gründe dafür kann die Komplexität der Webseite und die persönlich getroffenen Entscheidungen der Teilnehmer*innen genannt werden.
-\cite{spoolTestingWeb2001}
+\textcite{spoolTestingWeb2001} fanden einen deutlich geringeren Wert von $\lambda{}=10\%$ bei unstrukturiertem Testen von E-Commerce-Webseiten. Somit würden mit 5 Testdurchläufen nur 35\% der Probleme gefunden werden. Als Gründe dafür kann die Komplexität der Webseite und die persönlich getroffenen Entscheidungen der Teilnehmer*innen genannt werden.
+\parencite{spoolTestingWeb2001}
 
-Laut \citeauthor{woolrychWhyWhen2001} ist die Wahrscheinlichkeit, dass ein Problem entdeckt wird, nicht konstant sondern hängt von Schweregrad, Benutzermerkmalen, Produkttyp und Strukturierungsgrad des Testes ab. \citeauthor{woolrychWhyWhen2001} erweitern deshalb Gleichung \ref{equation:finding-usability-problems} um $\lambda{}_j$ für jedes Usability Problem, welches die Wahrscheinlichkeit darstellt, dass Problem von einer zufällig ausgewählten Teilnehmer*in gefunden wird. Die erwartete Nummer an gefundenen Problemen beträgt dann \cite{woolrychWhyWhen2001}:
+Laut \textcite{woolrychWhyWhen2001} ist die Wahrscheinlichkeit, dass ein Problem entdeckt wird, nicht konstant sondern hängt von Schweregrad, Benutzermerkmalen, Produkttyp und Strukturierungsgrad des Testes ab. Sie erweitern deshalb Gleichung \ref{equation:finding-usability-problems} um $\lambda{}_j$ für jedes Usability Problem, welches die Wahrscheinlichkeit darstellt, dass Problem von einer zufällig ausgewählten Teilnehmer*in gefunden wird. Die erwartete Nummer an gefundenen Problemen beträgt dann laut \textcite{woolrychWhyWhen2001}:
 \begin{equation}
  \sum_{j=1}^n 1-(1-\lambda{}_j)^n
 \end{equation}
 Um Gleichung \ref{equation:finding-usability-problems} zu reproduzieren, müsste $\lambda{}_j = \lambda{}$ für alle $j$ gelten. Das bedeutet, dass die Wahrscheinlichkeiten, einzelner Probleme gefunden zu werden, eine geringe Variabilität besitzen. \todo{aah Formulierung weird (aber wo ist sie das nicht)}
-\cite{woolrychWhyWhen2001}
+\parencite{woolrychWhyWhen2001}
