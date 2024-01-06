@@ -11,7 +11,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{csquotes}
-\usepackage[backend=biber,style=apa]{biblatex}
+\usepackage[style=apa,backend=biber]{biblatex}
 \usepackage{xcolor}
 \addbibresource{bibliography.bib}
 
@@ -20,7 +20,12 @@
   type=inproceedings
 }
 
-\hypersetup{bookmarksnumbered=true,bookmarksopen=true, bookmarksopenlevel=1,pdfborder=0 0 0}
+% \DefineBibliographyStrings{ngerman}{
+%   retrieved = {abgerufen am},
+%   from      = {von},
+% }
+
+\hypersetup{bookmarksnumbered=true,bookmarksopen=true,bookmarksopenlevel=1,pdfborder=0 0 0}
 
 % remove this later
 \setcounter{tocdepth}{4}
@@ -171,7 +176,7 @@
 \let\clearpage\relax
 \printbibliography[filter=articles, title=Artikel, heading=subbibliography]
 \printbibliography[type=book, title=Bücher, heading=subbibliography]
-\printbibliography[type=misc, title=sonstige, heading=subbibliography]
+\printbibliography[type=online, title=sonstige, heading=subbibliography]
 \endgroup
 
 \printindex
