@@ -1,0 +1,11 @@
+\defbibfilter{articles}{
+  type=article or
+  type=inproceedings or
+  type=report
+}
+
+\newstarcommand{\shorthandtextcite}[1]{
+  \citeauthor{#1}~[\citefield{#1}{shorthand}] (\citeyear{#1})
+}{
+  \citefield{#1}{shorthand} (\citeyear{#1})
+}

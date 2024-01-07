@@ -15,28 +15,16 @@
 \usepackage{xcolor}
 \addbibresource{bibliography.bib}
 
-\defbibfilter{articles}{
-  type=article or
-  type=inproceedings
-}
-
-% \DefineBibliographyStrings{ngerman}{
-%   retrieved = {abgerufen am},
-%   from      = {von},
-% }
+\input{util/cmd}
+\input{util/bib}
 
 \hypersetup{bookmarksnumbered=true,bookmarksopen=true,bookmarksopenlevel=1,pdfborder=0 0 0}
 
 % remove this later
 \setcounter{tocdepth}{4}
 
-
 % könnte zu Problemen führen
 \MakeOuterQuote{"}
-
-\newcounter{todocounter}
-\setcounter{todocounter}{100}
-\newcommand{\todo}[1]{\refstepcounter{todocounter}\textcolor{red}{\footnote[\thetodocounter]{\textcolor{gray}{TODO: #1}}}}
 
 \begin{document}
 \begin{titlepage}
@@ -159,7 +147,11 @@
 \chapter{Studie}
 \section{Studienaufbau}
 \subsection{Problemformulierung und Ziele}
-\subsection{Auswahl von Teilnehmer:innen}
+\subsection{Personas}
+\subsubsection{Personas aus \shorthandtextcite{unisd2021}}
+\subsubsection{Shorthand: \shorthandtextcite*{unisd2021}}
+\subsection{Auswahl von Teilnehmer*innen}
+\subsubsection{Auf \ref{section:study-size} eingehen, wieso dürfte Größe reichen (wenig persönliche Entscheidungen, konkrete Aufgaben, etc.)}
 \subsection{Aufgaben}
 \subsection{Scenarios}
 \subsection{Evaluation}
