@@ -4,6 +4,17 @@
   type=report
 }
 
+\defbibfilter{books}{
+  type=book or
+  type=inbook or
+  type=incollection
+}
+
+\defbibfilter{other}{
+  type=misc or
+  type=online
+}
+
 \newstarcommand{\shorthandtextcite}[1]{
   \citeauthor{#1}~[\citefield{#1}{shorthand}] (\citeyear{#1})
 }{
