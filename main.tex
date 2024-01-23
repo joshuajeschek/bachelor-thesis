@@ -6,7 +6,8 @@
 % \usepackage{tocbibind}
 \usepackage{blindtext}
 \usepackage{subfigure}
-\usepackage{acronym}
+%\usepackage[acronym,toc,nomain]{glossaries}
+\usepackage{acro}
 \usepackage[shorthands=off,ngerman]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -17,6 +18,8 @@
 
 \input{util/cmd}
 \input{util/bib}
+
+\input{misc/acronyms}
 
 \hypersetup{bookmarksnumbered=true,bookmarksopen=true,bookmarksopenlevel=1,pdfborder=0 0 0}
 
@@ -77,8 +80,9 @@
 \endgroup
 
 \twocolumn
-\addchap{Abkürzungsverzeichnis}
-\input{misc/acronyms}
+%\addchap{Abkürzungsverzeichnis}
+%\printglossary[type=\acronymtype,style=long]
+\printacronyms
 \onecolumn
 
 \chapter{Einleitung}
