@@ -20,3 +20,13 @@
 }{
   \citefield{#1}{shorthand} (\citeyear{#1})
 }
+
+\newstarcommand{\shorthandparencite}[1]{
+  (\citeauthor{#1}~[\citefield{#1}{shorthand}], \citeyear{#1})
+}{
+  (\citefield{#1}{shorthand}, \citeyear{#1})
+}
+
+\DefineBibliographyStrings{ngerman}{
+  nodate = {{}o\adddot \space D\adddot}
+}
