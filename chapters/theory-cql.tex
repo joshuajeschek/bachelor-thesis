@@ -1,14 +1,28 @@
 \section{\acl{cql}}
 
-Bei der \acf{cql} handelt es sich um eine Abfragesprache, welche durch den Standard
-\citetitle{opengeospatialconsortiumOGCAPI}beschrieben wird. Zum Zeitpunkt des Verfassens dieser
-Arbeit handelt es sich dabei noch um einen Entwurf.
+Bei der \acf{cql} \footnote{Nicht zu verwechseln mit der \textit{Contextual} Query Language, welche
+zuerst auch als Common Query Language bezeichnet wurde.
+\parencite{thelibraryofcongressCQLContextual2023, ZINGGentle2003}} handelt es sich um eine
+Abfragesprache, welche durch den Standard \citetitle{opengeospatialconsortiumOGCAPI} beschrieben
+wird. Zum Zeitpunkt des Verfassens dieser Arbeit handelt es sich dabei noch um einen Entwurf.
 \shorthandparencite{opengeospatialconsortiumOGCAPI}
 
-\ac{cql} sollte nicht mit der \textit{Contextual} Query Language, auch mit CQL abgekürzt,
-verwechselt werden. Diese wurde zu Anfang auch als Common Query Language bezeichnet
-\parencite{ZINGGentle2003}. \todo{Umbenennungsdatum nicht bekannt}
+ACHTUNG eigentlich \shorthandtextcite*{opengeospatialconsortiumOGCCatalogue2016}
 
-\shorthandtextcite*{opengeospatialconsortiumOGCAPI} beschreibt die Sprache als einen Weg, um
-API-Abfragen zu filtern, die dem OGC API Standard folgen. Dazu existiert eine formale Definition in
-der \ac{bnf}, welche aus verschiedenen Klassen besteht.
+= Anwendungsfall
+- GIS
+- Filtern
+- GIS, dadurch Augenmerk auf spacial und temporal functions
+
+= Datentypen und Typsystem
+- primitive datentypen
+- spatial und temporal datentypen
+
+= Funktionen
+- Selbstauskunft über /functions
+- einfache Operatoren, spatial and temporal functions
+- information über inputs gegeben, output typ wird von /functions bestimmt
+
+= Verwendung zum Erstellen von Nicht-Filter Ausdrücken
+- Filter bestehen aus komplexen Ausdrücken
+- Kombination aus Funktionen kann Transformationen an Queryables darstellen
