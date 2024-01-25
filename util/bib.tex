@@ -15,18 +15,27 @@
   type=online
 }
 
-\newstarcommand{\shorthandtextcite}[1]{
-  \citeauthor{#1}~[\citefield{#1}{shorthand}] (\citeyear{#1})
-}{
-  \citefield{#1}{shorthand} (\citeyear{#1})
-}
-
-\newstarcommand{\shorthandparencite}[1]{
-  (\citeauthor{#1}~[\citefield{#1}{shorthand}], \citeyear{#1})
-}{
-  (\citefield{#1}{shorthand}, \citeyear{#1})
-}
-
 \DefineBibliographyStrings{ngerman}{
   nodate = {{}o\adddot \space D\adddot}
 }
+
+\makeatletter
+\DeclareCiteCommand{\citetalias}
+  {\usebibmacro{prenote}}
+  {\usebibmacro{citeindex}%
+   \printtext[bibhyperref]{\@citealias{\thefield{entrykey}} (\citeyear{\thefield{entrykey}})}}
+  {\multicitedelim}
+  {\usebibmacro{postnote}}
+
+\DeclareCiteCommand{\citepalias}[\mkbibparens]
+  {\usebibmacro{prenote}}
+  {\usebibmacro{citeindex}%
+   \printtext[bibhyperref]{\@citealias{\thefield{entrykey}}, \citeyear{\thefield{entrykey}}}}
+  {\multicitedelim}
+  {\usebibmacro{postnote}}
+\makeatother
+
+\defcitealias{ogcCatalogue2016}{\ac{ogc}}
+\defcitealias{ogcFiltering}{\ac{ogc}}
+\defcitealias{ISO924111}{ISO/TC 159 Ergonomics SC 4}
+\defcitealias{unisd2021}{UNIS-D}

@@ -3,20 +3,24 @@
 Bei der \acf{cql} \footnote{Nicht zu verwechseln mit der \textit{Contextual} Query Language, welche
 zuerst auch als Common Query Language bezeichnet wurde.
 \parencite{thelibraryofcongressCQLContextual2023, ZINGGentle2003}} handelt es sich um eine
-Abfragesprache, welche durch den Standard \citetitle{opengeospatialconsortiumOGCAPI} beschrieben
-wird. Zum Zeitpunkt des Verfassens dieser Arbeit handelt es sich dabei noch um einen Entwurf.
-\shorthandparencite{opengeospatialconsortiumOGCAPI}
+Abfragesprache, welche durch das \ac{ogc} zum internationalen Standard erhoben wurde und von allen
+konformen \textit{\ac{ogc} Catalogue Services} untersützt wird. \citepalias{ogcCatalogue2016} In
+einem neuen Entwurf \citepalias{ogcFiltering} wird eine Variation von \ac{cql} eingeführt: Simple
+\ac{cql}. Sie wird dazu benutzt um Filterbedingungen für Abfragen an \ac{ogc} API-Dienste zu
+erstellen und existiert in zwei Formaten: \textit{CQL\_TEXT} und \textit{CQL\_JSON}. \citepalias{ogcFiltering} Im
+Weiteren wird sich auf Simple \ac{cql} bezogen.
 
-ACHTUNG eigentlich \shorthandtextcite*{opengeospatialconsortiumOGCCatalogue2016}
+Der Syntax von \ac{cql} basiert auf der \texttt{WHERE}-Klausel in \acs{sql}, und unterstützt
+boolesche Prädikate, Textvergleiche, zeitliche Datentypen und raumbezogene Operatoren. Die Sprache
+kann um Prädikate, Operatoren und Datentypen erweitert werden.
+\citepalias{ogcCatalogue2016}
 
-= Anwendungsfall
-- GIS
-- Filtern
-- GIS, dadurch Augenmerk auf spacial und temporal functions
-
-= Datentypen und Typsystem
-- primitive datentypen
-- spatial und temporal datentypen
+Als typischer Anwendungsfall für \ac{cql} dienen Geoinformationssysteme, mit denen sich die \ac{ogc}
+befasst. Daher sind im Gegensatz zu \ac{sql} geometrische Operatoren wie \texttt{EQUALS},
+\texttt{DISJOINT}, \texttt{INTERSECT} oder \texttt{CONTAINS} bereits Teil der Sprache. Die in
+\ac{cql} vorhandenen Datentypen umfassen sowohl primitive Datentypen, als auch zeitliche und
+raumbezogene Datentypen.
+\citepalias{ogcCatalogue2016}
 
 = Funktionen
 - Selbstauskunft über /functions
