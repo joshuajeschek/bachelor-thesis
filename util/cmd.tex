@@ -17,3 +17,12 @@
 \newcounter{todocounter}
 \setcounter{todocounter}{100}
 \newcommand{\todo}[1]{\refstepcounter{todocounter}\textcolor{red}{\footnote[\thetodocounter]{\textcolor{gray}{TODO: #1}}}}
+
+% inline box notes
+\newcommand{\boxnote}[1]{%
+  \bigbreak
+  \begin{center}
+    \noindent\fbox{\parbox{0.85\textwidth}{#1}}
+  \end{center}
+  \bigbreak
+}

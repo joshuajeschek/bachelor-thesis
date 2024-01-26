@@ -1,32 +1,58 @@
 \section{\acl{cql}}
 
+\boxnote{%
+  An sich definiert sowohl \citetitle{ogcCatalogue2016} als auch \citetitle{ogcFiltering} CQL.
+  Zweiteres definiert den Kern als "Simple CQL".
+}
+
 Bei der \acf{cql} \footnote{Nicht zu verwechseln mit der \textit{Contextual} Query Language, welche
 zuerst auch als Common Query Language bezeichnet wurde.
 \parencite{thelibraryofcongressCQLContextual2023, ZINGGentle2003}} handelt es sich um eine
 Abfragesprache, welche durch das \ac{ogc} zum internationalen Standard erhoben wurde und von allen
-konformen \textit{\ac{ogc} Catalogue Services} untersützt wird. \citepalias{ogcCatalogue2016} In
-einem neuen Entwurf \citepalias{ogcFiltering} wird eine Variation von \ac{cql} eingeführt: Simple
+konformen \textit{\ac{ogc} Catalogue Services} untersützt wird. \parencitealias{ogcCatalogue2016} In
+einem neuen Entwurf \parencitealias{ogcFiltering} wird eine Variation von \ac{cql} eingeführt: Simple
 \ac{cql}. Sie wird dazu benutzt um Filterbedingungen für Abfragen an \ac{ogc} API-Dienste zu
-erstellen und existiert in zwei Formaten: \textit{CQL\_TEXT} und \textit{CQL\_JSON}. \citepalias{ogcFiltering} Im
+erstellen und existiert in zwei Formaten: \textit{CQL\_TEXT} und \textit{CQL\_JSON}. \parencitealias{ogcFiltering} Im
 Weiteren wird sich auf Simple \ac{cql} bezogen.
 
 Der Syntax von \ac{cql} basiert auf der \texttt{WHERE}-Klausel in \acs{sql}, und unterstützt
 boolesche Prädikate, Textvergleiche, zeitliche Datentypen und raumbezogene Operatoren. Die Sprache
 kann um Prädikate, Operatoren und Datentypen erweitert werden.
-\citepalias{ogcCatalogue2016}
+\parencitealias{ogcCatalogue2016}
 
 Als typischer Anwendungsfall für \ac{cql} dienen Geoinformationssysteme, mit denen sich die \ac{ogc}
 befasst. Daher sind im Gegensatz zu \ac{sql} geometrische Operatoren wie \texttt{EQUALS},
 \texttt{DISJOINT}, \texttt{INTERSECT} oder \texttt{CONTAINS} bereits Teil der Sprache. Die in
 \ac{cql} vorhandenen Datentypen umfassen sowohl primitive Datentypen, als auch zeitliche und
 raumbezogene Datentypen.
-\citepalias{ogcCatalogue2016}
+\parencitealias{ogcCatalogue2016}
 
-= Funktionen
-- Selbstauskunft über /functions
-- einfache Operatoren, spatial and temporal functions
-- information über inputs gegeben, output typ wird von /functions bestimmt
+Der Entwurf des dritten Teil des OGC-API-Standards \parencitealias{ogcFiltering}, sieht die
+Möglichkeit vor, Abfragen über \ac{cql} zu filtern. Laut Anforderung /req/filter/filter-param soll
+dies von Endpunkten wie \texttt{/collections/{collectionId}/items} unterstützt werden, welche
+Instanzlisten zurückgeben. Die Filterbedingungen, werden über den GET-Parameter \texttt{filter}
+spezifiziert und können mit \textit{CQL\_TEXT} und \textit{CQL\_JSON} umgesetzt werden.
+\parencitealias{ogcFiltering}
 
-= Verwendung zum Erstellen von Nicht-Filter Ausdrücken
-- Filter bestehen aus komplexen Ausdrücken
-- Kombination aus Funktionen kann Transformationen an Queryables darstellen
+Während Filterprädikate boolsche Werte und \texttt{NULL} ergeben, können sie aus komplexeren
+Funktionen zusammengesetzt sein, welche auch andere Datentypen als Rückgabewert besitzen können.
+Über den Endpunkt \texttt{/functions} können Clients Informationen über die verfügbaren Funktionen
+abrufen.
+
+\boxnote{%
+  Wichtig für praktischen Teil:
+  \begin{itemize}
+    \item Funktionen
+    \begin{itemize}
+      \item Selbstauskunft über /functions
+      \item einfache Operatoren, spatial and temporal functions
+      \item information über inputs gegeben, output typ wird von /functions bestimmt
+    \end{itemize}
+    \item Verwendung zum Erstellen von Nicht-Filter Ausdrücken
+    \begin{itemize}
+      \item Filter bestehen aus komplexen Ausdrücken
+      \item Kombination aus Funktionen kann Transformationen an Queryables darstellen
+    \end{itemize}
+    \item Queryables
+  \end{itemize}
+}

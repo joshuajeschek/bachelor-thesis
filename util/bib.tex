@@ -20,14 +20,14 @@
 }
 
 \makeatletter
-\DeclareCiteCommand{\citetalias}
+\DeclareCiteCommand{\textcitealias}
   {\usebibmacro{prenote}}
   {\usebibmacro{citeindex}%
    \printtext[bibhyperref]{\@citealias{\thefield{entrykey}} (\citeyear{\thefield{entrykey}})}}
   {\multicitedelim}
   {\usebibmacro{postnote}}
 
-\DeclareCiteCommand{\citepalias}[\mkbibparens]
+\DeclareCiteCommand{\parencitealias}[\mkbibparens]
   {\usebibmacro{prenote}}
   {\usebibmacro{citeindex}%
    \printtext[bibhyperref]{\@citealias{\thefield{entrykey}}, \citeyear{\thefield{entrykey}}}}
