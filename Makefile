@@ -26,8 +26,18 @@ ifdef VERBOSE
 else
 	cd notes; $(LATEX) main 1> /dev/null
 endif
-	mv notes/main.pdf $@.pdf
+	mv notes/main.pdf $(@F).pdf
 	DIR=notes TMPONLY=true make clean
+
+documents/%:
+	cp $@.tex documents/.document.tex
+ifdef VERBOSE
+	cd documents; $(LATEX) main
+else
+	cd documents; $(LATEX) main 1> /dev/null
+endif
+	mv documents/main.pdf $(@F).pdf
+	DIR=documents TMPONLY=true make clean
 
 watch:
 	@bash scripts/watch.sh

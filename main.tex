@@ -3,10 +3,8 @@
 \usepackage{graphicx}                   % use for pdfLatex
 \usepackage{makeidx}                    % \printindex
 \usepackage[colorlinks=false]{hyperref}
-% \usepackage{tocbibind}
 \usepackage{blindtext}
 \usepackage{subfigure}
-%\usepackage[acronym,toc,nomain]{glossaries}
 \usepackage{acro}
 \usepackage[shorthands=off,ngerman]{babel}
 \usepackage[utf8]{inputenc}
@@ -15,6 +13,7 @@
 \usepackage[style=apa,backend=biber,backref,natbib]{biblatex}
 \usepackage{xcolor}
 \usepackage{amssymb}
+\usepackage[toc,page]{appendix}
 \addbibresource{bibliography.bib}
 
 \input{util/cmd}
@@ -180,6 +179,10 @@ Eingehen auf Problematik: functions typen / queryables typen -> Informationsverl
 \section{Schlussfolgerungen und Zukunftsaussicht}
 
 \chapter{Fazit}
+
+\begin{appendices}
+  \include{documents/invitation}
+\end{appendices}
 
 
 \nocite{*}
