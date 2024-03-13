@@ -14,6 +14,10 @@
 \usepackage{xcolor}
 \usepackage{amssymb}
 \usepackage[toc,page]{appendix}
+\addto\captionsngerman{%
+   \renewcommand{\appendixtocname}{Anhang}%
+   \renewcommand{\appendixpagename}{Anhang}%
+}
 \addbibresource{bibliography.bib}
 
 \input{util/cmd}
@@ -30,6 +34,7 @@
 \MakeOuterQuote{"}
 
 \begin{document}
+\pagenumbering{Roman}
 \begin{titlepage}
 
   \begin{center}
@@ -58,11 +63,11 @@
   Datum: 24.12.2023\\
   \vspace{0.3cm}\\
   Dr. Thomas Wilhelm-Stein \\
-  Dr. Heino Rudolf
+  Dr. Werner Koch
 
 \end{titlepage}
 
-\addchap*{Abstract}
+\addchap{Abstract}
 \input{misc/abstract}
 
 \tableofcontents
@@ -72,19 +77,22 @@
 \addcontentsline{toc}{chapter}{\listfigurename}
 \listoffigures
 
-\let\clearpage\relax
+% \let\clearpage\relax
 
 \cleardoublepage
 \addcontentsline{toc}{chapter}{\listtablename}
 \listoftables
 
-\let\clearpage\relax
+% \let\clearpage\relax
 
 \cleardoublepage
 \addcontentsline{toc}{chapter}{Abkürzungen}
 \printacronyms
 \endgroup
 
+
+\clearpage
+\pagenumbering{arabic}
 \chapter{Einleitung}
 
 \section{Hintergrund und Motivation}
@@ -180,6 +188,7 @@ Eingehen auf Problematik: functions typen / queryables typen -> Informationsverl
 
 \chapter{Fazit}
 
+\clearpage
 \begin{appendices}
   \include{documents/invitation}
 \end{appendices}
