@@ -23,18 +23,18 @@
 
 \makeatletter
 \DeclareCiteCommand{\textcitealias}
-  {\usebibmacro{prenote}}
-  {\usebibmacro{citeindex}%
-   \printtext[bibhyperref]{\@citealias{\thefield{entrykey}} (\citeyear{\thefield{entrykey}})}}
-  {\multicitedelim}
-  {\usebibmacro{postnote}}
+{\usebibmacro{prenote}}
+{\usebibmacro{citeindex}%
+  \printtext[bibhyperref]{\@citealias{\thefield{entrykey}} (\citeyear{\thefield{entrykey}})}}
+{\multicitedelim}
+{\usebibmacro{postnote}}
 
 \DeclareCiteCommand{\parencitealias}[\mkbibparens]
-  {\usebibmacro{prenote}}
-  {\usebibmacro{citeindex}%
-   \printtext[bibhyperref]{\@citealias{\thefield{entrykey}}, \citeyear{\thefield{entrykey}}}}
-  {\multicitedelim}
-  {\usebibmacro{postnote}}
+{\usebibmacro{prenote}}
+{\usebibmacro{citeindex}%
+  \printtext[bibhyperref]{\@citealias{\thefield{entrykey}}, \citeyear{\thefield{entrykey}}}}
+{\multicitedelim}
+{\usebibmacro{postnote}}
 \makeatother
 
 \defcitealias{ogcCatalogue2016}{\ac{ogc}}
