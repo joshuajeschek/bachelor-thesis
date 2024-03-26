@@ -1,0 +1,129 @@
+\ifdefined\STANDALONE\else
+  \chapter{Handout Usability Studie}
+\fi
+
+\subsection*{Szenario 1: Import von Bundesländern}
+\href[pdfnewwindow=true]{https://db01.simplex4data.de:444/develop/joshua/cql/szenario/1}{Startpunkt Szenario 1}
+
+\vspace{\baselineskip}\noindent
+Gegeben ist eine Importtabelle mit Daten zu den Bundesländern. Sie wollen diese in das Simplex4Data
+System importieren. Dazu existiert bereits eine Objektklasse mit den nötigen Attributen.
+
+\vspace{\baselineskip}\noindent
+Die Importtabelle sieht in etwa so aus:
+
+\begin{flushleft}
+  \begin{tabular}{||c | c | c | c | c | c | c | c | c ||}
+    \hline
+    bezeichnung & name      & ars    & nuts   & nbd    & ibz    & bemerkung & wirksamkeit & geom       \\ [0.5ex]
+    \hline\hline
+    'Freistaat' & 'Sachsen' & '14'   & 'DED'  & 'ja'   & 20     & '--'      & 2014-02-01  & <geometry> \\
+    \hline
+    \vdots      & \vdots    & \vdots & \vdots & \vdots & \vdots & \vdots    & \vdots      & \vdots     \\
+    \hline
+  \end{tabular}
+\end{flushleft}
+
+\vspace{\baselineskip}\noindent
+Die Objektklasse enthält folgende Attribute:
+\begin{flushleft}
+  \begin{tabular}{ || l || }
+    \hline
+    Bundesland            \\
+    \hline
+    key - ARS             \\
+    typ - Bezeichnung     \\
+    title - Name          \\
+    cmt - Bemerkung       \\
+    beg - Wirksamkeit     \\
+    nuts - NUTS           \\
+    nbd - NBD             \\
+    ibz - IBZ             \\
+    fl - Flächengeometrie \\
+    \hline
+  \end{tabular}
+\end{flushleft}
+
+\vspace{\baselineskip}\noindent
+Weisen Sie die Daten aus der Importtabelle den korrespondierenden Attributen aus der Objektklasse
+zu, und überprüfen Sie das Resultat.
+
+\clearpage
+
+\subsection*{Szenario 2: Import von Gemeinden}
+\href{https://db01.simplex4data.de:444/develop/joshua/cql/szenario/2}{Startpunkt Szenario 2}
+
+\vspace{\baselineskip}\noindent
+Analog zu den Bundesländern sollen Gemeinden importiert werden. Die Daten in der Quelltabelle liegen
+nicht einfach zur Zuordnung bereit, sondern müssen teilweise umgeformt werden.
+
+\noindent Die Quelltabelle enthält auch Einträge, die sich nicht auf Gemeinden beziehen. Diese
+können daran erkannt werden, dass \texttt{gemeinde\_id} nicht angegeben ist, und sollen nicht
+importiert werden.
+
+\vspace{\baselineskip}\noindent
+Hier ein Auszug aus der Quelltabelle:
+\begin{flushleft}
+  \begin{tabular}{|| c | c | c | c | c | c | c | c ||}
+    \hline
+    gemeindename  & breitengrad & \dots  & bevoelkerung & flaeche & gemeinde\_id & \dots  & land\_id \\ [0.5ex]
+    \hline\hline
+    'Saarbrücken' & 49.236608   & \dots  & 179634       & 167.52  & '10'         & \dots  & '10'     \\
+    \hline
+    \vdots        & \vdots      & \vdots & \vdots       & \vdots  & \vdots       & \vdots & \vdots   \\
+    \hline
+  \end{tabular}
+\end{flushleft}
+
+\vspace{\baselineskip}\noindent
+Die Objektklasse enthält folgende Attribute:
+\begin{flushleft}
+  \begin{tabular}{ || l || }
+    \hline
+    Gemeinde                                        \\
+    \hline
+    title - Name                                    \\
+    key - ARS                                       \\
+    bevoelkerung\_je\_km2 - Bevölkerung je km2      \\
+    bevoelkerung\_weiblich - Bevölkerung weiblich   \\
+    bevoelkerung\_männlich - Bevölkerung männlich   \\
+    bevoelkerung\_insgesamt - Bevölkerung insgesamt \\
+    flaeche\_km2 - Fläche in km2                    \\
+    pt - Punktgeometrie                             \\
+    \hline
+  \end{tabular}
+\end{flushleft}
+
+\vspace{\baselineskip}\noindent
+Der ARS (Amtlicher Regionalschlüssel) setzt sich wie folgt zusammen:
+\[
+  \underbrace{\scalebox{3}{10}}_{\texttt{land\_id}}\overbrace{\scalebox{3}{0}}^{\texttt{bezirk\_id}}\underbrace{\scalebox{3}{41}}_{\texttt{kreis\_id}}\overbrace{\scalebox{3}{0100}}^{\texttt{verband\_id}}\underbrace{\scalebox{3}{10}}_{\texttt{gemeinde\_id}}
+\]
+
+\clearpage
+
+\subsection*{Szenario 3: Auflistung der Adressen in einem Leipziger Ortsteil}
+\href{https://db01.simplex4data.de:444/develop/joshua/cql/szenario/3}{Startpunkt Szenario 3}
+
+\vspace{\baselineskip}\noindent
+In diesem Szenario sind die Objektklassen bereits importiert. Dabei handelt es sich um:
+\begin{itemize}
+  \item Adressen (Hausnummer, PLZ, Geometrie)
+  \item Straßen (Straßenname)
+  \item Ortsteile (Ortsteil-Name)
+\end{itemize}
+
+\vspace{\baselineskip}\noindent
+Die Klassen sind miteinander verknüpft und sollen nun zu einer Übersicht aller Adressen \textbf{im Ortsteil
+  "Lindenau"} zusammengestellt werden.
+
+\vspace{\baselineskip}\noindent
+Die Liste sollte am Ende folgende Informationen enthalten:
+\begin{itemize}
+  \item Straßenname
+  \item Hausnummer
+  \item Adresszusatz
+  \item Postleitzahl
+  \item Ortsteil-Name
+  \item Punktgeometrie(n)
+\end{itemize}

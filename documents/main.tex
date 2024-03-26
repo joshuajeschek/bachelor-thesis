@@ -6,8 +6,17 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{csquotes}
-\usepackage[colorlinks=false]{hyperref}
 \usepackage{graphicx}
+
+\usepackage{xcolor}
+\usepackage[colorlinks=true]{hyperref}
+\AtBeginDocument{%
+ \hypersetup{
+   urlcolor=blue,
+   urlbordercolor=blue,
+   pdfborder={1 1 1},
+   pdfborderstyle={/S/U/W 1}
+}}
 
 \MakeOuterQuote{"}
 \newcommand{\STANDALONE}{}
