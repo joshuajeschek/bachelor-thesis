@@ -102,6 +102,8 @@
 - klammerung
 - automat umsetzen
 - orientierung an automaten
+- auf der linken seite erkennen was noch nicht benutzt
+- typ konvertierung - müsste einfach gehen - automatisch?
 
 ## Wie würden Sie ähnliche Aufgaben wie die hier betrachteten Aufgaben sonst angehen?
 - alte oberfläche, fme (andere)
