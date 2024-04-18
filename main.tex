@@ -1,23 +1,54 @@
-\documentclass[a4paper, 12pt, oneside, BCOR=1cm,toc=chapterentrywithdots]{scrbook}
+\documentclass[oneside,a4paper,11pt,openright]{report}
 
-\usepackage{graphicx}                   % use for pdfLatex
-\usepackage{makeidx}                    % \printindex
-\usepackage[colorlinks=false]{hyperref}
-\usepackage{blindtext}
-\usepackage{subfigure}
-\usepackage{acro}
-\usepackage[shorthands=off,ngerman]{babel}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{csquotes}
+
+\usepackage[utf8]{inputenc} % Einstellung der Eingabekodierung
+\usepackage[ngerman]{babel} % Deutsche Trennmuster
+\usepackage{newpxtext} % Schriftart Palatino
+\usepackage{newpxmath} % passende Mathe-Schrift
+\usepackage[T1]{fontenc} % Einstellung Schriftkodierung
+\usepackage{amsmath} % Mathematik-Erweiterungen
+\usepackage{microtype} % Verbesserte Mikrotypographie
+\usepackage{csquotes} % Kontextabhängige Anführungszeichen
+\usepackage{calc} % Berechnung von TeX-Maßen
+\usepackage[%
+  inner=25mm,%
+  outer=35mm,%
+  top=25mm,%
+  bottom=30mm,%
+  includeheadfoot,%
+  headheight=14pt,%
+  marginparwidth=25mm%
+]{geometry} % Anpassung Satzspiegel
+\usepackage{parskip} % Kein Absatzeinzug
+\usepackage{emptypage} % Keine Seitenzahlen auf Leerzeiten
+\usepackage{array} % Tabellen-Erweiterung
+\usepackage{graphicx} % Einbindung von Grafiken
+\usepackage{float} % Anpassung von Gleitumgebungen
+\usepackage{fancyhdr} % Anpassung von Kopf- und Fußzeilen
+\usepackage{acro} % Abkürzungen
+
+
 \usepackage[style=apa,backend=biber,backref,natbib]{biblatex}
-\usepackage{xcolor}
-\usepackage{amssymb}
-\usepackage[toc,page]{appendix}
-\addto\captionsngerman{%
-   \renewcommand{\appendixtocname}{Anhang}%
-   \renewcommand{\appendixpagename}{Anhang}%
-}
+
+% auf Einbindungsreihenfolge achten
+\usepackage{hyperref}
+
+
+% können nach Fertigstellung gelöscht werden
+\usepackage{todonotes} % TODO-Anmerkungen
+\usepackage{lipsum} % Blindtexte
+\usepackage{blindtext} % Blindtexte
+\usepackage{layout} % Darstellung des Satzspiegels
+
+\input{latex/float}   % Anpassungen für Gleitumgebungen
+\input{latex/titlepage} % Formatvorlage für das Deckblatt
+\input{latex/simplesection} % Einfache Überschriften für Aufgabenstellung usw.
+\input{latex/declaration} % Formatvorlage für die Selbstständigkeitserklärung
+
+% Bei Bedarf aktivieren
+%\input{latex/fancyhdr} % Einstellungen zu Kopf- und Fußzeilen
+%\input{latex/linespace_mod}  % Erweiterter Zeilenabstand in Gleitumgebungen, Fußnoten und Minpages
+
 \addbibresource{bibliography.bib}
 
 \input{util/cmd}
@@ -25,74 +56,28 @@
 
 \input{misc/acronyms}
 
-\hypersetup{bookmarksnumbered=true,bookmarksopen=true,bookmarksopenlevel=1,pdfborder=0 0 0}
-
-% remove this later
-%\setcounter{tocdepth}{4}
-
 % könnte zu Problemen führen
 \MakeOuterQuote{"}
 
 \begin{document}
-\pagenumbering{Roman}
-\begin{titlepage}
-
-  \begin{center}
-    \raisebox{-1ex}{\includegraphics[scale=1.5]{assets/tuc.pdf}}\\
-  \end{center}
-  \vspace{0.5cm}
-
-  \begin{center}
-
-    \LARGE{\textbf{Title of the bachelor thesis}}\\
-    \vspace{1cm}
-
-
-    \Large{\textbf{Bachelor Thesis}}\\
-    \vspace{1cm}
-    Submitted in Fulfilment of the\\
-    Requirements for the Academic Degree\\
-    B.Sc.\\
-    \vspace{0.5cm}
-    Dept. of Computer Science\\
-    Chair of Computer Engineering
-  \end{center}
-  \vspace{3cm}
-  Eingereicht von: Joshua Jeschek\\
-  Matrikelnummer: 652272\\
-  Datum: 24.12.2023\\
-  \vspace{0.3cm}\\
-  Dr. Thomas Wilhelm-Stein \\
-  Dr. Werner Koch
-
-\end{titlepage}
-
-\addchap{Abstract}
+\pagenumbering{roman}
+\input{misc/titlepage}
+\cleardoublepage
 \input{misc/abstract}
-
 \tableofcontents
 
-\begingroup
-\cleardoublepage
 \addcontentsline{toc}{chapter}{\listfigurename}
 \listoffigures
 
-% \let\clearpage\relax
-
-\cleardoublepage
 \addcontentsline{toc}{chapter}{\listtablename}
 \listoftables
 
-% \let\clearpage\relax
-
-\cleardoublepage
 \addcontentsline{toc}{chapter}{Abkürzungen}
 \printacronyms
-\endgroup
 
 
-\clearpage
 \pagenumbering{arabic}
+
 \chapter{Einleitung}
 
 \section{Hintergrund und Motivation}
@@ -191,15 +176,22 @@ Eingehen auf Problematik: functions typen / queryables typen -> Informationsverl
 
 \chapter{Fazit}
 
-\clearpage
-\begin{appendices}
-  \include{documents/invitation}
-  \include{documents/handout}
-\end{appendices}
+%
+% Anhang
+%
+
+\appendix
+\part*{Anhang}
+\markboth{}{}
+\addcontentsline{toc}{part}{Anhang}
+
+\input{documents/invitation}
+\input{documents/handout}
+\input{documents/moderation}
 
 
 \nocite{*}
-\chapter*{Quellen}
+\chapter*{Literaturverzeichnis}
 \begingroup
 \let\clearpage\relax
 \printbibliography[filter=articles, title=Artikel, heading=subbibliography]
@@ -207,6 +199,11 @@ Eingehen auf Problematik: functions typen / queryables typen -> Informationsverl
 \printbibliography[filter=other, title=sonstige, heading=subbibliography]
 \endgroup
 
-\printindex
+% TODO: Index
+% TODO: Glossar
 
+\cleardoublepage
+\input{misc/danksagung}
+\cleardoublepage
+\input{misc/erklaerung}
 \end{document}
