@@ -26,7 +26,7 @@
 \usepackage{float} % Anpassung von Gleitumgebungen
 \usepackage{fancyhdr} % Anpassung von Kopf- und Fußzeilen
 \usepackage{acro} % Abkürzungen
-\usepackage[]{listings} % Codeblöcke
+\usepackage{listings} % Codeblöcke
 
 
 \usepackage[style=apa,backend=biber,backref,natbib]{biblatex}
@@ -73,6 +73,9 @@
 
 \addcontentsline{toc}{chapter}{\listtablename}
 \listoftables
+
+\addcontentsline{toc}{chapter}{\lstlistlistingname}
+\lstlistoflistings
 
 \addcontentsline{toc}{chapter}{Abkürzungen}
 \printacronyms
