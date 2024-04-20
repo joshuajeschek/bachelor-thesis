@@ -19,13 +19,14 @@
   headheight=14pt,%
   marginparwidth=25mm%
 ]{geometry} % Anpassung Satzspiegel
-\usepackage{parskip} % Kein Absatzeinzug
+% \usepackage{parskip} % Kein Absatzeinzug
 \usepackage{emptypage} % Keine Seitenzahlen auf Leerzeiten
 \usepackage{array} % Tabellen-Erweiterung
 \usepackage{graphicx} % Einbindung von Grafiken
 \usepackage{float} % Anpassung von Gleitumgebungen
 \usepackage{fancyhdr} % Anpassung von Kopf- und Fußzeilen
 \usepackage{acro} % Abkürzungen
+\usepackage[]{listings} % Codeblöcke
 
 
 \usepackage[style=apa,backend=biber,backref,natbib]{biblatex}
@@ -53,6 +54,7 @@
 
 \input{util/cmd}
 \input{util/bib}
+\input{util/listings}
 
 \input{misc/acronyms}
 
@@ -97,11 +99,13 @@
 \subsubsection{da in Converter Formular eingesetzt werden soll}
 \subsubsection{wichtig, Prozesse zu verstehen}
 \subsection{Szenarios}
+\subsection{SimplexService}
 
-\include{chapters/theory-ogc}
-\include{chapters/theory-ogc-cql}
-\subsection{Queryables}
-\subsection{Functions}
+\clearpage
+\input{chapters/theory-ogc}
+\input{chapters/theory-ogc-cql}
+\input{chapters/theory-ogc-queryables}
+\input{chapters/theory-ogc-functions}
 
 \clearpage
 \section{(Human-Centered Design)}

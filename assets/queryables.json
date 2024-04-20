@@ -1,0 +1,16 @@
+{`\lstsetnumber{\dots}`
+  ...`\lstresetnumber\setcounter{lstnumber}{4}`
+  "properties": {
+    "key": {
+      "title": "ARS",
+      "description": "Amtlicher Regionalschl`ü`ssel",
+      "type": "string"
+    },`\lstsetnumber{\dots}`
+    ...`\lstresetnumber\setcounter{lstnumber}{114}`
+    "fl": {
+      "title": "Fl`ä`che Polygon",
+      "$ref": "https://geojson.org/schema/Geometry.json",
+      "format": "geometry-any"
+    }
+  }
+}

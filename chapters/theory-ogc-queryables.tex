@@ -1,0 +1,44 @@
+\newcommand{\rfqsfn}{\footnote{\texttt{/rec/filter/queryables-schema}
+(\url{https://portal.ogc.org/files/96288\#rec_filter_queryables-schema})}\todo[color=yellow]{OGC
+scheint anfällig dafür zu sein, Links nicht beizubehalten (1. weil Entwurf, zweitens verlinkt
+"external identifier" in \citetitle{ogcFiltering} auf 404) - wäre es dann sinnvoll, den aktuellen
+Stand von relevanten Teilen in den Anhang zu packen?}}
+
+\subsection{Queryables}
+
+\citetitle{ogcFiltering} beschreibt \textit{Queryables} als Token, welche ein eine Eigenschaft einer
+Ressource darstellen, die in einem Filterausdruck verwendet werden können
+\parencitealias{ogcFiltering}. Der vorläufige Standard sieht vor, dass ein \ac{api}-Endpunkt
+angeboten wird, der über die existierenden Queryables, deren Namen und Typen informiert.
+\parencitealias{ogcFiltering}
+
+Dabei existieren zwei Pfade. Unter \texttt{/queryables} werden die Attribute zurückgegeben , die für
+alle \textit{collections} existieren. Jede \textit{collection} verfügt des Weiteren über einen
+Unterpfad \texttt{/collections/\{collectionId\}/queryables}, welcher die spezifischen Attribute für
+die \textit{collection} angibt.
+\parencitealias{ogcFiltering}
+
+Der vorläufige Standard schlägt vor\rfqsfn, dass jedes ausgelieferte Attribut über einen Titel und,
+wenn nötig, über eine Beschreibung verfügt. Des Weiteren sollte jedes Attribut einen Typ angeben,
+außer es handelt sich um einen räumlichen Typ. Diese werden mittels einer Referenzierung des
+passenden \ac{json}-Schema des Geometrietyps gekennzeichnet. Zeitliche Typen sollen als
+\texttt{string} beschrieben werden und mit einem entsprechenden Format spezifiziert. Des Weiteren
+wird definiert, wie mit Aufzählungen und Wertebereichen umgegangen werden sollte.
+\parencitealias{ogcFiltering}
+
+\subsubsection{Queryables im SimplexService}
+
+\lstinputlisting[
+  label=lst:queryables,
+  caption={\texttt{/queryables} für \textit{collection} "Gemeinden" (Auszug)},
+  captionpos=b,
+  language=json,
+  escapeinside=``
+]{assets/queryables.json}
+
+\todo[inline]{Standardfall für Queryables in SimplexService erklären (Szenario 1, Objektklassen,
+Felder, Attribute)}
+
+\todo[inline]{Auf Quelltext \ref{lst:queryables} eingehen}
+
+\todo[inline]{Gejointe Queryables beschreiben}
