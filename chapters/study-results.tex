@@ -15,6 +15,7 @@
         ylabel={\acl{seq}},
         ymajorgrids,
         width=\textwidth,
+        height=8.9cm,
         bar width=8pt,
         legend cell align=left,
       ]
@@ -27,8 +28,22 @@
 
     \end{axis}
   \end{tikzpicture}
-  \caption{Antworten auf die \ac{seq} nach jedem Szenario}
+  \caption{Antworten auf die \acs{seq} nach jedem Szenario}
 \end{figure}
+
+\begin{table}
+  \centering
+  \csvreader[
+    tabular={lccc},
+    head to column names,
+    table head=\toprule\bfseries Usability Test & \bfseries Szenario 1 & \bfseries Szenario 2 &
+    \bfseries Szenario 3\\\midrule,
+    table foot=\bottomrule
+  ]
+  {assets/study-results.csv}{}
+  {Test Nr. \n & \a & \b & \c}
+  \caption{Antworten auf die \acs{seq} nach jedem Szenario}
+\end{table}
 
 \begin{figure}
   \label{fig:sus}
@@ -45,6 +60,7 @@
         ylabel={Einfachheit der Benutzung},
         ymajorgrids,
         width=\textwidth,
+        height=11cm,
         bar width=12pt,
         legend cell align=left,
       ]
@@ -58,3 +74,17 @@
   \end{tikzpicture}
   \caption{Einschätzung der Einfachheit der Benutzung nach dem Usability Test}
 \end{figure}
+
+\begin{table}
+  \centering
+  \csvreader[
+    tabular={lcc},
+    head to column names,
+    table head=\toprule\bfseries Usability Test & \bfseries Vorversion & \bfseries
+    Block-Editor\\\midrule,
+    table foot=\bottomrule
+  ]
+  {assets/study-results.csv}{}
+  {Test Nr. \n & \prev & \ges}
+  \caption{Einschätzung der Einfachheit der Benutzung nach dem Usability Test}
+\end{table}
