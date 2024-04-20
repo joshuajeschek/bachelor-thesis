@@ -27,6 +27,8 @@
 \usepackage{fancyhdr} % Anpassung von Kopf- und Fußzeilen
 \usepackage{acro} % Abkürzungen
 \usepackage{listings} % Codeblöcke
+\usepackage{pgfplots}
+\usepackage{pgfplotstable}
 
 
 \usepackage[style=apa,backend=biber,backref,natbib]{biblatex}
@@ -55,6 +57,7 @@
 \input{latex/cmd}
 \input{latex/bib}
 \input{latex/listings}
+\input{latex/colors}
 
 \input{misc/acronyms}
 
@@ -178,7 +181,7 @@ Eingehen auf Problematik: functions typen / queryables typen -> Informationsverl
 \subsection{Studienablauf}
 
 \clearpage
-\section{Ergebnisse und Analyse}
+\input{chapters/study-results}
 
 \clearpage
 \section{Schlussfolgerungen und Zukunftsaussicht}
