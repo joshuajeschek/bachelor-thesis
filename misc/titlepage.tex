@@ -1,31 +1,31 @@
+\makeatletter
 \begin{tuctitlepage}
   \begin{tuctitleorgunit}
-    Technische Universität Chemnitz \\
-    Fakultät Informatik \\
-    Professur Medieninformatik \\
+    \organization
   \end{tuctitleorgunit}
 
   \tuctitlelogo
 
-  \tuctitlethesistype{Bachelorarbeit}
+  \tuctitlethesistype{\thesistype}
   \bigskip
-  \tuctitledegree{Bachelor of Science}
+  \tuctitledegree{\degree}
   \bigskip
-  \tuctitleauthor{Joshua Jeschek}
+  \tuctitleauthor{\@author}
 
   \vspace*{0pt plus 2fill}
   \begin{tuctitletopic}
-    Blockbasierte Daten-Konvertierung \\
-    \large{Einschätzung der empfundenen Produktivitätssteigerung im Umgang mit Umweltdaten}
+    \@title \\
+    \large{\@subtitle}
   \end{tuctitletopic}
   \vspace*{0pt plus 2fill}
 
   \begin{tuctitletable}[\bfseries]{1}
-    Erstprüfer:  & Dr. Thomas Wilhelm-Stein \\
-    Zweitprüfer: & Dr. Werner Koch \\
+    Erstprüfer:  & \erstpruefer \\
+    Zweitprüfer: & \zweitpruefer \\
   \end{tuctitletable}
 
   \vspace*{0pt plus 1fill}
 
-  \tuctitleplacedate{Chemnitz, Datum\todo{Datum}}
+  \tuctitleplacedate{\place, \@date}
 \end{tuctitlepage}
+\makeatother

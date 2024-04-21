@@ -1,4 +1,5 @@
-\documentclass[oneside,a4paper,11pt,openright]{report}
+\documentclass[oneside,a4paper,11pt,openright]{scrreprt}
+% scrreprt
 
 
 \usepackage[utf8]{inputenc} % Einstellung der Eingabekodierung
@@ -19,7 +20,6 @@
   headheight=14pt,%
   marginparwidth=25mm%
 ]{geometry} % Anpassung Satzspiegel
-% \usepackage{parskip} % Kein Absatzeinzug
 \usepackage{emptypage} % Keine Seitenzahlen auf Leerzeiten
 \usepackage{array} % Tabellen-Erweiterung
 \usepackage{graphicx} % Einbindung von Grafiken
@@ -31,6 +31,7 @@
 \usepackage{pgfplotstable} % CSV für Plots importieren
 \usepackage{csvsimple} % CSV für Tabellen importieren
 \usepackage{booktabs} % Tabellenlinien
+\usepackage{pdfpages} % Einbindung von externen PDFs
 
 
 \usepackage[style=apa,backend=biber,backref,natbib]{biblatex}
@@ -49,22 +50,17 @@
 \input{latex/titlepage} % Formatvorlage für das Deckblatt
 \input{latex/simplesection} % Einfache Überschriften für Aufgabenstellung usw.
 \input{latex/declaration} % Formatvorlage für die Selbstständigkeitserklärung
+\input{latex/cmd} % util commands
+\input{latex/bib} % bib utils
+\input{latex/listings} % listings setup
+\input{latex/colors} % colors
 
-% Bei Bedarf aktivieren
-%\input{latex/fancyhdr} % Einstellungen zu Kopf- und Fußzeilen
-%\input{latex/linespace_mod}  % Erweiterter Zeilenabstand in Gleitumgebungen, Fußnoten und Minpages
+\input{misc/acronyms} % acronyms
+\input{misc/variables} % acronyms
 
 \addbibresource{bibliography.bib}
 
-\input{latex/cmd}
-\input{latex/bib}
-\input{latex/listings}
-\input{latex/colors}
-
-\input{misc/acronyms}
-
-% könnte zu Problemen führen
-\MakeOuterQuote{"}
+\MakeOuterQuote{"} % könnte zu Problemen führen
 
 \begin{document}
 \pagenumbering{roman}
@@ -176,8 +172,10 @@ Eingehen auf Problematik: functions typen / queryables typen -> Informationsverl
 \clearpage
 \section{Studienaufbau}
 \subsection{Problemformulierung und Ziele}
+\subsection{Methodik}
+\todo[inline]{\acl{cta}, auf \ref{sec:think-aloud} eingehen}
 \subsection{Auswahl von Teilnehmer*innen}
-\subsubsection{Auf \ref{section:study-size} eingehen, wieso dürfte Größe reichen (wenig persönliche Entscheidungen, konkrete Aufgaben, etc.)}
+\todo[inline]{Auf \ref{sec:study-size} eingehen, wieso dürfte Größe reichen (wenig persönliche Entscheidungen, konkrete Aufgaben, etc.)}
 \subsection{Szenarios}
 \subsection{Evaluation}
 \subsection{Studienablauf}
@@ -219,5 +217,5 @@ Eingehen auf Problematik: functions typen / queryables typen -> Informationsverl
 \cleardoublepage
 \input{misc/danksagung}
 \cleardoublepage
-\input{misc/erklaerung}
+\input{misc/declaration}
 \end{document}
