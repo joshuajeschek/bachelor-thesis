@@ -3,6 +3,10 @@
 scheint anfällig dafür zu sein, Links nicht beizubehalten (1. weil Entwurf, zweitens verlinkt
 "external identifier" in \citetitle{ogcFiltering} auf 404) - wäre es dann sinnvoll, den aktuellen
 Stand von relevanten Teilen in den Anhang zu packen?}}
+\newcommand{\rfgqog}{\footnote{\texttt{/req/filter/get-queryables-op-global}
+(\url{https://portal.ogc.org/files/96288\#req_filter_get-queryables-op-global})}}
+\newcommand{\rfgqol}{\footnote{\texttt{/req/filter/get-queryables-op-local}
+(\url{https://portal.ogc.org/files/96288\#req_filter_get-queryables-op-local})}}
 
 \subsection{Queryables}
 
@@ -13,9 +17,9 @@ angeboten wird, der über die existierenden Queryables, deren Namen und Typen in
 \parencitealias{ogcFiltering}
 
 Dabei existieren zwei Pfade. Unter \texttt{/queryables} werden die Attribute zurückgegeben , die für
-alle \textit{collections} existieren. Jede \textit{collection} verfügt des Weiteren über einen
+alle \textit{collections} existieren\rfgqog. Jede \textit{collection} verfügt des Weiteren über einen
 Unterpfad \texttt{/collections/\{collectionId\}/queryables}, welcher die spezifischen Attribute für
-die \textit{collection} angibt.
+die \textit{collection} angibt\rfgqol.
 \parencitealias{ogcFiltering}
 
 Der vorläufige Standard schlägt vor\rfqsfn, dass jedes ausgelieferte Attribut über einen Titel und,
@@ -30,11 +34,12 @@ wird definiert, wie mit Aufzählungen und Wertebereichen umgegangen werden sollt
 
 \lstinputlisting[
   label=lst:queryables,
-  caption={\texttt{/queryables} für \textit{collection} "Gemeinden" (Auszug)},
+  caption={Antwort auf \texttt{/queryables}-Anfrage für \textit{collection} "Gemeinden" (Auszug)},
   captionpos=b,
   language=json,
   escapeinside=``
 ]{assets/queryables.json}
+\todo{filename, margin}
 
 \todo[inline]{Standardfall für Queryables in SimplexService erklären (Szenario 1, Objektklassen,
 Felder, Attribute)}

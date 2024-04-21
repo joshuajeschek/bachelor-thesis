@@ -1,1 +1,43 @@
-\subsection{Functions}
+\subsection{Funktionen in \ac{cql}}
+
+\citetitle{ogcFiltering} sieht Funktionen als ein Weg vor, um \ac{cql} zu erweitern. Die Grammatik
+für Funktionen in \ac{cql} werden durch die \ac{bnf} in Quelltext \ref{lst:function} definiert.
+Zu sehen ist, dass die Funktionen ähnlich wie in \ac{sql} oder verschiedenen Programmiersprachen
+funktionieren\todo{Formulierung}. Eine Funktion wird durch einen Funktionsname (\textit{identifier})
+identifiziert, und kann eine Liste an Argumenten annehmen. Bei diesen Argumenten kann es sich um
+Literale, arithmetische und boolsche Ausdrücke, Arrays, Attribute\todo{mit Queryables in
+Verbindung setzen} oder weitere Funktionsaufrufe handeln.
+
+\lstinputlisting[
+  label=lst:function,
+  caption={\ac{bnf} für \ac{cql}-Funktionen laut \textcite{ogcFiltering}},
+  captionpos=b,
+  firstnumber=351,
+  firstline=351,
+  lastline=363,
+  language=bnf
+]{assets/cql2.bnf}
+\todo{filename, margin}
+
+Durch den rekursiven Charakter und den Zugriff auf Attribute aus Datensätzen lassen sich beliebig
+komplexe\todo{Beweis?} Ausdrücke erstellen, welche zur Transformation und Auswertung von Daten
+benutzt werden kann.
+
+Vorraussetzung dafür ist jedoch, dass alle benötigten Funktionen zur Verfügung stehen. Der
+vorläufige \ac{api}-Standard sieht vor, dass ein spezifischer Endpunkt über die auf dem Server
+verfügbaren Funktionen informiert. Unter \texttt{/functions} soll eine Liste von Funktionen
+zurückgegeben werden. Dabei soll jede Funktion über ihren Name, den Rückgabetyp und die möglichen
+Typen der Argumente Auskunft geben. Eine beispielhafte Antwort auf eine Anfrage vom
+\texttt{/functions}-Endpunkt wird in Quelltext \ref{lst:functions} dargestellt. Dabei wird die
+Funktion \texttt{st\_makepoint} aus \textit{PostGIS} und \texttt{date\_trunc} von \ac{sql}
+beschrieben. Alle Argumente der beiden Funktionen nehmen nur einen Typ an - \citetitle{ogcFiltering}
+sieht jedoch auch die Möglichkeit vor, dass Argumente mehrere Datentypen annehmen können.
+
+\lstinputlisting[
+  label=lst:functions,
+  caption={Antwort auf \texttt{/functions}-Anfrage (Auszug)},
+  captionpos=b,
+  language=json,
+  escapeinside=``
+]{assets/functions.json}
+\todo{filename, margin}

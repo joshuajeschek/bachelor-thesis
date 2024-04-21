@@ -5,7 +5,7 @@ handle_change() {
     while read -r directory events filename; do
         if [[ "$filename" =~ .*\.tex$ ]]; then
             echo $filename
-            make main || true
+            make main || VERBOSE=true make main || true
         fi
     done
 }
