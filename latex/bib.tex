@@ -22,6 +22,7 @@
 }
 
 \makeatletter
+% cite the alias like this: OGC (2016) or Open Geospatial Consortium (OGC) (2016)
 \DeclareCiteCommand{\textcitealias}
 {\usebibmacro{prenote}}
 {\usebibmacro{citeindex}%
@@ -29,15 +30,33 @@
 {\multicitedelim}
 {\usebibmacro{postnote}}
 
+% cite the alias like this: (OGC, 2016) or (Open Geospatial Consortium (OGC), (2016))
 \DeclareCiteCommand{\parencitealias}[\mkbibparens]
 {\usebibmacro{prenote}}
 {\usebibmacro{citeindex}%
   \printtext[bibhyperref]{\@citealias{\thefield{entrykey}}, \citeyear{\thefield{entrykey}}}}
 {\multicitedelim}
 {\usebibmacro{postnote}}
+
+% cite the alias with a forced short form like this: OGC (2016)
+\DeclareCiteCommand{\textcitealiass}
+{\usebibmacro{prenote}}
+{\usebibmacro{citeindex}%
+  \printtext[bibhyperref]{\@citealias{\thefield{entrykey}S} (\citeyear{\thefield{entrykey}})}}
+{\multicitedelim}
+{\usebibmacro{postnote}}
+
+% cite the alias with a forced short form like this: (OGC, 2016)
+\DeclareCiteCommand{\parencitealiass}[\mkbibparens]
+{\usebibmacro{prenote}}
+{\usebibmacro{citeindex}%
+  \printtext[bibhyperref]{\@citealias{\thefield{entrykey}S}, \citeyear{\thefield{entrykey}}}}
+{\multicitedelim}
+{\usebibmacro{postnote}}
 \makeatother
 
 \defcitealias{ogcCatalogue2016}{\ac{ogc}}
 \defcitealias{ogcFiltering}{\ac{ogc}}
+\defcitealias{ogcFilteringS}{\acs*{ogc}}
 \defcitealias{ISO924111}{ISO/TC 159 Ergonomics SC 4}
 \defcitealias{unisd2021}{UNIS-D}

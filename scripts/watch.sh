@@ -3,7 +3,7 @@
 # Function to handle file changes
 handle_change() {
     while read -r directory events filename; do
-        if [[ "$filename" =~ .*\.tex$ ]]; then
+        if [[ "$filename" =~ .*\.tex$ ]] || [[ "$directory" == './assets/' ]]; then
             echo $filename
             make main || VERBOSE=true make main || true
         fi

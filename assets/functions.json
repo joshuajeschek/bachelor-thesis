@@ -1,22 +1,18 @@
-{
-  "functions": [
-    {
-      "name": "st_makepoint",
-      "returns": ["geometry"],
-      "arguments": [
-        { "type": ["number"] },
-        { "type": ["number"] }
-      ]
-    },`\lstsetnumber{\dots}`
-  ...`\lstresetnumber\setcounter{lstnumber}{284}`
-    {
-      "name": "date_trunc",
-      "returns": ["datetime"],
-      "arguments": [
-        { "type": ["string"] },
-        { "type": ["datetime"] }
-      ]
-    }`\lstsetnumber{\dots}`
-  ...`\lstresetnumber\setcounter{lstnumber}{515}`
-  ]
-}
+{"functions": [
+  {"name": "st_makepoint",
+    "returns": ["geometry"],
+    "arguments": [
+      { "type": ["number"] },
+      { "type": ["number"] }
+    ]
+  },`\lstsetnumber{\dots}`
+...`\lstresetnumber\setcounter{lstnumber}{284}`
+  {"name": "date_trunc",
+    "returns": ["datetime"],
+    "arguments": [
+      { "type": ["string"] },
+      { "type": ["datetime"] }
+    ]
+  }`\lstsetnumber{\dots}`
+...`\lstresetnumber\setcounter{lstnumber}{515}`
+]}
