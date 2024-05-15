@@ -1,57 +1,20 @@
 \section{Ergebnisse und Analyse}
 
-\todo[inline]{use true box plots}
-
-\begin{figure}
-  \label{fig:seq}
+\begin{figure}[!h]
   \pgfplotstableread[col sep=comma]{assets/study-results.csv}\datatable
+  \centering
   \begin{tikzpicture}
     \begin{axis}[
-        ybar=2\pgflinewidth,
-        xlabel={Usability Test},
-        xtick=data,
-        xticklabels from table={\datatable}{n},
-        major x tick style=transparent,
-        ytick={1,2,...,7},
-        ymin=1,
-        ylabel={\acl{seq}},
-        ymajorgrids,
-        width=\textwidth,
-        bar width=8pt,
-        legend cell align=left,
-      ]
-
-      \addplot[plot1, fill=plot1] table [y=a, x expr=\coordindex] {\datatable};
-      \addplot[plot2, fill=plot2] table [y=b, x expr=\coordindex] {\datatable};
-      \addplot[plot3, fill=plot3] table [y=c, x expr=\coordindex] {\datatable};
-
-      \legend{Szenario 1, Szenario 2, Szenario 3}
-
-    \end{axis}
-  \end{tikzpicture}
-  \caption{Antworten auf die \acs{seq} nach jedem Szenario}
-\end{figure}
-
-\begin{figure}
-  \label{fig:seq2}
-  \pgfplotstableread[col sep=comma]{assets/study-results-transformed.csv}\datatable
-  \begin{tikzpicture}
-    \begin{axis}[
-        xtick={0,...,2},
+        boxplot/draw direction=y,
+        boxplot/every median/.style={ultra thick},
+        % boxplot/every average/.style={ultra thick},
+        xtick={1,2,3},
         xticklabels={Szenario 1, Szenario 2, Szenario 3},
-        ytick={1,2,...,7},
-        ymin=1,
         ylabel={\acl{seq}},
-        ymajorgrids,
       ]
-
-      \addplot+[only marks][plot1, error bars/.cd, y dir=both, y explicit]
-      coordinates {
-        (0, 6.22) +- (0.66, 0.66)
-        (1, 5.44) +- (0.88, 0.88)
-        (2, 5.25) +- (1.48, 1.48)
-      };
-
+      \addplot+ [boxplot] table [y=a] {\datatable};
+      \addplot+ [boxplot] table [y=b] {\datatable};
+      \addplot+ [boxplot] table [y=c] {\datatable};
     \end{axis}
   \end{tikzpicture}
   \caption{Antworten auf die \acs{seq} nach jedem Szenario}
