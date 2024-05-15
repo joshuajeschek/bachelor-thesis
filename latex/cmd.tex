@@ -26,3 +26,14 @@
   \end{center}
   \bigbreak
 }
+
+% ignore rows in pgfplotstableread?
+\pgfplotstableset{%
+  cignore row/.style={
+    row predicate/.append code={
+      \ifnum#1=\pgfplotstablerow\relax
+        \pgfplotstableuserowfalse
+      \fi
+    }
+  },
+}

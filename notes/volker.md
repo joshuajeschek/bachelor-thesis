@@ -78,7 +78,7 @@ https://db01.simplex4data.de/storage/index.php/s/CK8fJAk79TnhMYd
 - 
 
 ## Bewerten Sie die Einfachheit der Benutzung auf einer Skala von 1 bis 10. (1 ist sehr schwer, 10 ist sehr einfach.)
-- 
+- 8
 
 ## Falls das alte System bekannt ist, wie würden Sie dieses auf der gleichen Skala einschätzen?
 - 
