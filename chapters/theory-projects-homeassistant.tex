@@ -22,3 +22,52 @@ standardmäßig als Liste ausgeführt (Beispiel: "Leselampe anschalten, Musik ab
 \parencite{homeassistantConceptsTerminology} Sowohl Automatisierungen als auch Skripte werden als
 \acs{yaml}-Dateien\footnote{\acs{yaml}: \acl{yaml}} gespeichert und können über einen visuellen
 Editor bearbeitet werden. Dieser wird im Folgenden betrachtet.
+
+\subsubsection{Editor zum Erstellen von Automatisierungen}
+\begin{figure}[!htb]
+  \minipage{.49\textwidth}
+  \includegraphics[width=\linewidth]{assets/hassio-automation-empty.png}
+  \caption[]{Startpunkt der Erstellung einer Automatisierung in Home Assistant}
+  \endminipage
+  \hfill
+  \minipage{.49\textwidth}
+  \includegraphics[width=\linewidth]{assets/hassio-automation-trigger-select-1.png}
+  \caption{Auswahl eines Auslösers (1)}
+  \endminipage
+\end{figure}
+
+\blindtext
+
+\begin{figure}[!htb]
+  \minipage{.49\textwidth}
+  \includegraphics[width=\linewidth]{assets/hassio-automation-trigger-select-2.png}
+  \caption{Auswahl eines Auslösers (2)}
+  \endminipage
+  \hfill
+  \minipage{.49\textwidth}
+  \includegraphics[width=\linewidth]{assets/hassio-automation-trigger.png}
+  \caption{Angabe eines Auslösers in Home Assistant}
+  \endminipage
+\end{figure}
+
+\blindtext
+
+\begin{figure}[!htb]
+  \minipage{.49\textwidth}
+  \includegraphics[width=\linewidth]{assets/hassio-automation-condition.png}
+  \caption{Angabe einer Bedingung in Home Assistant}
+  \endminipage
+  \hfill
+  \minipage{.49\textwidth}
+  \includegraphics[width=\linewidth]{assets/hassio-automation-action.png}
+  \caption{Angabe einer Aktion in Home Assistant}
+  \endminipage
+\end{figure}
+
+\blindtext
+
+\lstinputlisting[
+  label=lst:automation,
+  caption={\ac{yaml}-Definition einer Automatisierung in Home Assistant},
+  language=yaml
+]{assets/hassio-automation.yaml}

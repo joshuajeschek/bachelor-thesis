@@ -1,0 +1,14 @@
+mode: single
+trigger:
+  - platform: zone
+    entity_id: person.joshua
+    zone: zone.wohnzimmer
+    event: enter
+condition:
+  - condition: numeric_state
+    entity_id: sensor.umgebungslicht
+    below: 20
+action:
+  - type: turn_on
+    entity_id: switch.leselampe
+    domain: switch
