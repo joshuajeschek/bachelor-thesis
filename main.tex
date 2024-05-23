@@ -32,6 +32,7 @@
 \usepackage{csvsimple} % CSV für Tabellen importieren
 \usepackage{booktabs} % Tabellenlinien
 \usepackage{pdfpages} % Einbindung von externen PDFs
+\usepackage{letltxmacro} % redefining commands with optional arguments
 
 
 \usepackage[style=apa,backend=biber,backref,natbib]{biblatex}
@@ -209,6 +210,7 @@ Eingehen auf Problematik: functions typen / queryables typen -> Informationsverl
 \let\clearpage\relax
 \printbibliography[filter=articles, title=Artikel, heading=subbibliography]
 \printbibliography[filter=books, title=Bücher, heading=subbibliography]
+\printbibliography[filter=software, title=Software, heading=subbibliography]
 \printbibliography[filter=other, title=sonstige, heading=subbibliography]
 \endgroup
 

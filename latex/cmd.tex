@@ -37,3 +37,13 @@
     }
   },
 }
+
+\LetLtxMacro{\blindtextblindtext}{\blindtext}
+\LetLtxMacro{\blindtextBlindtext}{\Blindtext}
+
+\RenewDocumentCommand{\blindtext}{O{\value{blindtext}}}{%
+  \begingroup\color{gray}\blindtextblindtext[#1]\endgroup
+}
+\RenewDocumentCommand{\Blindtext}{O{\value{blindtext}}O{\value{Blindtext}}}{%
+  \begingroup\color{gray}\blindtextBlindtext[#1][#2]\endgroup
+}

@@ -24,50 +24,93 @@ standardmäßig als Liste ausgeführt (Beispiel: "Leselampe anschalten, Musik ab
 Editor bearbeitet werden. Dieser wird im Folgenden betrachtet.
 
 \subsubsection{Editor zum Erstellen von Automatisierungen}
-\begin{figure}[!htb]
-  \minipage{.49\textwidth}
+\begin{figure}[!h]
+  \minipage[t]{.49\textwidth}
   \includegraphics[width=\linewidth]{assets/hassio-automation-empty.png}
-  \caption[]{Startpunkt der Erstellung einer Automatisierung in Home Assistant}
+  \caption{Startpunkt der Erstellung einer Automatisierung in Home Assistant}
+  \label{figure:hassio-automation-empty}
   \endminipage
   \hfill
-  \minipage{.49\textwidth}
+  \minipage[t]{.49\textwidth}
   \includegraphics[width=\linewidth]{assets/hassio-automation-trigger-select-1.png}
   \caption{Auswahl eines Auslösers (1)}
+  \label{figure:hassio-automation-trigger-select-1}
   \endminipage
 \end{figure}
 
-\blindtext
+Abbildung \ref{figure:hassio-automation-empty} zeigt den Initialzustand bei der Erstellung einer
+neuen Automatisierung. Die Ansicht ist in drei Abschnitte unterteilt, in der die drei relevanten
+Bausteine angegeben werden können. Abschnitte, die noch keinen Baustein enthalten, verfügen über
+einen Button zum Hinzufügen dieser. Der Button öffnet ein kontextabhängiges Pop-up-Fenster, wie in
+Abbildung \ref{figure:hassio-automation-trigger-select-1} und
+\ref{figure:hassio-automation-trigger-select-2} zu sehen. Je nach Typ des Bausteins werden dort
+unterschiedliche Elemente angezeigt. So werden im Auswahlmenü für Auslöser (Abbildung
+\ref{figure:hassio-automation-trigger-select-1}) nur passende Elemente gezeigt. In diesem Falle
+können Auslöser die Zustände von Geräten oder Entitäten, sowie zeitliche und örtlich bedingte
+Zustände sein. Sobald ein Auslöser ausgewählt wurde, können Einstellungen mit passenden UI-Elementen
+bearbeitet werden. Diese Einstellungen sind spezifisch für die Art des ausgewählten Auslösers. In
+Abbildung \ref{figure:hassio-automation-trigger} wurde der Auslöser "Zone" ausgewählt. Die Auswahl
+der gemeinten Person und Zone erfolgt über Dropdowns, während die Angabe, ob es auf das Betreten
+oder Verlassen der Zone geachtet werden soll, über einen Radiobutton gelöst wird. \todo{wo wird das
+festgelegt? configuration schema?} Die verfügbaren Auslöser werden von Integrationen bereitgestellt
+und per Programmcode mittels Python definiert \parencite{homeassistantDeviceAutomations2023}. In
+anderen Teilen des Home Assistant Projektes werden die passenden \ac{ui}-Elemente per TypeScript
+definiert \parencite{homeassistantHomeassistantFrontend}.
 
-\begin{figure}[!htb]
-  \minipage{.49\textwidth}
+\begin{figure}[!h]
+  \minipage[t]{.49\textwidth}
   \includegraphics[width=\linewidth]{assets/hassio-automation-trigger-select-2.png}
   \caption{Auswahl eines Auslösers (2)}
+  \label{figure:hassio-automation-trigger-select-2}
   \endminipage
   \hfill
-  \minipage{.49\textwidth}
+  \minipage[t]{.49\textwidth}
   \includegraphics[width=\linewidth]{assets/hassio-automation-trigger.png}
   \caption{Angabe eines Auslösers in Home Assistant}
+  \label{figure:hassio-automation-trigger}
   \endminipage
 \end{figure}
 
-\blindtext
+Abbildung \ref{figure:hassio-automation-condition} zeigt eine angegebene Bedingung. In diesem Fall
+wurde  die Bedingung "Numerischer Wert" mit der Entität "Umgebungslicht" ausgewählt und im Feld
+"Unter" wurde der Wert 20 eingetragen. Dies hat den Effekt, dass die Automatisierung nur ausgeführt
+wird, wenn das Umgebungslicht weniger als 20 Lux ist. Pflichtfelder sind mit einem Asterisk nach der
+Bezeichnung markiert. Dies ist hier nur bei der Entität der Fall, die restlichen Felder sind
+optional. Je nachdem welche Felder ausgefüllt sind, können unterschiedliche Verhaltensweisen
+auftreten. Dies wird in der externen Dokumentation beschrieben \parencite{homeassistantConditions}.
 
-\begin{figure}[!htb]
-  \minipage{.49\textwidth}
+Am Unteren Rand von Abbildung \ref{figure:hassio-automation-condition} ist die Möglichkeit gegeben,
+ein "Wert-Template" anzugeben und den numerischen Wert der ausgewählten Entität vor der Überprüfung
+der Bedingung zu verändern.
+
+\begin{figure}[!h]
+  \minipage[t]{.49\textwidth}
   \includegraphics[width=\linewidth]{assets/hassio-automation-condition.png}
   \caption{Angabe einer Bedingung in Home Assistant}
+  \label{figure:hassio-automation-condition}
   \endminipage
   \hfill
-  \minipage{.49\textwidth}
+  \minipage[t]{.49\textwidth}
   \includegraphics[width=\linewidth]{assets/hassio-automation-action.png}
   \caption{Angabe einer Aktion in Home Assistant}
+  \label{figure:hassio-automation-action}
   \endminipage
 \end{figure}
 
-\blindtext
+Abbildung \ref{figure:hassio-automation-action} zeigt den Endzustand beim Definieren einer
+Automatisierung. Dazu wurde eine Aktion hinzugefügt, die die Entität "Leselampe" auf den Zustand
+"An" setzt. Weitere Aktionen können über den Button "Aktion hinzufügen" hinzugefügt werden.
+Komplexere Aktionsabläufe können über ein Pop-up-Fenster, welches Abbildung
+\ref{figure:hassio-automation-trigger-select-1} und \ref{figure:hassio-automation-trigger-select-2}
+ähnelt, ausgewählt werden. Beispielsweise können Aktionen gleichzeitig ausgeführt werden, oder
+konditionale Strukturen gebildet werden \parencite{homeassistantScriptSyntax}.
 
 \lstinputlisting[
   label=lst:automation,
   caption={\ac{yaml}-Definition einer Automatisierung in Home Assistant},
-  language=yaml
+  language=yaml,
+  float=h,
 ]{assets/hassio-automation.yaml}
+
+Die erstellte Automatisierung wird als Datei im \ac{yaml}-Format gespeichert. Quelltext
+\ref{lst:automation} zeigt die aus der UI generierte \ac{yaml}-Datei. \todo{was noch mehr dazu?}
