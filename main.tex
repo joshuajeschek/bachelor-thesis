@@ -1,6 +1,4 @@
 \documentclass[oneside,a4paper,11pt,openright]{scrreprt}
-% scrreprt
-
 
 \usepackage[utf8]{inputenc} % Einstellung der Eingabekodierung
 \usepackage[ngerman]{babel} % Deutsche Trennmuster
@@ -95,15 +93,19 @@
 
 \section{Simplex4Data}
 \parencite{rudolfUmweltdatenmanagementGeoInspiration2018}
+\parencite{grossmannEnvVisioUniverselle2021}
+\parencite{grossmannEnvVisioService2022}
 \subsection{Das Realitätsmodell}
 \subsubsection{Allgemeine Erklärung von envVisio}
 \subsubsection{Vielleicht Aufteilung in mehrere Abschnitte?}
 \subsubsection{was ist alles wichtig?}
 \subsection{Laden und Konvertieren}
+\label{sec:simplex-importer}
 \subsubsection{auf Loader und insbesondere Converter eingehen}
 \subsubsection{da in Converter Formular eingesetzt werden soll}
 \subsubsection{wichtig, Prozesse zu verstehen}
-\subsection{Szenarios}
+\subsection{Szenarien}
+\label{sec:simplex-scenarios}
 \subsection{SimplexService}
 \label{sec:simplex-service}
 
@@ -154,8 +156,7 @@
 \url{https://www.semanticscholar.org/paper/DBSnap\%2B\%2B\%3A-creating-data-driven-programs-by-snapping-Silva-Nieuwenhuyse/fdd5ae1bc33337f9f0f7818509008705ffa2dc23}
 
 \subsection{DataSnap}
-\parencite{hellmannDataSnapEnabling2015}
-\url{https://www.semanticscholar.org/paper/DataSnap\%3A-Enabling-Domain-Experts-and-Introductory-Hellmann/999eda4ba4b9bb1c2320eaf9a0053e37e2bf0c51}
+\parencite{hellmannDataSnapEnabling2015} (Chapter 3: DataSnap for Domain Experts)
 
 \subsection{SQheLper}
 \parencite{jacobsSQheLperBlockbased2021}
@@ -163,13 +164,11 @@
 \subsection{Scratch}
 
 
-\chapter{Studie}
-\section{Prototyp}
-\subsection{Zielformulierung}
-\subsubsection{Genaue Formulierung der Problemstellung, was ist das Ziel?}
-\subsection{Lösungsvorstellung}
-Eingehen auf Problematik: functions typen / queryables typen -> Informationsverlust?
-\subsubsection{Erklärung des Resultats}
+\input{chapters/study}
+\input{chapters/study-prototype}
+\input{chapters/study-prototype-goal}
+\input{chapters/study-prototype-editor}
+\input{chapters/study-prototype-architecture}
 
 \clearpage
 \section{Studienaufbau}
