@@ -23,9 +23,16 @@ Der vorläufige Standard schlägt vor\rfqsfn, dass jedes ausgelieferte Attribut 
   escapeinside=``
 ]{assets/queryables.json}
 
-\todo[inline]{Standardfall für Queryables in SimplexService erklären (Szenario 1, Objektklassen,
-Felder, Attribute)}
+Im SimplexService werden die Daten im Realitätsmodell und in den Simplex-Szenarien als "API - Features"-Dienst ausgegeben (\textcite{grossmannEnvVisioService2022}, Vgl. \ref{sec:simplex-service}). Jedes Szenario bildet einen eigenen solchen Dienst, wobei das erste Szenario dem Realitätsmodell entspricht. Objektklassen werden als collections mit der ID \texttt{\{sourceId\}-1-\{classId\}} ausgegeben. Der Pfad für eine typische Queryables-Anfrage im SimplexService sieht somit wie folgt aus:
+\begin{quote}
+  \texttt{/simplexservice/scenarios/1/collections/9-1-100/queryables}
+\end{quote}
+Abgefragt wird Klasse 100 der Quelle 9 im Realitätsmodell (Szenario 1). Eine Ausschnit aus der dazugehörigen Antwort ist in Quelltext \ref{lst:queryables} zu sehen. In diesem Fall handelt es sich um die Objektklasse "Gemeinde".
 
-\todo[inline]{Auf Quelltext \ref{lst:queryables} eingehen}
+Jede Objektklasse in Simplex4Data verfügt über die gleichen Standardfelder (Titel, Schlüssel, Beschreibung, \dots). Diese können je nach Klasse per Metadaten unterschiedlich beschrieben werden, haben aber immer die gleichen Schlüssel. Außerdem werden für Objektklassen Attribute definiert, wie zum Beispiel Sachattribute (vom Typ Text, Ganzzahl, etc.) und Geometrieattribute (Geometrische Typen wie Fläche, Punkt, etc.). Sowohl die Standardfelder als auch die Attribute werden über den Queryables-Endpunkt ausgeliefert. Quelltext \ref{lst:queryables} enthält sowohl ein Standardfeld vom Typ string, als auch ein Geoemtrieattribut. Zu sehen ist, dass der Titel des Standardfelds gemäß der in der Objektklasse definierten Metadaten ausgeliefert wird und das Geometrieattribut nicht über \texttt{type}  definiert wird, sondern über \texttt{format} und eine Referenz zum zugehörigen \ac{JSON}-Schema.
 
-\todo[inline]{Gejointe Queryables beschreiben}
+Da in Simplex4Data Objektklassen miteinander verbunden sind, wurde der SimplexService um die Möglichkeit erweitert, Objektklasse-übergreifende Abfragen zu definieren. Diese geschieht über den \texttt{joins}-Parameter:
+\begin{quote}
+  \texttt{?joins=<9-1-100:9-3-106-obj-0:nn,>9-3-106-obj-0:9-1-102-obj-land}
+\end{quote}
+In diesem Fall wird die Verbindung 106 angesprochen, um mit der Abfrage außerdem die Informationen aus Klasse 102 abzufragen. Dabei handelt es sich um die Objektklasse "Bundesland". Wird der Parameter \texttt{joins} An eine Queryables-Abfrage angehangen, werden sowohl die Standardfelder und Attribute des der Basisklasse (in diesem Fall "Gemeinde"), als auch die der hinzugefügten Klassen zurückgegeben. Im zweiten Fall führt dies dazu, dass die Schlüssel der Elemente um einen Präfix erweitert werden, der angepasst werden kann. Im genannten Beispiel würde dann das Standardfeld der Klasse "Bundesland" \texttt{key} den Schlüssel \texttt{land.key} bekommen, während das gleiche Standardfelder der Klasse "Gemeinde" weiterhin \texttt{key} heißt.
