@@ -3,13 +3,7 @@
 \subsection{Funktionen in \ac{CQL}}
 \label{sec:functions}
 
-\citetitle{ogcFiltering} sieht Funktionen als ein Weg vor, um \ac{CQL} zu erweitern. Die Grammatik
-für Funktionen in \ac{CQL} werden durch die \ac{BNF} in Quelltext \ref{lst:function} definiert.
-Zu sehen ist, dass die Funktionen ähnlich wie in \ac{SQL} oder verschiedenen Programmiersprachen
-funktionieren\todo{Formulierung}. Eine Funktion wird durch einen Funktionsname (\textit{identifier})
-identifiziert, und kann eine Liste an Argumenten annehmen. Bei diesen Argumenten kann es sich um
-Literale, arithmetische und boolsche Ausdrücke, Arrays, Attribute\todo{mit Queryables in
-Verbindung setzen} oder weitere Funktionsaufrufe handeln.
+\citetitle{ogcFiltering} sieht Funktionen als ein Weg vor, um \ac{CQL} zu erweitern. Die Grammatik für Funktionen in \ac{CQL} werden durch die \ac{BNF} in Quelltext \ref{lst:function} definiert. Zu sehen ist, dass die Funktionen ähnlich wie in \ac{SQL} oder verschiedenen Programmiersprachen funktionieren\todo{Formulierung}. Eine Funktion wird durch einen Funktionsname (\textit{identifier}) identifiziert, und kann eine Liste an Argumenten annehmen. Bei diesen Argumenten kann es sich um Literale, arithmetische und boolsche Ausdrücke, Arrays, Attribute\todo{mit Queryables in Verbindung setzen} oder weitere Funktionsaufrufe handeln.
 \parencitealias{ogcFiltering}
 
 \lstinputlisting[
@@ -21,22 +15,9 @@ Verbindung setzen} oder weitere Funktionsaufrufe handeln.
   language=bnf
 ]{assets/cql2.bnf}
 
-\textcitealias{ogcFiltering} definiert Funktionen als eine Erweiterung für \ac{CQL}, um komplexere
-Filterbedingungen zu erstellen. Diese evaluieren immer als boolscher Wert. Entweder hat die äußere
-Funktion von Filterbedingungen einen Wahrheitswert als Rückgabetyp, oder der obere Ausdruck besteht
-aus einem boolschen Ausdruck. Durch den rekursiven Charakter und den Zugriff auf Attribute aus
-Datensätzen lassen sich jedoch mit Hilfe der Funktionen beliebig komplexe\todo{Beweis?} Ausdrücke
-erstellen, welche auch zur Transformation und Auswertung von Daten benutzt werden könnten.
+\textcitealias{ogcFiltering} definiert Funktionen als eine Erweiterung für \ac{CQL}, um komplexere Filterbedingungen zu erstellen. Diese evaluieren immer als boolscher Wert. Entweder hat die äußere Funktion von Filterbedingungen einen Wahrheitswert als Rückgabetyp, oder der obere Ausdruck besteht aus einem boolschen Ausdruck. Durch den rekursiven Charakter und den Zugriff auf Attribute aus Datensätzen lassen sich jedoch mit Hilfe der Funktionen beliebig komplexe\todo{Beweis?} Ausdrücke erstellen, welche auch zur Transformation und Auswertung von Daten benutzt werden könnten.
 
-Vorraussetzung dafür ist jedoch, dass alle benötigten Funktionen zur Verfügung stehen. Der
-vorläufige \ac{API}-Standard sieht vor, dass ein spezifischer Endpunkt über die auf dem Server
-verfügbaren Funktionen informiert. Unter \texttt{/functions} soll eine Liste von Funktionen
-zurückgegeben werden. Dabei soll jede Funktion über ihren Name, den Rückgabetyp und die möglichen
-Typen der Argumente Auskunft geben. Eine beispielhafte Antwort auf eine Anfrage vom
-\texttt{/functions}-Endpunkt wird in Quelltext \ref{lst:functions} dargestellt. Dabei wird die
-Funktion \texttt{st\_makepoint} aus \textit{PostGIS} und \texttt{date\_trunc} von \ac{SQL}
-beschrieben. Alle Argumente der beiden Funktionen nehmen nur einen Typ an - \citetitle{ogcFiltering}
-sieht jedoch auch die Möglichkeit vor, dass Argumente mehrere Datentypen annehmen können.
+Vorraussetzung dafür ist jedoch, dass alle benötigten Funktionen zur Verfügung stehen. Der vorläufige \ac{API}-Standard sieht vor, dass ein spezifischer Endpunkt über die auf dem Server verfügbaren Funktionen informiert. Unter \texttt{/functions} soll eine Liste von Funktionen zurückgegeben werden. Dabei soll jede Funktion über ihren Name, den Rückgabetyp und die möglichen Typen der Argumente Auskunft geben. Eine beispielhafte Antwort auf eine Anfrage vom \texttt{/functions}-Endpunkt wird in Quelltext \ref{lst:functions} dargestellt. Dabei wird die Funktion \texttt{st\_makepoint} aus \textit{PostGIS} und \texttt{date\_trunc} von \ac{SQL} beschrieben. Alle Argumente der beiden Funktionen nehmen nur einen Typ an - \citetitle{ogcFiltering} sieht jedoch auch die Möglichkeit vor, dass Argumente mehrere Datentypen annehmen können.
 \parencitealias{ogcFiltering}
 
 \lstinputlisting[
@@ -46,7 +27,4 @@ sieht jedoch auch die Möglichkeit vor, dass Argumente mehrere Datentypen annehm
   escapeinside=``
 ]{assets/functions.json}
 
-\citetitle{ogcFiltering} sieht für Argumente \texttt{type} als einzige Pflichtinformation vor\rfgfrjfn. Es
-kann jedoch auch ein Titel und eine Beschreibung für Argumente definiert werden.
-\parencitealias{ogcFiltering} Im SimplexService (siehe \ref{sec:simplex-service}) ist dies aktuell
-nicht der Fall - es werden nur die Argumenttypen ausgeliefert.
+\citetitle{ogcFiltering} sieht für Argumente \texttt{type} als einzige Pflichtinformation vor\rfgfrjfn. Es kann jedoch auch ein Titel und eine Beschreibung für Argumente definiert werden. \parencitealias{ogcFiltering} Im SimplexService (siehe \ref{sec:simplex-service}) ist dies aktuell nicht der Fall - es werden nur die Argumenttypen ausgeliefert.

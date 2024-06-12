@@ -5,24 +5,13 @@
 \subsection{Queryables}
 \label{sec:queryables}
 
-\citetitle{ogcFiltering} beschreibt \textit{Queryables} als Token, welche ein eine Eigenschaft einer
-Ressource darstellen, die in einem Filterausdruck verwendet werden können
-\parencitealias{ogcFiltering}. Der vorläufige Standard sieht vor, dass ein \ac{API}-Endpunkt
-angeboten wird, der über die existierenden Queryables, deren Namen und Typen informiert.
+\citetitle{ogcFiltering} beschreibt \textit{Queryables} als Token, welche ein eine Eigenschaft einer Ressource darstellen, die in einem Filterausdruck verwendet werden können \parencitealias{ogcFiltering}. Der vorläufige Standard sieht vor, dass ein \ac{API}-Endpunkt angeboten wird, der über die existierenden Queryables, deren Namen und Typen informiert.
 \parencitealias{ogcFiltering}
 
-Dabei existieren zwei Pfade. Unter \texttt{/queryables} werden die Attribute zurückgegeben , die für
-alle \textit{collections} existieren\rfgqog. Jede \textit{collection} verfügt des Weiteren über einen
-Unterpfad \texttt{/collections/\{collectionId\}/queryables}, welcher die spezifischen Attribute für
-die \textit{collection} angibt\rfgqol.
+Dabei existieren zwei Pfade. Unter \texttt{/queryables} werden die Attribute zurückgegeben , die für alle \textit{collections} existieren\rfgqog. Jede \textit{collection} verfügt des Weiteren über einen Unterpfad \texttt{/collections/\{collectionId\}/queryables}, welcher die spezifischen Attribute für die \textit{collection} angibt\rfgqol.
 \parencitealias{ogcFiltering}
 
-Der vorläufige Standard schlägt vor\rfqsfn, dass jedes ausgelieferte Attribut über einen Titel und,
-wenn nötig, über eine Beschreibung verfügt. Des Weiteren sollte jedes Attribut einen Typ angeben,
-außer es handelt sich um einen räumlichen Typ. Diese werden mittels einer Referenzierung des
-passenden \ac{JSON}-Schema des Geometrietyps gekennzeichnet. Zeitliche Typen sollen als
-\texttt{string} beschrieben werden und mit einem entsprechenden Format spezifiziert. Des Weiteren
-wird definiert, wie mit Aufzählungen und Wertebereichen umgegangen werden sollte.
+Der vorläufige Standard schlägt vor\rfqsfn, dass jedes ausgelieferte Attribut über einen Titel und, wenn nötig, über eine Beschreibung verfügt. Des Weiteren sollte jedes Attribut einen Typ angeben, außer es handelt sich um einen räumlichen Typ. Diese werden mittels einer Referenzierung des passenden \ac{JSON}-Schema des Geometrietyps gekennzeichnet. Zeitliche Typen sollen als \texttt{string} beschrieben werden und mit einem entsprechenden Format spezifiziert. Des Weiteren wird definiert, wie mit Aufzählungen und Wertebereichen umgegangen werden sollte.
 \parencitealias{ogcFiltering}
 
 \subsubsection{Queryables im SimplexService}

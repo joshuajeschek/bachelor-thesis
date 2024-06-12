@@ -1,43 +1,21 @@
 \subsection{\acl{CQL}}
 
 \boxnote{%
-  An sich definiert sowohl \citetitle{ogcCatalogue2016} als auch \citetitle{ogcFiltering} CQL.
-  Zweiteres definiert den Kern als "Simple CQL".
+  An sich definiert sowohl \citetitle{ogcCatalogue2016} als auch \citetitle{ogcFiltering} CQL. Zweiteres definiert den Kern als "Simple CQL".
 }
 
-Bei der \acf{CQL} \footnote{Nicht zu verwechseln mit der \textit{Contextual} Query Language, welche
-  zuerst auch als Common Query Language bezeichnet wurde.
-  \parencite{thelibraryofcongressCQLContextual2023, ZINGGentle2003}} handelt es sich um eine
-Abfragesprache, welche durch das \ac{OGC} zum internationalen Standard erhoben wurde und von allen
-konformen \textit{\ac{OGC} Catalogue Services} untersützt wird. \parencitealias{ogcCatalogue2016} In
-einem neuen Entwurf \parencitealias{ogcFiltering} wird eine Variation von \ac{CQL} eingeführt: Simple
-\ac{CQL}. Sie wird dazu benutzt um Filterbedingungen für Abfragen an \ac{OGC} API-Dienste zu
-erstellen und existiert in zwei Formaten: \textit{CQL\_TEXT} und \textit{CQL\_JSON}. \parencitealias{ogcFiltering} Im
-Weiteren wird sich auf Simple \ac{CQL} bezogen.
+Bei der \acf{CQL} \footnote{Nicht zu verwechseln mit der \textit{Contextual} Query Language, welche zuerst auch als Common Query Language bezeichnet wurde. \parencite{thelibraryofcongressCQLContextual2023, ZINGGentle2003}} handelt es sich um eine Abfragesprache, welche durch das \ac{OGC} zum internationalen Standard erhoben wurde und von allen konformen \textit{\ac{OGC} Catalogue Services} untersützt wird. \parencitealias{ogcCatalogue2016} In einem neuen Entwurf \parencitealias{ogcFiltering} wird eine Variation von \ac{CQL} eingeführt: Simple \ac{CQL}. Sie wird dazu benutzt um Filterbedingungen für Abfragen an \ac{OGC} API-Dienste zu erstellen und existiert in zwei Formaten: \textit{CQL\_TEXT} und \textit{CQL\_JSON}. \parencitealias{ogcFiltering} Im Weiteren wird sich auf Simple \ac{CQL} bezogen.
 
-Der Syntax von \ac{CQL} basiert auf der \texttt{WHERE}-Klausel in \acs{SQL}, und unterstützt
-boolesche Prädikate, Textvergleiche, zeitliche Datentypen und raumbezogene Operatoren. Die Sprache
-kann um Prädikate, Operatoren und Datentypen erweitert werden.
+Der Syntax von \ac{CQL} basiert auf der \texttt{WHERE}-Klausel in \acs{SQL}, und unterstützt boolesche Prädikate, Textvergleiche, zeitliche Datentypen und raumbezogene Operatoren. Die Sprache kann um Prädikate, Operatoren und Datentypen erweitert werden.
 \parencitealias{ogcCatalogue2016}
 
-Als typischer Anwendungsfall für \ac{CQL} dienen Geoinformationssysteme, mit denen sich die \ac{OGC}
-befasst. Daher sind im Gegensatz zu \ac{SQL} geometrische Operatoren wie \texttt{EQUALS},
-\texttt{DISJOINT}, \texttt{INTERSECT} oder \texttt{CONTAINS} bereits Teil der Sprache. Die in
-\ac{CQL} vorhandenen Datentypen umfassen sowohl primitive Datentypen, als auch zeitliche und
-raumbezogene Datentypen.
+Als typischer Anwendungsfall für \ac{CQL} dienen Geoinformationssysteme, mit denen sich die \ac{OGC} befasst. Daher sind im Gegensatz zu \ac{SQL} geometrische Operatoren wie \texttt{EQUALS}, \texttt{DISJOINT}, \texttt{INTERSECT} oder \texttt{CONTAINS} bereits Teil der Sprache. Die in \ac{CQL} vorhandenen Datentypen umfassen sowohl primitive Datentypen, als auch zeitliche und raumbezogene Datentypen.
 \parencitealias{ogcCatalogue2016}
 
-Der Entwurf des dritten Teil des OGC-API-Standards \parencitealias{ogcFiltering}, sieht die
-Möglichkeit vor, Abfragen über \ac{CQL} zu filtern. Laut Anforderung /req/filter/filter-param soll
-dies von Endpunkten wie \texttt{/collections/{collectionId}/items} unterstützt werden, welche
-Instanzlisten zurückgeben. Die Filterbedingungen, werden über den GET-Parameter \texttt{filter}
-spezifiziert und können mit \textit{CQL\_TEXT} und \textit{CQL\_JSON} umgesetzt werden.
+Der Entwurf des dritten Teil des OGC-API-Standards \parencitealias{ogcFiltering}, sieht die Möglichkeit vor, Abfragen über \ac{CQL} zu filtern. Laut Anforderung /req/filter/filter-param soll dies von Endpunkten wie \texttt{/collections/{collectionId}/items} unterstützt werden, welche Instanzlisten zurückgeben. Die Filterbedingungen, werden über den GET-Parameter \texttt{filter} spezifiziert und können mit \textit{CQL\_TEXT} und \textit{CQL\_JSON} umgesetzt werden.
 \parencitealias{ogcFiltering}
 
-Während Filterprädikate boolsche Werte und \texttt{NULL} ergeben, können sie aus komplexeren
-Funktionen zusammengesetzt sein, welche auch andere Datentypen als Rückgabewert besitzen können.
-Über den Endpunkt \texttt{/functions} können Clients Informationen über die verfügbaren Funktionen
-abrufen.
+Während Filterprädikate boolsche Werte und \texttt{NULL} ergeben, können sie aus komplexeren Funktionen zusammengesetzt sein, welche auch andere Datentypen als Rückgabewert besitzen können. Über den Endpunkt \texttt{/functions} können Clients Informationen über die verfügbaren Funktionen abrufen.
 
 \boxnote{%
   Wichtig für praktischen Teil:
