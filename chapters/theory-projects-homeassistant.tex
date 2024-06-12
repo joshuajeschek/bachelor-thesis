@@ -20,7 +20,7 @@ Tests darstellen, welche die Ausführung der Automatisierung verhindern können 
 standardmäßig als Liste ausgeführt (Beispiel: "Leselampe anschalten, Musik abspielen.").
 \textbf{Skripte} sind Sammlungen von Aktionen, welche als eine Aktion wiederverwendet werden können.
 \parencite{homeassistantConceptsTerminology} Sowohl Automatisierungen als auch Skripte werden als
-\acs{yaml}-Dateien\footnote{\acs{yaml}: \acl{yaml}} gespeichert und können über einen visuellen
+\acs{YAML}-Dateien\footnote{\acs{YAML}: \acl{YAML}} gespeichert und können über einen visuellen
 Editor bearbeitet werden. Dieser wird im Folgenden betrachtet.
 
 \subsubsection{Editor zum Erstellen von Automatisierungen}
@@ -54,7 +54,7 @@ der gemeinten Person und Zone erfolgt über Dropdowns, während die Angabe, ob e
 oder Verlassen der Zone geachtet werden soll, über einen Radiobutton gelöst wird. \todo{wo wird das
 festgelegt? configuration schema?} Die verfügbaren Auslöser werden von Integrationen bereitgestellt
 und per Programmcode mittels Python definiert \parencite{homeassistantDeviceAutomations2023}. In
-anderen Teilen des Home Assistant Projektes werden die passenden \ac{ui}-Elemente per TypeScript
+anderen Teilen des Home Assistant Projektes werden die passenden \ac{UI}-Elemente per TypeScript
 definiert \parencite{homeassistantHomeassistantFrontend}.
 
 \begin{figure}[!ht]
@@ -108,10 +108,10 @@ konditionale Strukturen gebildet werden \parencite{homeassistantScriptSyntax}.
 
 \lstinputlisting[
   label=lst:automation,
-  caption={\acs*{yaml}-Definition einer Automatisierung in Home Assistant},
+  caption={\acs*{YAML}-Definition einer Automatisierung in Home Assistant},
   language=yaml,
   float=h,
 ]{assets/hassio-automation.yaml}
 
-Die erstellte Automatisierung wird als Datei im \ac{yaml}-Format gespeichert. Quelltext
-\ref{lst:automation} zeigt die aus der UI generierte \ac{yaml}-Datei. \todo{was noch mehr dazu?}
+Die erstellte Automatisierung wird als Datei im \ac{YAML}-Format gespeichert. Quelltext
+\ref{lst:automation} zeigt die aus der UI generierte \ac{YAML}-Datei. \todo{was noch mehr dazu?}

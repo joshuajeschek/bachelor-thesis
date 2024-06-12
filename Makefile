@@ -1,4 +1,4 @@
-TMPFILES     = *.{log,aux,toc,out,lof,lot,snm,nav,vrb,bak,bbl,blg,ent,xml,bcf}
+TMPFILES     = *.{log,aux,toc,out,lof,lot,snm,nav,vrb,bak,bbl,blg,ent,xml,bcf,lol}
 FLAGS=
 LATEX        = texfot --quiet pdflatex
 BIB          = biber
