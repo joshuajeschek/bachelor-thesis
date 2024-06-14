@@ -55,13 +55,15 @@ Am Unteren Rand von Abbildung \ref{figure:hassio-automation-condition} ist die M
 \end{figure}
 \todo{wegen Formattierung maybe 4 Abbildungen als eine figure definieren}
 
-Abbildung \ref{figure:hassio-automation-action} zeigt den Endzustand beim Definieren einer Automatisierung. Dazu wurde eine Aktion hinzugefügt, die die Entität "Leselampe" auf den Zustand "An" setzt. Weitere Aktionen können über den Button "Aktion hinzufügen" hinzugefügt werden. Komplexere Aktionsabläufe können über ein Pop-up-Fenster, welches Abbildung \ref{figure:hassio-automation-trigger-select-1} und \ref{figure:hassio-automation-trigger-select-2} ähnelt, ausgewählt werden. Beispielsweise können Aktionen gleichzeitig ausgeführt werden, oder konditionale Strukturen gebildet werden \parencite{homeassistantScriptSyntax}.
+Abbildung \ref{figure:hassio-automation-action} zeigt den Endzustand beim Definieren einer Automatisierung. Es wurde eine Aktion hinzugefügt, die die Entität "Leselampe" auf den Zustand "An" setzt. Weitere Aktionen können über den Button "Aktion hinzufügen" hinzugefügt werden. Komplexere Aktionsabläufe können über ein Pop-up-Fenster, welches Abbildung \ref{figure:hassio-automation-trigger-select-1} und \ref{figure:hassio-automation-trigger-select-2} ähnelt, ausgewählt werden. Beispielsweise können Aktionen gleichzeitig ausgeführt werden, oder konditionale Strukturen gebildet werden \parencite{homeassistantScriptSyntax}.
+
+Sobald ein Block definiert wurde, wird im Titel des Blocks eine natürlichsprachliche Zusammenfassung angezeigt, welche die im Block enthaltenen Elemente beschreibt. Dabei werden die gesetzten Variablen und getroffenen Auswahlen berücksichtigt. Zudem besteht die Möglichkeit, Blöcke einzuklappen, wodurch vertikaler Platz gespart wird. Dies ist in Abbildung \ref{figure:hassio-automation-action} dargestellt.
 
 \lstinputlisting[
   label=lst:automation,
   caption={\acs*{YAML}-Definition einer Automatisierung in Home Assistant},
   language=yaml,
-  float=h,
+  float=ht,
 ]{assets/hassio-automation.yaml}
 
 Die erstellte Automatisierung wird als Datei im \ac{YAML}-Format gespeichert. Quelltext \ref{lst:automation} zeigt die aus der UI generierte \ac{YAML}-Datei. \todo{was noch mehr dazu?}
