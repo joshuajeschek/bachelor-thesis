@@ -1,7 +1,7 @@
 # Vor Beginn des ersten Szenarios
 ## Was ist ihr Eindruck?
 - sieht schick aus
-- abfragbare felder sind querfelder
+- abfragbare felder sind quellfelder
 - 
 
 ## Können Sie beschreiben was Sie über die Oberfläche in diesem Zustand denken?
