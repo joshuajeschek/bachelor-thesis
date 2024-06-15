@@ -28,11 +28,11 @@
   - funktionen die ich drauf und anwenden kann
     - zum import sachen verbinden und attribute ändern
   - erkennt SQL-Funktionen in Funktionen wieder
+  - Funktionen für Berechnungen identifiziert
 
 - Icons
   - verwirrt von icons von booleans, denkt es wären schaltflächen
   - erkennt Icons als Datentypen
-  - Funktionen für Berechnungen identifiziert
   - erkennt Icons als Datentypen
 
 - Allgemeines
@@ -64,3 +64,5 @@
   - Vorschlag für Liste links (Überschriften):
     - aktuell sticky header, nicht gut markiert was passiert bei klick (go to top)
     - vielleicht mit pfeil markieren
+  - drag and drop von Elementen links
+  - Benennung
