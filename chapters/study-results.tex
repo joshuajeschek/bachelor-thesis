@@ -44,5 +44,89 @@
     \end{axis}
   \end{tikzpicture}
   \caption{Einschätzung der Einfachheit der Benutzung nach dem Usability
-  Test auf einer Skala von 1 (sehr schwer) bis 10 (sehr einfach)}
+    Test auf einer Skala von 1 (sehr schwer) bis 10 (sehr einfach)}
+\end{figure}
+
+\colorlet{technical}{plot1}
+\colorlet{presentation}{plot2}
+\colorlet{interaction}{plot3}
+\colorlet{content}{plot4}
+
+\begin{figure}[!ht]
+  \centering
+  \begin{tikzpicture}
+    \begin{axis}[
+        xbar=0pt,
+        /pgf/bar shift=0pt,
+        legend style={
+            legend columns=4,
+            at={(xticklabel cs:0.5)},
+            anchor=north,
+            draw=none
+          },
+        ytick={0,...,19},
+        ytick style={draw=none},% <- added
+        axis y line*=none,
+        axis x line*=bottom,
+        tick label style={font=\footnotesize},
+        legend style={font=\footnotesize},
+        label style={font=\footnotesize},
+        xtick={0,...,10},
+        width=.8\textwidth,
+        bar width=6mm,
+        yticklabels={
+            {Übersichtlichkeit Funktionsliste},
+            {Präfix von Objektklassen},
+            {Benennung Abfragbare Felder},
+            {automatisches Typfilterung},
+            {Auswahl von Überladungen},
+            {Metadaten von Szenario-Feldern},
+            {Details zu Funktionen},
+            {Zugriff auf die Quelldaten},
+            {Angabe von statischen Werten},
+            {Probleme mit Scrollen},
+            {Drag\&Drop},
+            {Ersetzen von Einträgen},
+            {Benennung mittlerer Bereich},
+            {Datentyp von Szenario-Feldern},
+            {Benennung des Speichern-Buttons},
+            {Icons für Datentypen},
+            {Details zu Parametern},
+            {Anzeige von Attributen in Ziel},
+            {Parameterübernahme bei Überladungen},
+            {Bedienreihenfolge von Funktionen},
+        },
+        xmin=0,
+        % xmax=600,
+        area legend,
+        y=8mm,
+        enlarge y limits={abs=0.625},
+        nodes near coords,
+        nodes near coords style={text=black},
+        every axis plot/.append style={fill}
+      ]
+      \addplot[presentation, legend entry=Darstellung] coordinates {(1,0)};  % Übersichtlichkeit Funktionsliste
+      \addplot[content, legend entry=Inhalt] coordinates {(2,1)};  % Präfix von Objektklassen
+      \addplot[presentation] coordinates {(2,2)};  % Benennung Abfragbare Felder
+      \addplot[interaction, legend entry=Interaktion] coordinates {(2,3)};  % automatisches Typfilterung
+      \addplot[interaction] coordinates {(2,4)};  % Auswahl von Überladungen
+      \addplot[presentation] coordinates {(2,5)};  % Metadaten von Szenario-Feldern
+      \addplot[content] coordinates {(2,6)};  % Details zu Funktionen
+      \addplot[content] coordinates {(3,7)};  % Zugriff auf die Quelldaten
+      \addplot[interaction] coordinates {(3,8)};  % Angabe von statischen Werten
+      \addplot[technical, legend entry=Technisch] coordinates {(3,9)};  % Probleme mit Scrollen
+      \addplot[interaction] coordinates {(4,10)}; % Drag\&Drop
+      \addplot[interaction] coordinates {(4,11)}; % Ersetzen von Einträgen
+      \addplot[presentation] coordinates {(4,12)}; % Benennung mittlerer Bereich
+      \addplot[interaction] coordinates {(4,13)}; % Datentyp von Szenario-Feldern
+      \addplot[presentation] coordinates {(4,14)}; % Benennung des Speichern-Buttons
+      \addplot[presentation] coordinates {(5,15)}; % Icons für Datentypen
+      \addplot[content] coordinates {(5,16)}; % Details zu Parametern
+      \addplot[presentation] coordinates {(5,17)}; % Anzeige von Attributen in Ziel
+      \addplot[interaction] coordinates {(5,18)}; % Parameterübernahme bei Überladungen
+      \addplot[interaction] coordinates {(6,19)}; % Bedienreihenfolge von Funktionen
+    \end{axis}
+  \end{tikzpicture}
+  \caption{Häufigkeit des Auftretens verschiedener Probleme während der Usability-Studie.}
+  \label{figure:problems}
 \end{figure}

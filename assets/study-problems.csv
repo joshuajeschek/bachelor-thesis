@@ -1,0 +1,21 @@
+count,name,color
+1,Ubersichtlichkeit Funktionsliste,green
+2,Präfix von Objektklassen,blue
+2,Benennung Abfragbare Felder,green
+2,automatisches Typfilterung,blue
+2,Auswahl von Überladungen,green
+2,Metadaten von Szenario-Feldern,green
+2,Details zu Funktionen,green
+3,Zugriff auf die Quelldaten,green
+3,Angabe von statischen Werten,green
+3,Probleme mit Scrollen,green
+4,Drag\&Drop,green
+4,Ersetzen von Einträgen,green
+4,Benennung mittlerer Bereich,green
+4,Datentyp von Szenario-Feldern,green
+4,Benennung des Speichern-Buttons,green
+5,Icons für Datentypen,green
+5,Details zu Parametern,green
+5,Anzeige von Attributen in Ziel,green
+5,Parameterübernahme bei Überladungen,green
+6,Bedienreihenfolge von Funktionen,green
