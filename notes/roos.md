@@ -70,7 +70,6 @@
 
 ## Nach Szenario 3
 - SEQ(1-7): 6, durch die davor auch
-- 
 
 
 # Nach den Szenarios

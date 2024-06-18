@@ -73,6 +73,7 @@ https://db01.simplex4data.de/storage/index.php/s/CK8fJAk79TnhMYd
 - im Hinweistext Tipp nach parameter erwartet
 - cool dass sie einfach zurückgehen kann, und wieder was ändern/speichern
 
+
 # Szenario 3: Szenario Adressen Leipzig
 - fürchte das wird leipzig
 - muss erstmal schauen was ich hier als Felder hab (links)
@@ -87,7 +88,7 @@ https://db01.simplex4data.de/storage/index.php/s/CK8fJAk79TnhMYd
 - schön zum einfach reinklicken
 - key richtig erkannt, alles umbenannt
 - brauchen ja noch filter
-- überlaugt nach st_contains, kommt dann aber könnte auch nach Lindenau suchen, Ortsteilname soll...
+- überlegt nach st_contains, kommt dann aber könnte auch nach Lindenau suchen, Ortsteilname soll...
 - jetzt bin ich überfragt, kann ich da reinschreiben?
 
 ## Nach Szenario 3

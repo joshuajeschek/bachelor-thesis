@@ -42,6 +42,7 @@
 - noch paar Bezeichnungen
 - muss lesbar sein was import ist und von wo nach wo
 
+
 # Szenario 2: Import Gemeinden
 - erstmal verwirrt von der aufgabe
 - erstmal quellsystem angeschaut
