@@ -1,0 +1,128 @@
+\subsection{Qualitative Auswertung}
+
+Im Rahmen der Testsitzungen wurden 20 verschiedene Usability-Probleme identifiziert. Diese wurden entweder im Zuge von \ac{CTA} von den Teilnehmer:innen bemängelt, oder durch Verwirrung, Zögern und fehlerhafte Nutzung festgestellt.
+
+\begin{figure}[!ht]
+  \colorlet{presentation}{plot1}
+  \colorlet{interaction}{plot2}
+  \colorlet{content}{plot3}
+  \colorlet{technical}{plot4}
+  \centering
+  \begin{tikzpicture}
+    \begin{axis}[
+        xbar=0pt,
+        xmajorgrids=true,
+        xtick={0,...,10},
+        xmin=0,
+        xmax=6,
+        xlabel={Absolute Häufigkeit},
+        /pgf/bar shift=0pt,
+        legend style={legend cell align=left},
+        legend pos=south east,
+        axis y line*=none,
+        axis x line*=bottom,
+        tick label style={font=\footnotesize},
+        legend style={font=\footnotesize},
+        label style={font=\footnotesize},
+        width=.6\textwidth,
+        bar width=3.5mm,
+        ymin=1,
+        ytick={1,...,20},
+        ytick style={draw=none},
+        yticklabels={
+            {Übersichtlichkeit Funktionsliste (\ref{problem:functionlist})},
+            {Präfix von Objektklassen (\ref{problem:präfix})},
+            {Details zu Funktionen (\ref{problem:functions})},
+            {Benennung Abfragbare Felder (\ref{problem:queryables})},
+            {Metadaten von Szenario-Feldern (\ref{problem:meta})},
+            {automatische Typfilterung (\ref{problem:filter})},
+            {Auswahl von Überladungen (\ref{problem:overload})},
+            {Probleme mit Scrollen (\ref{problem:scroll})},
+            {Zugriff auf die Quelldaten (\ref{problem:quelle})},
+            {Angabe von statischen Werten (\ref{problem:statisch})},
+            {Benennung mittlerer Bereich (\ref{problem:mitte})},
+            {Benennung des Speichern-Buttons (\ref{problem:speichern})},
+            {Drag \& Drop (\ref{problem:drag})},
+            {Ersetzen von Einträgen (\ref{problem:ersetzen})},
+            {Datentyp von Szenario-Feldern (\ref{problem:datentyp})},
+            {Details zu Parametern (\ref{problem:parameter})},
+            {Icons für Datentypen (\ref{problem:icons})},
+            {Anzeige von Attributen in Ziel (\ref{problem:attribute})},
+            {Parameterübernahme bei Überladungen (\ref{problem:parameterübernahme})},
+            {Bedienreihenfolge von Funktionen (\ref{problem:bedienreihenfolge})},
+          },
+        area legend,
+        y=6mm,
+        enlarge y limits={abs=0.625},
+        every axis plot/.append style={fill}
+      ]
+      \addplot[interaction]  coordinates {(0,0)};  \addlegendentry{Interaktion (8)}
+      \addplot[presentation] coordinates {(0,0)};  \addlegendentry{Darstellung (7)}
+      \addplot[content]      coordinates {(0,0)};  \addlegendentry{Inhalt (4)}
+      \addplot[technical]    coordinates {(0,0)};  \addlegendentry{Technisch (1)}
+
+      \addplot[presentation] coordinates {(1,1)};  % Übersichtlichkeit Funktionsliste
+      \addplot[content]      coordinates {(2,2)};  % Präfix von Objektklassen
+      \addplot[content]      coordinates {(2,3)};  % Details zu Funktionen
+      \addplot[presentation] coordinates {(2,4)};  % Benennung Abfragbare Felder
+      \addplot[presentation] coordinates {(2,5)};  % Metadaten von Szenario-Feldern
+      \addplot[interaction]  coordinates {(2,6)};  % automatische Typfilterung
+      \addplot[interaction]  coordinates {(2,7)};  % Auswahl von Überladungen
+      \addplot[technical]    coordinates {(3,8)};  % Probleme mit Scrollen
+      \addplot[content]      coordinates {(3,9)};  % Zugriff auf die Quelldaten
+      \addplot[interaction]  coordinates {(3,10)}; % Angabe von statischen Werten
+      \addplot[presentation] coordinates {(4,11)}; % Benennung mittlerer Bereich
+      \addplot[presentation] coordinates {(4,12)}; % Benennung des Speichern-Buttons
+      \addplot[interaction]  coordinates {(4,13)}; % Drag \& Drop
+      \addplot[interaction]  coordinates {(4,14)}; % Ersetzen von Einträgen
+      \addplot[interaction]  coordinates {(4,15)}; % Datentyp von Szenario-Feldern
+      \addplot[content]      coordinates {(5,16)}; % Details zu Parametern
+      \addplot[presentation] coordinates {(5,17)}; % Icons für Datentypen
+      \addplot[presentation] coordinates {(5,18)}; % Anzeige von Attributen in Ziel
+      \addplot[interaction]  coordinates {(5,19)}; % Parameterübernahme bei Überladungen
+      \addplot[interaction]  coordinates {(6,20)}; % Bedienreihenfolge von Funktionen
+    \end{axis}
+  \end{tikzpicture}
+  \caption{Häufigkeit des Auftretens verschiedener Probleme während der Usability-Studie. Gezählt wird die Anzahl der Testsitzungen, in der das jeweilige Problem aufgetaucht ist.}
+  \label{figure:problems}
+\end{figure}
+
+Abbildung \ref{figure:problems} listet die aufgetretenen Probleme, zusammen mit ihrer Häufigkeit auf. Hierbei wird die Anzahl der Testsitzungen gezählt, in denen das jeweilige Problem aufgetaucht ist. Es wird nicht zwischen der Stärke des Auftretens unterschieden: Von einer Testperson könnte nur ein Verbesserungsvorschlag geäußert worden sein, während eine andere Person durch das Problem eine Aufgabe nicht richtig absolvieren konnte. Außerdem wird die Ernsthaftikgeit des Problems nicht bewertet. Eine Problem welches häufig auftritt könnte die Nutzer:innen zu einem geringeren Grad beeinträchtigt haben, während weniger häufig auftretende Probleme ein größeres Hindernis darstellen können. Diesbezüglich können sich auch die Meinungen der Teilnehmer:innen unterscheiden.
+
+Die aufgetretenen Probleme können in vier Kategorien unterteilt werden. Diese sind in Abbildung \ref{figure:problems} farblich dargestellt. Außerdem wurde jedem Problem ein Buchstabe zugeordnet (A-T), über welchen zur zugehörigen Textstelle navigiert werden kann. Im Folgenden werden die Probleme, sortiert nach ihrer Kategorie, erläutert.
+
+\subsubsection{Interaktionsprobleme}
+
+Probleme dieser Art sind dadurch charakterisiert, das sie Hürden beim Bedienen der Oberfläche darstellen. Die Nutzer:innen erwarteten beispielsweise eine unterschiedliche Art der Benutzung, oder hatten Schwierigkeiten bestimmte Aktionen auszuführen. Insgesamt wurden 8 Interaktionsprobleme festgestellt.
+
+\clabel{problem:bedienreihenfolge}{A}
+\clabel{problem:parameterübernahme}{B}
+\clabel{problem:datentyp}{F}
+\clabel{problem:ersetzen}{G}
+\clabel{problem:drag}{H}
+\clabel{problem:statisch}{K}
+\clabel{problem:overload}{N}
+\clabel{problem:filter}{O}
+
+\subsubsection{Darstellungsprobleme}
+
+Auch die Darstellung von Informationen innerhalb des Block-Editors führte zu Problemen. Es wurden 8 Darstellungsprobleme identifiziert, welche von unklaren Bezeichnungen bis hin zu Icons reichen.
+
+\clabel{problem:attribute}{C}
+\clabel{problem:icons}{D}
+\clabel{problem:speichern}{I}
+\clabel{problem:mitte}{J}
+\clabel{problem:meta}{P}
+\clabel{problem:queryables}{Q}
+\clabel{problem:functionlist}{T}
+
+\subsubsection{Inhaltliche Probleme}
+
+\clabel{problem:parameter}{E}
+\clabel{problem:quelle}{L}
+\clabel{problem:functions}{R}
+\clabel{problem:präfix}{S}
+
+\subsubsection{Technische Probleme}
+
+\clabel{problem:scroll}{M}

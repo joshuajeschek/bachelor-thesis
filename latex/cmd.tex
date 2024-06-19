@@ -47,3 +47,12 @@
 \RenewDocumentCommand{\Blindtext}{O{\value{blindtext}}O{\value{Blindtext}}}{%
   \begingroup\color{gray}\blindtextBlindtext[#1][#2]\endgroup
 }
+
+% custom label
+\makeatletter
+\newcommand{\clabel}[2]{%
+   \protected@write \@auxout {}{\string \newlabel {#1}{{#2}{\thepage}{#2}{#1}{}} }%
+   \hypertarget{#1}{#2}
+}
+\makeatother
+
