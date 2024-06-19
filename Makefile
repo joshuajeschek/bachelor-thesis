@@ -9,14 +9,20 @@ default: main
 %: %.tex bibliography.bib $(wildcard src/**/*) $(wildcard assets/**/*)
 ifdef VERBOSE
 	$(LATEX) $@
+	mv $@.pdf thesis.pdf
 	$(BIB) $@
 	$(LATEX) $@
+	mv $@.pdf thesis.pdf
 	$(LATEX) $@
+	mv $@.pdf thesis.pdf
 else
 	$(LATEX) $@ 1> /dev/null
+	mv $@.pdf thesis.pdf
 	$(BIB) $@ 1> /dev/null
 	$(LATEX) $@ 1> /dev/null
+	mv $@.pdf thesis.pdf
 	$(LATEX) $@ 1> /dev/null
+	mv $@.pdf thesis.pdf
 endif
 
 notes/%:

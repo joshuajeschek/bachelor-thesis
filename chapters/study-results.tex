@@ -57,35 +57,36 @@
   \begin{tikzpicture}
     \begin{axis}[
         xbar=0pt,
+        xmajorgrids=true,
+        xtick={0,...,10},
+        xmin=0,
+        xmax=6,
+        xlabel={Absolute Häufigkeit},
         /pgf/bar shift=0pt,
-        legend style={
-            legend columns=4,
-            at={(xticklabel cs:0.5)},
-            anchor=north,
-            draw=none
-          },
-        ytick={0,...,19},
-        ytick style={draw=none},% <- added
+        legend style={legend cell align=left},
+        legend pos=south east,
         axis y line*=none,
         axis x line*=bottom,
         tick label style={font=\footnotesize},
         legend style={font=\footnotesize},
         label style={font=\footnotesize},
-        xtick={0,...,10},
-        width=.8\textwidth,
-        bar width=6mm,
+        width=.6\textwidth,
+        bar width=3.5mm,
+        ymin=1,
+        ytick={1,...,20},
+        ytick style={draw=none},% <- added
         yticklabels={
             {Übersichtlichkeit Funktionsliste},
             {Präfix von Objektklassen},
             {Benennung Abfragbare Felder},
-            {automatisches Typfilterung},
+            {automatische Typfilterung},
             {Auswahl von Überladungen},
             {Metadaten von Szenario-Feldern},
             {Details zu Funktionen},
             {Zugriff auf die Quelldaten},
             {Angabe von statischen Werten},
             {Probleme mit Scrollen},
-            {Drag\&Drop},
+            {Drag \& Drop},
             {Ersetzen von Einträgen},
             {Benennung mittlerer Bereich},
             {Datentyp von Szenario-Feldern},
@@ -95,38 +96,42 @@
             {Anzeige von Attributen in Ziel},
             {Parameterübernahme bei Überladungen},
             {Bedienreihenfolge von Funktionen},
-        },
-        xmin=0,
-        % xmax=600,
+          },
         area legend,
-        y=8mm,
+        y=6mm,
         enlarge y limits={abs=0.625},
-        nodes near coords,
-        nodes near coords style={text=black},
         every axis plot/.append style={fill}
       ]
-      \addplot[presentation, legend entry=Darstellung] coordinates {(1,0)};  % Übersichtlichkeit Funktionsliste
-      \addplot[content, legend entry=Inhalt] coordinates {(2,1)};  % Präfix von Objektklassen
-      \addplot[presentation] coordinates {(2,2)};  % Benennung Abfragbare Felder
-      \addplot[interaction, legend entry=Interaktion] coordinates {(2,3)};  % automatisches Typfilterung
-      \addplot[interaction] coordinates {(2,4)};  % Auswahl von Überladungen
-      \addplot[presentation] coordinates {(2,5)};  % Metadaten von Szenario-Feldern
-      \addplot[content] coordinates {(2,6)};  % Details zu Funktionen
-      \addplot[content] coordinates {(3,7)};  % Zugriff auf die Quelldaten
-      \addplot[interaction] coordinates {(3,8)};  % Angabe von statischen Werten
-      \addplot[technical, legend entry=Technisch] coordinates {(3,9)};  % Probleme mit Scrollen
-      \addplot[interaction] coordinates {(4,10)}; % Drag\&Drop
-      \addplot[interaction] coordinates {(4,11)}; % Ersetzen von Einträgen
-      \addplot[presentation] coordinates {(4,12)}; % Benennung mittlerer Bereich
-      \addplot[interaction] coordinates {(4,13)}; % Datentyp von Szenario-Feldern
-      \addplot[presentation] coordinates {(4,14)}; % Benennung des Speichern-Buttons
-      \addplot[presentation] coordinates {(5,15)}; % Icons für Datentypen
-      \addplot[content] coordinates {(5,16)}; % Details zu Parametern
-      \addplot[presentation] coordinates {(5,17)}; % Anzeige von Attributen in Ziel
-      \addplot[interaction] coordinates {(5,18)}; % Parameterübernahme bei Überladungen
-      \addplot[interaction] coordinates {(6,19)}; % Bedienreihenfolge von Funktionen
+      \addplot[presentation] coordinates {(0,0)};
+      \addplot[content] coordinates {(0,0)};
+      \addplot[interaction] coordinates {(0,0)};
+      \addplot[technical] coordinates {(0,0)};
+      \addlegendentry{Darstellung}
+      \addlegendentry{Inhalt}
+      \addlegendentry{Interaktion}
+      \addlegendentry{Technisch}
+      \addplot[presentation] coordinates {(1,1)};  % Übersichtlichkeit Funktionsliste
+      \addplot[content]      coordinates {(2,2)};  % Präfix von Objektklassen
+      \addplot[presentation] coordinates {(2,3)};  % Benennung Abfragbare Felder
+      \addplot[interaction]  coordinates {(2,4)};  % automatisches Typfilterung
+      \addplot[interaction]  coordinates {(2,5)};  % Auswahl von Überladungen
+      \addplot[presentation] coordinates {(2,6)};  % Metadaten von Szenario-Feldern
+      \addplot[content]      coordinates {(2,7)};  % Details zu Funktionen
+      \addplot[content]      coordinates {(3,8)};  % Zugriff auf die Quelldaten
+      \addplot[interaction]  coordinates {(3,9)};  % Angabe von statischen Werten
+      \addplot[technical]    coordinates {(3,10)}; % Probleme mit Scrollen
+      \addplot[interaction]  coordinates {(4,11)}; % Drag\&Drop
+      \addplot[interaction]  coordinates {(4,12)}; % Ersetzen von Einträgen
+      \addplot[presentation] coordinates {(4,13)}; % Benennung mittlerer Bereich
+      \addplot[interaction]  coordinates {(4,14)}; % Datentyp von Szenario-Feldern
+      \addplot[presentation] coordinates {(4,15)}; % Benennung des Speichern-Buttons
+      \addplot[presentation] coordinates {(5,16)}; % Icons für Datentypen
+      \addplot[content]      coordinates {(5,17)}; % Details zu Parametern
+      \addplot[presentation] coordinates {(5,18)}; % Anzeige von Attributen in Ziel
+      \addplot[interaction]  coordinates {(5,19)}; % Parameterübernahme bei Überladungen
+      \addplot[interaction]  coordinates {(6,20)}; % Bedienreihenfolge von Funktionen
     \end{axis}
   \end{tikzpicture}
-  \caption{Häufigkeit des Auftretens verschiedener Probleme während der Usability-Studie.}
+  \caption{Häufigkeit des Auftretens verschiedener Probleme während der Usability-Studie. Gezählt wird die Anzahl der Testsitzungen, in der das jeweilige Problem aufgetaucht ist.}
   \label{figure:problems}
 \end{figure}
