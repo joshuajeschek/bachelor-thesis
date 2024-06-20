@@ -1,24 +1,24 @@
 # Probleme
-- Fehlendes Drag & Drop: Z,E,F,V
-- Ersetzen von Elementen: Z,R,P,T
-- Benennung Abfragbare Felder: Z,F
-- automatische Typfilterung: Z,R
-- Icons für Datentypen: Z,J,P,E,R(text)
-- Bedeutung/Reihenfolge von Parametern: Z,E,A,F,V
 - Bedienreihenfolge von Funktionen: R,Z,E,F,P,T
 - Anzeige von key statt title in Ziel: Z,A,F,P,V
-- direkter Zugriff auf die Quelldaten: Z,H,J
-- (I) Mitte = Quelltabelle / Benennung mittlerer Bereich: Z,E,J,F
-- Auswahl von Überladungen: Z,T
-- Verschwinden von Auswahl bei Überladungen: H,R,E,J,P
-- Übersichtlichkeit Funktionen: E
+- Icons für Datentypen: Z,J,P,E,R(text)
+- Bedeutung/Reihenfolge von Parametern: Z,E,A,F,V
+- Verschwinden von Auswahl bei Überladungen: H,R,J,P
 - Typ der Felder im Szenario-Modus: H,Z,P,V
-- (j) Statische Werte in Textfeld eingeben: J,E,A
+- Ersetzen von Elementen: Z,R,P,T
+- Fehlendes Drag & Drop: Z,E,F,V
 - Benennung des "Speichern"-Buttons: R,H,A,V
+- Mitte = Quelltabelle / Benennung mittlerer Bereich: Z,E,J,F
+- Statische Werte in Textfeld eingeben: J,E,A
+- direkter Zugriff auf die Quelldaten: Z,H,J
 - Scrollen: R,F,V
+- Auswahl von Überladungen: Z,T
+- automatische Typfilterung: Z,R
 - Metadaten von Szenario-Feldern: J,R
-- Präfix Szenario-Modus: T,J
+- Benennung Abfragbare Felder: Z,F
 - detailliertere Beschreibung der Funktionen: P,V
+- Präfix Szenario-Modus: T,J
+- Übersichtlichkeit Funktionen: E
 
 # ZENNER
 ## Arbeitsweise
@@ -123,7 +123,7 @@
   - durchsucht quelldaten nach geometrie, findet längen breitengrad sucht nach funktion
   - was ist da als erstes benötigt? nutzt tipp der in description steht
 - concat
-  - (b) wie mehr? findet pfeile, verwirrt dass erste zwei weg sind
+  - wie mehr? findet pfeile, verwirrt dass erste zwei weg sind
   - schaut zuerst wie viele benötigt dann schwups
 - kann mit vielen funktionen nichts anfangen, kann aber einfach die benutzen die sie braucht
 ## Minifilter
@@ -151,13 +151,13 @@
 ## Funktionen
 - für ars gleich funktion rausgesucht
 - concat
-  - (a) gleich parameteranzahl gesetzt, angemerkt dass später änderbar sein sollte
+  - gleich parameteranzahl gesetzt, angemerkt dass später änderbar sein sollte
   - beschreibung der parameter wäre praktisch
 ## Auswahlmenü links
 - inhalt der attribute links nicht verfügbar, nur keys, wäre praktisch vorschau
 ## Simplex Szenarios
 - straßennummer numerisch, falsches feld (typ) erst hinzugefügt
-- (a) typ dropdown
+- typ dropdown
   - nicht gleich den dropdown button gefunden
   - für andere typen sollten icons verwendet werden und benennung angepasst werden
 - neu hinzugefügt felder sollten gleich ausgewählt werden, so ein klick gespart
