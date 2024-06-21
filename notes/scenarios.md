@@ -12,8 +12,8 @@
 - Statische Werte in Textfeld eingeben: J,E,A
 - direkter Zugriff auf die Quelldaten: Z,H,J
 - Scrollen: R,F,V
-- Auswahl von Überladungen: Z,T
-- automatische Typfilterung: Z,R
+- Auswahl von Überladungen: Z,T,A
+- automatische Typfilterung: Z,R,F
 - Metadaten von Szenario-Feldern: J,R
 - Benennung Abfragbare Felder: Z,F
 - detailliertere Beschreibung der Funktionen: P,V
@@ -284,7 +284,7 @@
 - checkt autofilter sofort
 - überrascht dass nach reinklicken autofilter zurückgesetzt wird, findet aber gut, QOL, ein klick weniger
 ## Icons
-- dachte das icon für Text ein button ist, für mehr infos ooder so?
+- dachte das icon für Text ein button ist, für mehr infos oder so?
 ## Minifilter
 - minifilter leicht zu übersehen, hat übersicht erwartet bei klick
 ## Funktionen
