@@ -1,7 +1,7 @@
 # Probleme
 - Bedienreihenfolge von Funktionen: R,Z,E,F,P,T
 - Anzeige von key statt title in Ziel: Z,A,F,P,V
-- Icons für Datentypen: Z,J,P,E,R(text)
+- Icons für Datentypen: Z,J,P,E,R(text),F
 - Bedeutung/Reihenfolge von Parametern: Z,E,A,F,V
 - Verschwinden von Auswahl bei Überladungen: H,R,J,P
 - Typ der Felder im Szenario-Modus: H,Z,P,V

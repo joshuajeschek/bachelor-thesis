@@ -1,6 +1,6 @@
 TMPFILES     = *.{log,aux,toc,out,lof,lot,snm,nav,vrb,bak,bbl,blg,ent,xml,bcf,lol}
 FLAGS=
-LATEX        = texfot --quiet pdflatex
+LATEX        = texfot --quiet pdflatex --shell-escape
 BIB          = biber
 SHELL        = /bin/bash # fix for not running clean
 
