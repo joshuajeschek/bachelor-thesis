@@ -2,6 +2,8 @@
 
 \todo[noline]{Zahlenformat überprüfen}
 
+\todo[noline]{Buchstaben anpassen}
+
 Im Rahmen der Testsitzungen wurden 20 verschiedene Usability-Probleme identifiziert. Diese wurden entweder im Zuge von \ac{CTA} von den Teilnehmer:innen bemängelt, oder durch Verwirrung, Zögern und fehlerhafte Nutzung festgestellt.
 
 \begin{figure}[!ht]
@@ -36,18 +38,18 @@ Im Rahmen der Testsitzungen wurden 20 verschiedene Usability-Probleme identifizi
             {\hyperref[p:präfix]{Präfix von Objektklassen (S)}},
             {\hyperref[p:functions]{Details zu Funktionen (R)}},
             {\hyperref[p:queryables]{Benennung Abfragbare Felder (Q)}},
-            {\hyperref[p:meta]{Metadaten von Szenario-Feldern (P)}},
             {\hyperref[p:scroll]{Probleme mit Scrollen (O)}},
             {\hyperref[p:quelle]{Zugriff auf die Quelldaten (N)}},
             {\hyperref[p:filter]{Automatische Typfilterung (M)}},
             {\hyperref[p:statisch]{Angabe von statischen Werten (L)}},
             {\hyperref[p:overload]{Auswahl von Überladungen (K)}},
-            {\hyperref[p:mitte]{Benennung mittlerer Bereich (J)}},
+            {\hyperref[p:mitte]{Benennung rechter Bereich (J)}},
             {\hyperref[p:speichern]{Benennung des Speichern-Buttons (I)}},
             {\hyperref[p:parameterübernahme]{Parameterübernahme bei Überladungen (H)}},
             {\hyperref[p:drag]{Drag \& Drop (G)}},
             {\hyperref[p:ersetzen]{Ersetzen von Einträgen (F)}},
             {\hyperref[p:parameter]{Details zu Parametern (E)}},
+            {\hyperref[p:meta]{Metadaten von Szenario-Feldern (P)}},
             {\hyperref[p:attribute]{Anzeige von Attributen in Ziel (D)}},
             {\hyperref[p:datentyp]{Datentyp von Szenario-Feldern (C)}},
             {\hyperref[p:icons]{Icons für Datentypen (B)}},
@@ -67,18 +69,18 @@ Im Rahmen der Testsitzungen wurden 20 verschiedene Usability-Probleme identifizi
       \addplot[content]      coordinates {(2,2)};  % Präfix von Objektklassen
       \addplot[content]      coordinates {(2,3)};  % Details zu Funktionen
       \addplot[presentation] coordinates {(2,4)};  % Benennung Abfragbare Felder
-      \addplot[presentation] coordinates {(2,5)};  % Metadaten von Szenario-Feldern
-      \addplot[technical]    coordinates {(3,6)};  % Probleme mit Scrollen
-      \addplot[content]      coordinates {(3,7)};  % Zugriff auf die Quelldaten
-      \addplot[interaction]  coordinates {(3,8)};  % automatische Typfilterung
-      \addplot[interaction]  coordinates {(3,9)}; % Angabe von statischen Werten
-      \addplot[interaction]  coordinates {(3,10)};  % Auswahl von Überladungen
-      \addplot[presentation] coordinates {(4,11)}; % Benennung mittlerer Bereich
-      \addplot[presentation] coordinates {(4,12)}; % Benennung des Speichern-Buttons
-      \addplot[interaction]  coordinates {(4,13)}; % Parameterübernahme bei Überladungen
-      \addplot[interaction]  coordinates {(4,14)}; % Drag \& Drop
-      \addplot[interaction]  coordinates {(4,15)}; % Ersetzen von Einträgen
-      \addplot[content]      coordinates {(5,16)}; % Details zu Parametern
+      \addplot[technical]    coordinates {(3,5)};  % Probleme mit Scrollen
+      \addplot[content]      coordinates {(3,6)};  % Zugriff auf die Quelldaten
+      \addplot[interaction]  coordinates {(3,7)};  % automatische Typfilterung
+      \addplot[interaction]  coordinates {(3,8)};  % Angabe von statischen Werten
+      \addplot[interaction]  coordinates {(3,9)};  % Auswahl von Überladungen
+      \addplot[presentation] coordinates {(4,10)}; % Benennung rechterBereich
+      \addplot[presentation] coordinates {(4,11)}; % Benennung des Speichern-Buttons
+      \addplot[interaction]  coordinates {(4,12)}; % Parameterübernahme bei Überladungen
+      \addplot[interaction]  coordinates {(4,13)}; % Drag \& Drop
+      \addplot[interaction]  coordinates {(4,14)}; % Ersetzen von Einträgen
+      \addplot[content]      coordinates {(5,15)}; % Details zu Parametern
+      \addplot[presentation] coordinates {(5,16)}; % Metadaten von Szenario-Feldern
       \addplot[presentation] coordinates {(5,17)}; % Anzeige von Attributen in Ziel
       \addplot[interaction]  coordinates {(5,18)}; % Datentyp von Szenario-Feldern
       \addplot[presentation] coordinates {(6,19)}; % Icons für Datentypen
@@ -190,10 +192,18 @@ Die Anzeige von Attributen in der Zielstruktur weicht von der im Auswahlmenü ab
   \endminipage
 \end{figure}
 
-\plabel{p:speichern}
-\plabel{p:mitte}
 \plabel{p:meta}
+Im Szenario-Modus besteht die Möglichkeit, grundlegende Metadaten der Felder zu bearbeiten \textbf{(P)}. Wie in Abbildung \ref{fig:attribute-target} zu sehen, können Titel (\texttt{nam}, "Straßenname") und Schlüssel (\texttt{key}, "strassenname") bearbeitet werden. Dies soll sowohl über die Stift-Symbole als auch durch die gepunktete Linie unter den Werten signalisiert. Die Möglichkeit der Bearbeitung wurde nicht immer wahrgenommen. In 2 Fällen wurden die Standardwerte so belassen wie sie sind. In 5 Testsitzungen kam es jedoch zu verschiedenen Komplikationen während der Bearbeitung der Metadaten. Der Unterschied zwischen den zwei Werten war den Teilnehmer:innen nicht bekannt und oft wurde deshalb nur der Titel angepasst. In einem Fall trat jedoch das Gegenteil ein - als Grund wurde genannt dass der Schlüssel durch den dunklen Hintergrund mehr hervorstach. Eine Person verwechselte den Schlüssel (\texttt{key}) mit der Beschreibung (\texttt{dsc}), welche allerdings nicht über die Anwendung editierbar ist. Zwei mal wurde vorgeschlagen, den Schlüssel über eine Slugify-Funktion anhand des Titels zu generieren, um Mehrfacheingaben zu verhindern. Auch kritisiert wurde, dass nicht ersichtlich ist, dass es sich beim Schlüssel um ein Pflichtfeld handelt und dass der Inhalt beim Beginn der Bearbeitung nicht automatisch komplett ausgewählt ist.
+
+\plabel{p:speichern}
+Als Abschluss von Szenarien sollten die Teilnehmer:innen den "Speichern"-Button \textbf{(I)} betätigen, und so zur in Abbildung \ref{fig:scenario-result} dargestellten Tabellenansicht gelangen. In der Aufgabenstellung wurde vermieden, die in der Anwendung verwendete Sprache zu nutzen. Es wurde nur der Hinweis gegeben, dass die erstellten Objekte überprüft werden sollen. Nicht in allen Testsitzungen konnte erfolgreich die Assoziation zwischen der Beendigung der Aufgabe, dem Überprüfen des Resultats und dem "Speichern"-Button gemacht \todo{gemacht?} werden. Insgesamt 4 Personen waren mit der Benennung des Buttons unzufrieden, wobei 2 von ihnen spezifizierten, dass sie durch das Klicken auf "Speichern" nicht erwarteten, die Eingaben überprüfen zu können oder eine Vorschau zu sehen. Ein:e Teilnehmer:in würde "Ausführen" als eine angemessenere Benennung empfinden. Zu beobachten war, dass Personen, die bereits mehr Erfahrung mit der Benutzung von Simplex4Data hatten, die Benennung des Buttons nicht kritisierten. Der Button zum Speichern von Formularen ist in Simplex4Data standardmäßig oben rechts zu finden.
+
+\plabel{p:mitte}
+Wie bereits während der Einfindungsphase bemerkt, kam es bezüglich der Identifikation des rechten Bereiches \textbf{(I)} zu Problemen. Während der Szenarios identifizierten 3 Personen zuerst fälschlicherweise die Zielstruktur als Quelltabelle, und brauchten somit länger, um die allgemeine Funktionsweise des Block-Editors zu verinnerlichen. Ein:e Teilnehmer:in äußerte als Grund für die Verwirrung, dass sie nicht wusste, dass Standardfelder umbenannt werden können. Eine weitere Person erkannte zwar auf Anhieb, dass es sich bei den Feldern im rechten Bereich um die Zielstruktur handelt, wünschte sich jedoch trotzdem eine Überschrift zur Orientierung.
+
 \plabel{p:queryables}
+Bei 2 der 3 eben beschriebenen Testsitzungen wurde die Bennenung der abfragbaren Felder in der Seitenleiste bemängelt \textbf{(Q)}. Das passierte während des ersten Szenarios, in dem die abfragbaren Felder aus den Feldern der Quelltabelle bestehen. Deshalb wurde vorgeschlagen, diesen Abschnitt klarer zu benennen, zum Beispiel als Quell- oder Importtabelle. Eine Behebung dieses Problems könnte auch zu einer einfacheren Einfindung führen.
+
 \plabel{p:functionlist}
 
 \subsubsection{Inhaltliche Probleme}

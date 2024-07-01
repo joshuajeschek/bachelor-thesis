@@ -7,3 +7,12 @@ Das erste Szenario entspricht der Definition einer Konvertierung in Simplex4Data
 Beim zweiten Szenario handelt es sich ebenso um eine Konvertierung, die Quelldaten liegen jedoch noch nicht komplett im richtigen Format vor. Die Teilnehmer:innen mussten deshalb einen zusammengesetzten Schlüssel erstellen und eine Punktgeometrie aus Längen- und Breitengrad unter der Verwendung von \texttt{ST\_MakePoint} erstellen. Des Weiteren mussten die Daten mit einem Filter auf ausschließlich Bundesländer reduziert werden. Das Filter-Feld stellt in diesem Szenario ein neues Konzept dar, was erst mit diesem Szenario freigeschalten wurde.
 
 Im dritten Szenario soll der Block-Editor in der Bearbeitung von Simplex-Szenarien getestet werden. Dazu wurde ein Beispiel mit drei Objektklassen gewählt: Adressen, Straßen und Ortsteile. Diese sollten von den Teilnehmer:innen zu einer Übersicht aller Adressen im Ortsteil Lindenau zusammengestellt werden. Die Attribute können von der Auswahl auf der linken Seite übernommen werden, müssen aber zunächst als neue Felder hinzugefügt und benannt werden. Das Benennen von Feldern und mehrere Objektklassen, die Attribute bereitstellen, bilden hier neue Konzepte. Auch hier muss wieder gefiltert werden.
+
+Am Ende jedes Szenarios sollten die Teilnehmer:innen ihre Arbeit mit dem "Speichern"-Button oben rechts bestätigen. Dieser leitet zu einer Tabelle weiter, wie sie in \ref{szenario-result} zu sehen ist. In dieser Vorschauansicht können die konvertierten oder in Simplex-Szenarien enthaltenen Objekte überprüft werden. Sollten Änderungen von Nöten sein, kann zur vorherigen Ansicht mit dem "Zurück"-Button zum Block-Editor zurücknavigiert werden, und Änderungen vorgenommen werden.
+
+\begin{figure}
+  \todo[inline]{Bild Resultattabelle, 2 Zeilen mit Geometrie (Bundesländer?)}
+  \caption{Abschluss des zweiten Szenarios: Es wird eine Tabelle mit den resultierenden Objekten angezeigt.}
+  \label{fig:scenario-result}
+\end{figure}
+
