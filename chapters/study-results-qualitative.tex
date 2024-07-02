@@ -2,9 +2,9 @@
 
 \todo[noline]{Zahlenformat überprüfen}
 
-\todo[noline]{Buchstaben anpassen}
+Im Rahmen der Testsitzungen wurden 20 verschiedene Usability-Probleme identifiziert. Diese wurden entweder im Zuge von \ac{CTA} von den Teilnehmer:innen bemängelt, oder durch Verwirrung, Zögern und fehlerbehafte Nutzung festgestellt.
 
-Im Rahmen der Testsitzungen wurden 20 verschiedene Usability-Probleme identifiziert. Diese wurden entweder im Zuge von \ac{CTA} von den Teilnehmer:innen bemängelt, oder durch Verwirrung, Zögern und fehlerhafte Nutzung festgestellt.
+\todo[noline]{Buchstaben anpassen}
 
 \begin{figure}[!ht]
   \colorlet{presentation}{plot1}
@@ -202,16 +202,33 @@ Als Abschluss von Szenarien sollten die Teilnehmer:innen den "Speichern"-Button 
 Wie bereits während der Einfindungsphase bemerkt, kam es bezüglich der Identifikation des rechten Bereiches \textbf{(I)} zu Problemen. Während der Szenarios identifizierten 3 Personen zuerst fälschlicherweise die Zielstruktur als Quelltabelle, und brauchten somit länger, um die allgemeine Funktionsweise des Block-Editors zu verinnerlichen. Ein:e Teilnehmer:in äußerte als Grund für die Verwirrung, dass sie nicht wusste, dass Standardfelder umbenannt werden können. Eine weitere Person erkannte zwar auf Anhieb, dass es sich bei den Feldern im rechten Bereich um die Zielstruktur handelt, wünschte sich jedoch trotzdem eine Überschrift zur Orientierung.
 
 \plabel{p:queryables}
-Bei 2 der 3 eben beschriebenen Testsitzungen wurde die Bennenung der abfragbaren Felder in der Seitenleiste bemängelt \textbf{(Q)}. Das passierte während des ersten Szenarios, in dem die abfragbaren Felder aus den Feldern der Quelltabelle bestehen. Deshalb wurde vorgeschlagen, diesen Abschnitt klarer zu benennen, zum Beispiel als Quell- oder Importtabelle. Eine Behebung dieses Problems könnte auch zu einer einfacheren Einfindung führen.
+Bei 2 der 3 eben beschriebenen Testsitzungen wurde die Bennenung der abfragbaren Felder in der Seitenleiste bemängelt \textbf{(Q)}. Das passierte während des ersten Szenarios, in dem die abfragbaren Felder die Felder der Quelltabelle darstellen. Deshalb wurde vorgeschlagen, diesen Abschnitt klarer zu benennen, zum Beispiel als Quell- oder Importtabelle. Eine Behebung dieses Problems könnte auch zu einer einfacheren Einfindung führen.
 
 \plabel{p:functionlist}
+Eine Person empfand die Liste der Funktionen im linken Menü als zu unübersichtlich \textbf{(T)}. Dies erschwerte ihr das Finden von relevanten Funktionen, und weckte das Gefühl, dass die Funktionen fachspezifischer wären. Ein während der Testsitzung geäußerter Lösungsvorschlag lautete, die Funktionen in Themenbereiche zu unterteilen, um primitivere, beziehungsweise häufiger genutzte, Funktion hervorzustellen.
 
 \subsubsection{Inhaltliche Probleme}
+In einigen Testsitzungen wurde festgestellt, dass ein verbesserter inhaltlicher Kontext zum erfolgreichen Abschließen von Aufgaben hilfreich sein kann. Im Gegensatz zur vorherigen Kategorie werden Inhalte hier nicht unbedingt verwirrend dargestellt, sondern existieren gar nicht in der Oberfläche.
 
 \plabel{p:parameter}
+Im zweiten Szenario musste die Funktion \texttt{ST\_MakePoint} benutzt werden, um aus Längen- und Breitengraden eine Punktgeometrie zu bilden. Hierbei fehlte es an Details zu den benötigten Parametern \textbf{(E)}. Bis auf eine Teilnehmer:in war allen klar, dass die Reihenfolge der Paramter von Relevanz ist, 5 konnten jedoch nicht sofort feststellen, in welcher Reihenfolge die Paramter ausgefüllt werden müssen. Abbildung \ref{fig:parameters} zeigt die besagte Funktion, ausgefüllt in der korrekten Reihenfolge. Die Beschreibung nennt die Parameter in der richtigen Reihenfolge. Eine Person sah dies als Hinweis an, drückte jedoch aus, dass die Parameter trotzdem beschriftet werden sollten. Zwei weitere Personen äußerte eine ähnliche Meinung, während in einer anderen Testsitzung der Hinweis innerhalb der Beschreibung bevorzugt wurde. Ein:e Teilnehmer:in schlug ein Pop-Up für eine detailliertere Beschreibung der Parameter vor. Falls die Parameter für \texttt{ST\_MakePoint} falsch gesetzt wurden, fiel dieser Fehler spätestens beim Betrachten der Ergebnisse in der Tabellenansicht auf, und konnte durch ein Austauschen behoben werden. Die Teilnehmer:innen zeigten Unsicherheit in Bezug auf die Reihenfolge der Parameter und erwarteten dies somit als Fehlerquelle.
+
+\begin{figure}
+  \centering
+  \todo[inline]{Screenshot \texttt{ST\_MakePoint}, ausgefüllt}
+  \caption{Die Funktion \texttt{ST\_MakePoint} mit korrekt ausgefüllten Parametern.}
+  \label{fig:parameters}
+\end{figure}
+
 \plabel{p:quelle}
+Im Zuge von 3 Testsitzungen wurde der Wunsch geäußert, eine Vorschau der Quelldaten zu sehen \textbf{(N)}. Dies würde den Teilnehmer:innen helfen, die Ausgangsdaten zu verstehen und zu wissen dass die ausgewählten Datentransformationen richtig sind. Die genannte Hürde trat beispielsweise während des zweiten Szenarios auf, als der \ac{ARS}\todo{Beugung} gebildet wurde. Es stand die Frage im Raum, ob führende Nullen aufgefüllt werden müssen, oder ob diese bereits existieren. Ein Person wünschte sich, Werte der einzelnen Attribute abrufen zu können, während eine weitere eine tabellenförmige Darstellung über alle Attribute bevorzugen würde. Zu guter Letzt fasste ein:e Teilnehmer:in die Möglichkeiten zusammen: Es könnte eine Schnittmenge aller Daten gezeigt werden, oder nur verschiedene Werte von den einzelnen Attributen. Die zuletzt genannte Person schlug auch das Icon für den Datentyp als Ort vor, um solche Informationen abzurufen.
+
 \plabel{p:functions}
+Zwei Personen wünschten sich eine detailliertere Beschreibung der Funktionen \textbf{(R)}. Als Grund wurde genannt, dass manche Funktionsnamen nicht aussagereich genug sein könnten, insbesondere für Personen mit weniger Fach- oder Programmiererfahrung. Genannte Lösungsvorschlage beinhalten Tooltips und Pop-Ups, zum Beispiel über einen Button mit dem Buchstabe \textit{i} als Symbol.
+
 \plabel{p:präfix}
+Im Szenario-Modus besitzen die Attribute von verbundenen Objektklassen einen Präfix \textbf{(S)}. Nur die zentrale Objektklasse folgt diesem Schema nicht - die Attribute werden ohne Präfix ausgeliefert. Dies führte bei 2 Personen zur Verwirrung, da im dritten Szenario die Klasse "Adresse" keinen Präfix hatte, und somit nicht so leicht identizierbar wie die anderen Klassen war. Außerdem konnte eine der beiden Teilnehmer:innen die Bezeichnung "base" im Filtermenü für den rechten Bereich nicht der zentralen Objektklasse zuordnen.
+\todo{Schauen, ob extra Bild benötigt um darzustellen, oder vielleicht woanders schon}
 
 \subsubsection{Technische Probleme}
 
