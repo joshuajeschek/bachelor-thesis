@@ -1,0 +1,49 @@
+- EMI
+  - 8
+  - weil bisschen wissen was man tut wird benötigt - aber das ist eben auch weil es eine fachanwendung ist
+  - 4
+  - da muss noch so viel getippt werden, sehr anstrengend dass immer in die alte tabelle geschaut werden muss
+  - sehr anfällig für tippfehler
+- ROOS
+  - 9
+  - 5
+  - nicht nicht machbar, aber sehr umständlich, weil daten an unterschiedlicher stelle angelegt sind - immer quelldaten an monitor anschauen, sehr blöd immer hin und her schauen
+  - kann nicht komplett vergleichen
+  - nicht schwierig, sondern umständlich
+- HEINO
+  - 10
+  - 7
+  - natürlich mit vorwissen wie das sonst ist, muss sich zurechtfinden
+- JANIK
+  - 8
+  - schön übersichtlich, kennt sich gut genug damit aus um zu wissen wo er hin muss
+  - wen weniger auskennt mehr übersichtlichkeit / mehr eklärung
+  - fällt schwer quatsch zusammenzuklicken
+  - 6
+  - kann damit gut umgehen
+  - aber nur weil er sehr viel hintergrundwissen hat, was nicht in der oberfläche steht
+  - sonst würde er sehr lange davor stehen
+  - ist aber professionell genug, dass er sich nicht gleich abwendet
+  - scheint sich zu lohnen das zu verstehen
+- ANDRES
+  - 10
+  - eigentlich schon 10 wenn bisschen drin, schon intuitiv
+  - 6
+- FABIAN
+  - 7
+  - 4
+  - funktionen schreiben sehr aufwendig
+  - ist jetzt deutlich besser
+- PHILIP
+  - 9,5
+  - "ein zwei mal gefumbled", paar QOL Sachen
+  - 7
+  - aus seiner perspektive mit Vorwissen
+- TOMASZ
+  - 8/9
+  - 3
+- VOLKER
+  - 8
+- ZENNER
+  - 6-7
+  - liegt vielleicht an mir
