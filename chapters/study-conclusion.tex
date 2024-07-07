@@ -1,0 +1,96 @@
+\section{Schlussfolgerungen und Zukunftsaussicht}
+
+Die Usability-Studie des Prototyps hat gezeigt, dass die allgemeine Herangehensweise gut angenommen wurde. Tippfehler wurden verhindert, und ein Nachschlagen der Quellstrukturen während dem Abarbeitung von Aufgaben war nicht nötig. Je nach technischer Vorkenntnis und Vertrautheit mit dem System Simplex4Data konnten die Teilnehmer:innnen schnell mit dem Block-Editor arbeiten und die gewünschten Resultate erzielen. Die getestete Anwendung erweist sich somit in den getesteten Anwendungsfällen als geeignet zur Bearbeitung von Umweltdatensätzen.
+
+Zur Anwendung in der Praxis und für die Integration in das Produktiv-System Simplex4Data muss jedoch ein umfangreicherer Katalog an Funktionen unterstützt werden. Das Hinzufügen dieser Funktionen kann im Backend durchgeführt werden, ohne den Editor anzupassen, da die Kommunikation zwischen den beiden Schichten über die standardisierte \textit{OGC - API Features} Schnittstelle realisiert wird. Diesbezüglich steht allerdings die Frage aus, ob die aktuelle Herangehensweise zum Erstellen von Konvertierungen und Simplex-Szenarios ausreicht, oder der Komplexität der Praxis nicht gerecht wird. In diesem Fall bestünde einerseits die Möglichkeit, eine komplexere Anwendung zur Bedienung durch Expert:innen zu erstellen. Andererseits könnten Prä- oder Postprozesse müssen zur Datentransformation eingesetzt werden, um die Daten in ein von Fachanwender:innen bedienbares\todo{bedienbar?} Format zu überführen.
+
+Die durchgeführten Usability-Tests führten dazu, dass verschiedene Hürden aufgedeckt wurden, die die Einfachheit der Nutzung einschränken. Während einige von ihnen bereits im Vorhinein bekannt waren, wurden viele neue im Zuge der Testsitzungen dokumentiert. Dabei unterscheiden sich die aufgetretenen Probleme in Größe und Härte. Einige von ihnen können schnell gelöst werden, während andere Fragen aufwerfen, die noch beantwortet werden müssen. Des Öfteren haben auch Teilnehmer:innen bereits Verbesserungsvorschläge geäußert, die im Folgenden auch diskutiert werden sollen. Abschnitt \ref{sec:criticism} nennt bereits einige Schritten zur Weiterentwicklung für den Block-Editor. Insofern diese keine große Rolle während den Usability-Tests gespielt haben, werden diese hier nicht erneut aufgegriffen.
+
+% - Allgemeine Schlussfolgerungen
+%   - wurde gut angenommen blabla schreibfehler nachschlagen etc.
+%   - für die getesteten anwendungsfälle, in der Praxis müssen Funktionen hinzugefügt werden - sollte einfach hinzuzufügen sein, da standardisiertes interface - aber reicht das für anwendungsaufgaben aus? Da Komplexität in der Praxis nicht voraussehbar ist, müssen Wege geschaffen werden, um komplexe Abfragen zu ermöglichen - expert:innen Ansicht
+
+\subsubsection{Schnell zu behebende Probleme}
+
+Oft gewünscht wurde die Möglichkeit, Elemente durch Klicken zu ersetzen. Dazu müssten ausgefüllte Felder anklickbar bleiben. So wird einerseits ein Klick gespart, andererseits wurde dieses Bedienschema von einigen Teilnehmer:innen als intuitiver wahrgenommen. Die aktuelle Möglichkeit, über einen dedizierten Button den Inhalt eines Felds zu löschen, sollte jedoch weiterhin erhalten bleiben.
+
+Um die Einfindung in der Bearbeitungsoberfläche zu erleichtern, können relevante Bereiche besser benannt werden. Die Benennung der "Abfragbaren Felder" könnte verbessert werden. Im Konvertierungs-Editor würden sie als "Quelltabelle" bezeichnet werden, und im Szenario-Editor als "(Objekt-)Attribute". Somit würden der Inhalt klarer beschrieben werden. Des Weiteren sollte der rechte Bereich mit einer Überschrift benannt werden, sodass klar ist, was bearbeitet wird. Auch die Überschrift der Anwendung in der Kopfzeile sollte mit dieser Zielsetzung angepasst werden.
+
+Ein weiteres Problem der Darstellung trat bei der Anzeige der abfragbaren Felder in der Zielstruktur auf. Dort wurde nur der Schlüssel des Attributs (oder Quelltabellenspalte) angezeigt, obwohl im Auswahlmenü der Titel prominenter dargestellt wurde. In der nächsten Version des Editors sollte dies vereinheitlicht werden, wobei zu beachten ist, dass die abfragbaren Felder nicht unbedingt über einen Titel verfügen. Es kann also entweder wenn möglich beides angezeigt werden, oder falls verfügbar der Titel, sonst der Schlüssel.
+
+Im Szenario-Editor besaß die zentrale Klasse kein Präfix, um die Verständlichkeit zu verbessern sollte dies nicht der Fall sein. Der Präfix bietet einen Weg, um Elemente eindeutig einer Klasse zuzuordnen, diese Möglichkeit sollte einheitlich genutzt werden. Zur Umsetzung müssen Änderungen am Szenario-Join-Editor und an der \texttt{queryables}-Schnittstelle vorgenommen werden, damit ein Präfix vergeben werden, von der \ac{API} ausgegeben und im Szenario-Editor angezeigt werden kann.
+
+Während mehreren Testsitzungen wurde klar, dass die Icons für die Datentypen Boolean, Integer und Float etwas unglücklich gewählt sind (siehe Abbildung \ref{fig:icons}). Booleans wurden als Schaltfläche verstanden, während Integers und Floats nicht voneinander zu unterscheiden waren. Die Wahl der Icons sollte in der nächsten Version der Anwendung verändert werden.
+
+Überprüft werden sollte das Scroll-Verhalten in verschiedenen Browsern, um visuelle Fehler zu vermeiden. Außerdem sollte überprüft werden, ob der Abstand zum Seitenende groß genug ist, denn zwei Personen hätten gerne ein wenig weiter gescrollt. Im gleichen Zusammenhang kann getestet werden, ob es Sinn ergibt automatisch zu scrollen, wenn eine neue Funktion hinzugefügt wird die nicht komplett im Ansichtsfenster dargestellt wird. Unnötiges, nicht von Nutzer:innen ausgelöstes, Scrollen sollte jedoch vermieden werden.
+
+
+% - schnell zu behebende Fehler
+%   - Ersetzen von Items durch einfaches Klicken (4)
+%   - benennung mitte und abfragbaren felder
+%   - anzeige von attributen im ziel vereinheitlichen
+%   - präfix von objektklassen
+%   - scrolling
+%   - icons für booleans und float verbessern
+
+\subsubsection{Verbesserungsvorschläge von Teilnehmer:innen}
+
+Im Zuge der Testsitzungen äußerten einige Teilnehmer:innen bereits Verbesserungsvorschläge. Einige von ihnen, die einfach umzusetzen und logische nächste Schritte darstellen wurde bereits im vorherigen Abschnitt genannt\footnote{Ersetzen, verbesserte Benennungen}. Im Folgenden werden weitere Vorschläge präsentiert und diskutiert.
+
+Die Bearbeitungsfunktion für Titel und Schlüssel von Feldern im Szenario-Editor wurde nicht immer genutzt. Der Unterschied zwischen den beiden Metadaten-Feldern war einigen Personen nicht sofort klar, und zwei Personen drückten Unzufriedenheit damit aus, dass sie meistens den gleichen oder ähnlichen Text in die Felder schreiben müssen. Sie schlugen vor, den Schlüssel automatisch mit einer \texttt{slugify}-Funktion zu generieren, sobald sich der Titel ändert. Dieser Vorschlag ist sinnvoll, bei der Implementierung muss jedoch darauf geachtet werden, dass der Schlüssel weiterhin eindeutig bleibt und manuell angepasst werden kann.
+
+Mit der Verbesserung der Effizienz im Szenario-Editor befasst sich ein weiterer Vorschlag. Neu hinzugefügte Felder könnten sofort ausgewählt werden, nachdem sie hinzugefügt wurden, wodurch ein Klick eingespart wird und das Auswahlmenü sofort auf die richtigen Elemente reduziert wird. Eine Umsetzung dieser Funktionalität könnte die Benutzung beschleunigen, sollte jedoch gut überlegt sein. In einigen Usability-Tests war zu sehen, dass die automatische Typfilterung nicht sofort verstanden und eingesetzt wurde. Außerdem bevorzugten einige Teilnehmer:innen, zuerst das Element im Auswahlmenü auszusuchen, und dann in das gewünschte Zielfeld zu klicken. Eine automatische Auswahl nach Hinzufügen des Elementes könnte dieser Arbeitsweise beeinträchtigen oder zu Verwirrung führen.
+
+Ein:e Teilnehmer:in empfand die Liste der Funktionen als zu unübersichtlich, und schlug vor, Unterkategorien einzuführen. Da die Anzahl der Funktionen im Vergleich zum getesteten Prototyp weiter steigen wird, könnte dies sinnvoll sein. Sobald eine angemessene Anzahl an Funktionen existiert, sollte überprüft werden, ob der automatische Typfilter genug Übersichtlichkeit schafft, oder ob und wie die Funktionen weiter gruppiert werden können.
+
+Ein bereits während der Entwicklung aufgetretener Vorschlag beinhaltete, Die ausgefüllten Zielfelder mit ihren Bestandteilen aus dem Auswahlmenü über eine Linie oder einen Pfeil zu verbinden. In einer Testsitzung wurde dieser Wunsch erneut geäußert, da die Person dieses Konzept aus anderen Anwendungen kennt. Eine Umsetzung könnte Übersichtlichkeit über die definierten Strukturen schaffen, und Fehler wie doppelte Selektionen vermeiden. Es sollte jedoch getestet werden, wie sich eine solche Ansicht bei vielen Elementen verhält. Es wäre denkbar, die Verbindungsstriche als optionales UI-Element zu implementieren.
+
+Häufig gefordert wurde auch die Möglichkeit eine Stichprobe der Daten, die bearbeitet werden, zu sehen. Bevor diese sinnvolle Erweiterung umgesetzt werden kann, muss geklärt werden, wo die Daten angezeigt werden sollen, und in welchem Umfang dies geschehen soll. Es wäre möglich, Werte für einzelne abfragbare Felder bereitzustellen, oder einen Querschnitt über alle abfragbaren Felder eines Datensatzes. Optimalerweise würde das Abrufen der Daten nicht dazu führen, dass Nutzer:innen den aktuellen Browsertab verlassen müssen.
+
+Die Auswahlmöglichkeit von Funktionsüberladungen wurde nicht immer erkannt, als Grund dafür wurden mehrfach die Icons auf den dazugehörigen Buttons genannt. Statt der aktuell genutzten Pfeile wurde vorgeschlagen, ein Plus und Minus zu verwenden. Da den wenigsten Teilnehmer:innen das Konzept von Funktionsüberladungen geläufig war, und viele von ihnen diese nur als Möglichkeit ansahen, die Anzahl der Parameter zu verändern, ergibt es Sinn die Icons so anzupassen. Im gleichen Schritt muss jedoch geklärt werden, wie mit Funktionsüberladungen mit der gleichen Anzahl an Parametern, aber unterschiedlichen Typen umgegangen wird. Eine Möglichkeit wäre, Felder mit mehreren akzeptierten Typen einzuführen, wodurch jede Überladung eine unterschiedliche Anzahl an Parametern haben könnte.
+
+Die Benutzung der Funktionen wurde teilweise dadurch erschwert, dass die Parameter nicht über genügend Metadaten verfügten. Es war nicht immer möglich, eindeutig zu erkennen, welcher Parameter welche Information entgegennimmt, wie im Beispiel der Funktion \texttt{ST\_MakePoint}. Die einzelnen Parameter sollten somit zumindest über Namen verfügen. Die \textit{OGC API - Features}-Schnittstelle für Funktionen unterstützt bereits die Metadatenfelder \texttt{title} und \texttt{description}, diese müssen im Backend hinzugefügt werden und durch den Block-Editor ausgelesen und angezeigt werden. Der Großteil der Teilnehmer:innen erwartet diese Informationen direkt beim dazugehörigen Eingabefeld. Eine Beschreibung einzelner Parameter könnte hinter einem Info-Button versteckt sein, um die Ansicht nicht mit Informationen zu überladen. Nicht alle Funktionen sind so komplex, dass die Parameter über Namen, geschweige denn Beschreibungen verfügen müssen. Für alle drei Optionen sollte die Art und Weise, wie Parameter dargestellt werden, angepasst werden.
+
+% - Verbesserungsvorschläge von Teilnehmer:innen
+%   - notfalls einschätzen falls nicht sinnvoll
+%   - szenario: slugified key von titel abgeleitet (J, V; 2)
+%   - szenario: automatisch bei neu hinzugefügten feldern reinklicken? spart einen klick (heino; 1)
+%   - übersichtlichkeit funktionsliste
+%   - pfeil von links nach rechts (würde auch auswahlfehler verhindern)
+%   - stichprobe von daten, offene Fragen: wo? in welchem Umfang?
+  % - Overload Funktionalität vereinfachen, viele kennen overloads nicht - anzahl der parameter schon
+%   - parameter metadaten, beschreibung z.b. längen und breitengrad
+%     - muss von backend unterstützt werden, dort müssen metadaten hinzugefügt werden - dann im frontend anzeigen
+%     - wird schon von ogc unterstützt, parameter können title und description haben
+%     - funktion kann metadataUrl haben, die nicht weiter dokumentiert ist (zitat) aber für hilfestellung für fkt benutzt werden könnte
+
+\subsubsection{Weitere Möglichkeiten zur Verbesserung}
+
+Aufgefallen ist, dass die Arbeitsrichtung zwischen den Teilnehmer:innen schwankte. Viele von Ihnen bedienten den Block-Editor von rechts nach links, indem sie zuerst das Zielfeld auswählten und dann das gewünschte Element einfügten. Es gab jedoch auch Personen, die andersherum vorgingen. Der aktuelle Prototyp unterstützt beide Richtungen, unterstützt die Nutzer:innen jedoch durch die automatische Typfilterung besser, wenn sie von rechts nach links arbeiten. Um diese Diskrepanz zu verringern, können zwei Wege eingeschlagen. Entweder werden beide Arbeitsweisen auf ähnliche Art und Weise unterstützt, sodass weniger Benachteiligung entsteht, oder die Bedienweise von Links nach Rechts wird unterbunden. Letzteres könnte dadurch umgesetzt werden, dass das Auswahlmenü erst nach Anklicken eines Zielfeldes angezeigt wird, oder vorher nicht klickbar, aber sichtbar ist. Eine weitere Möglichkeit wäre, das Auswahlmenü auf der rechten Seite zu platzieren, sodass die Arbeitsrichtung mehr mit der hierzulande genutzten Leserichtung übereinstimmt. Dies könnte bei beiden Optionen sinnvoll sein. Mit der Entscheidung der Arbeitsweise verbunden ist die Frage, ob \textit{Drag \& Drop} implementiert werden sollte, da dies nur beim Ziehen der Quellelemente in die Zielstruktur sinnvoll ist.
+
+Das Auswählen der Datentypen im Szenario-Editor ist aktuell zu umständlich. Theoretisch wäre es möglich, den Datentyp der Felder basierend auf dem Inhalt ihrer Definition zu bestimmen. Es könnte ein Eingabefeld eingeführt werden, in das alle Datentypen eingefügt werden können. Dies führt zwar dazu, dass die als nervig empfundene Typauswahl entfällt, hat jedoch auch zur Folge, dass die Nutzer:innen nicht durch die automatische Typfilterung unterstützt werden.
+
+% - weiter einzuschlagende Schritte, die nicht von Teilnehmer:innen erwähnt wurden
+%   - LtR workflow verbessern, da dies von einigen als intuitiv angesehen wurde, oder RtL workflow forcen
+%     - vielleicht wäre es möglich das menü links gar nicht immer zu zeigen, nur bei auswahl? so geht nur RtL
+%     - damit verbunden wäre die frage ob dragndrop unterstützt werden sollte, weil das nur bei ltr geht
+%   - verbesserung könnte auch bei szenario feldern benutzt werden (alle typen gehen rein), typ steht nicht vorher fest - auswahl fällt weg, die zuvor nervig war
+
+\subsubsection{Offene Fragen}
+
+Die folgenden Fragen wurden im Laufe der Usability-Studie aufgeworfen, konnten aber noch nicht auf zufriedenstellende Art beantwortet werden. Um ein optimales Nutzungserlebnis zu ermöglichen, sollten sie jedoch überdacht werden.
+
+Einige Operatoren, die typischerweise durch Infixnotation ausgedrückt werden (\texttt{+}, \texttt{-}, \texttt{||}, \texttt{AND}, \texttt{OR}), werden im Block-Editor über Funktionen abgebildet. Bereits bei der Verwendung der \texttt{concat}-Funktion suchten mehrere Teilnehmer:innen nach einem \texttt{+} oder versuchten, zuerst das erste Element, und dann den dazugehörigen Operator in das Zielfeld einzufügen. Zwar ist es möglich, Infix-Operatoren über Funktionen darzustellen, dies scheint jedoch mitunter als unintuitiv aufgefasst zu werden und erschwert die Verkettung von mehreren Elementen. Die Anzahl der Parameter kann zwar über Funktionsüberladungen erhöht werden, entspricht aber nicht dem gleichen Nutzungserlebnis von Verkettungen mit Infix-Operatoren. Es ist zu diskutieren, ob mit Operatoren anders umgegangen werden sollte als mit Funktionen, und ob dafür eigene UI-Elemente und -Verhaltensmuster geschaffen werden sollten.
+
+Eine Hürde bei der Benutzung von Funktionsüberladungen bestand darin, dass bereits ausgefüllte Parameter nicht übernommen wurden. Wie eine Übernahme von Parametern in andere Funktionsüberladungen auch in Randfällen vorhersehbar durchgeführt werden kann ist noch ungeklärt. Solche Randfälle beinhalten beispielsweise die Veränderung des Datentyps von Parametern, die Veränderung der Bedeutung von Parametern, sowie ein Wegfallen von bereits ausgefüllten Parametern.
+
+Das eben genannte Problem könnte teilweise durch Felder mit variablen Datentypen (begrenzt auf die möglichen Datentypen für einen Parameter in Funktionen) gelöst werden. Dies birgt jedoch weitere Probleme in sich, da so die Möglichkeit besteht, ausgeschlossene Kombinationen von Datentypen zu ermöglichen, die zuvor durch Überladungen voneinander ausgeschlossen wurden. Eine dynamische Anpassung der validen Datentypen für einzelne Parameter könnte sehr komplex werden, eine Fehlermeldung beim Eintragen oder Abschicken wäre jedoch auch nicht optimal.
+
+% - offene Fragen:
+%   - wie wird mit Operatoren umgegangen die typischerweise infix sind (z.B. +)
+%     - normale bedienweise wäre da erst paramter 1 dann operator dann parameter 2 auswählen, würde aber über api als funktion abgebildet werden
+%     - funktional ähnlich, auch wenn aneinanderkettung schwieriger ist - parameter anzahl könnte bei funktionsdarstellung erhöht werden, aber das ist dann auch limitierend
+%   - welche heuristik wird bei der Parameterübernahme bei Überladungen genutzt werden? 
+%     - Frage: wie wird mit unterschiedlichen typen bei gleicher anzahl umgegangen?
+%   - Antwort: typen sollten variabel sein für einzelne Parameter - vereinfacht das
+%     - Frage: wie wird mit ausgeschlossenen Kombinationen umgegangen? Fehlermeldung beim Eintragen/Abschicken oder dynamisches Anpassen des Types sobald ein anderer ausgewählt wurde? könnte sehr komplex werden
