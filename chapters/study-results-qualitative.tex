@@ -2,8 +2,8 @@
 \label{sec:qualitative}
 
 \todo[inline]{positive Sachen aufzählen?}
-
-\todo[inline]{auf RtL vs LtR eingehen?}
+\todo[inline]{weniger nachschlagen aber manche wünschen sich trotzdem noch funktionalität für quellen}
+\todo[inline]{keine abfragen die fehler verursachten, allerdings paar inhaltliche fehler}
 
 \todo[noline]{Zahlenformat überprüfen}
 
@@ -46,7 +46,7 @@ Im Rahmen der Testsitzungen wurden 20 verschiedene Usability-Probleme identifizi
             {\hyperref[p:filter]{Automatische Typ-Filterung (N)}},
             {\hyperref[p:statisch]{Angabe von statischen Werten (M)}},
             {\hyperref[p:overload]{Auswahl von Überladungen (L)}},
-            {\hyperref[p:mitte]{Benennung rechter Bereich (K)}},
+            {\hyperref[p:rechts]{Benennung rechter Bereich (K)}},
             {\hyperref[p:speichern]{Benennung des Speichern-Buttons (J)}},
             {\hyperref[p:parameterübernahme]{Parameterübernahme bei Überladungen (I)}},
             {\hyperref[p:drag]{Drag \& Drop (H)}},
@@ -179,7 +179,7 @@ Abbildung \ref{fig:icons} zeigt die vom Block-Editor verwendeten Icons für Date
 \end{figure}
 
 \plabel{p:attribute}
-Die Anzeige von Attributen in der Zielstruktur weicht von der im Auswahlmenü ab \textbf{(D)}. Im Auswahlmenü wird sowohl der Name, als auch der Schlüssel von Attributen angezeigt, während im mittleren Bereich nur noch der Schlüssel angezeigt wird. Dies fiel 5 Teilnehmer:innen auf, zumeist im dritten Szenario, wahrscheinlich weil sich dort die Inhalte mehr unterscheiden. Abbildung \ref{fig:attribute-source} und \ref{fig:attribute-target} stellen dies beispielhaft dar. "strassenname" ist der Name des Attributs der Objektklasse, während "description" der Schlüssel ist. Sobald das Attribut im Ziel erscheint, wird nur noch der Schlüssel angezeigt. Besonders im Fall der Standardfelder \footnote{\texttt{key, ndx, typ, dsc, cmt, beg, fin}, Vgl. \ref{sec:theory-s4d-reality}}, kann dieser stark vom Name abweichen. Fünf Personen waren davon verwirrt.
+Die Anzeige von Attributen in der Zielstruktur weicht von der im Auswahlmenü ab \textbf{(D)}. Im Auswahlmenü wird sowohl der Name, als auch der Schlüssel von Attributen angezeigt, während im rechten Bereich nur noch der Schlüssel angezeigt wird. Dies fiel 5 Teilnehmer:innen auf, zumeist im dritten Szenario, wahrscheinlich weil sich dort die Inhalte mehr unterscheiden. Abbildung \ref{fig:attribute-source} und \ref{fig:attribute-target} stellen dies beispielhaft dar. "strassenname" ist der Name des Attributs der Objektklasse, während "description" der Schlüssel ist. Sobald das Attribut im Ziel erscheint, wird nur noch der Schlüssel angezeigt. Besonders im Fall der Standardfelder \footnote{\texttt{key, ndx, typ, dsc, cmt, beg, fin}, Vgl. \ref{sec:theory-s4d-reality}}, kann dieser stark vom Name abweichen. Fünf Personen waren davon verwirrt.
 
 \begin{figure}[!ht]
   \minipage[t]{.38\textwidth}
@@ -201,7 +201,7 @@ Im Szenario-Modus besteht die Möglichkeit, grundlegende Metadaten der Felder zu
 \plabel{p:speichern}
 Als Abschluss von Szenarios sollten die Teilnehmer:innen den "Speichern"-Button \textbf{(J)} betätigen, und so zur in Abbildung \ref{fig:scenario-result} dargestellten Tabellenansicht gelangen. In der Aufgabenstellung wurde vermieden, die in der Anwendung verwendete Sprache zu nutzen. Es wurde nur der Hinweis gegeben, dass die erstellten Objekte überprüft werden sollen. Nicht in allen Testsitzungen konnte erfolgreich die Assoziation zwischen der Beendigung der Aufgabe, dem Überprüfen des Resultats und dem "Speichern"-Button gemacht \todo{gemacht?} werden. Insgesamt 4 Personen waren mit der Benennung des Buttons unzufrieden, wobei 2 von ihnen spezifizierten, dass sie durch das Klicken auf "Speichern" nicht erwarteten, die Eingaben überprüfen zu können oder eine Vorschau zu sehen. Ein:e Teilnehmer:in würde "Ausführen" als eine angemessenere Benennung empfinden. Zu beobachten war, dass Personen, die bereits mehr Erfahrung mit der Benutzung von Simplex4Data hatten, die Benennung des Buttons nicht kritisierten. Der Button zum Speichern von Formularen ist in Simplex4Data standardmäßig oben rechts zu finden.
 
-\plabel{p:mitte}
+\plabel{p:rechts}
 Wie bereits während der Einfindungsphase bemerkt, kam es bezüglich der Identifikation des rechten Bereiches \textbf{(K)} zu Problemen. Während der Szenarios identifizierten 3 Personen zuerst fälschlicherweise die Zielstruktur als Quelltabelle, und brauchten somit länger, um die allgemeine Funktionsweise des Block-Editors zu verinnerlichen. Ein:e Teilnehmer:in äußerte als Grund für die Verwirrung, dass sie nicht wusste, dass Standardfelder umbenannt werden können. Eine weitere Person erkannte zwar auf Anhieb, dass es sich bei den Feldern im rechten Bereich um die Zielstruktur handelt, wünschte sich jedoch trotzdem eine Überschrift zur Orientierung.
 
 \plabel{p:queryables}

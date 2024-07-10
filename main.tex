@@ -69,17 +69,28 @@
 \input{misc/titlepage}
 \cleardoublepage
 \input{misc/abstract}
+
+\cleardoublepage
+\currentpdfbookmark{Inhaltsverzeichnis}{name}
 \tableofcontents
 
+\cleardoublepage
+\phantomsection
 \addcontentsline{toc}{chapter}{\listfigurename}
 \listoffigures
 
-\addcontentsline{toc}{chapter}{\listtablename}
-\listoftables
+% \cleardoublepage
+% \phantomsection
+% \addcontentsline{toc}{chapter}{\listtablename}
+% \listoftables
 
+\cleardoublepage
+\phantomsection
 \addcontentsline{toc}{chapter}{\lstlistlistingname}
 \lstlistoflistings
 
+\cleardoublepage
+\phantomsection
 \addcontentsline{toc}{chapter}{Abkürzungen}
 \printacronyms
 
@@ -208,6 +219,7 @@
 \input{documents/invitation}
 \input{documents/handout}
 \input{documents/moderation}
+\input{appendix/scenarios}
 
 
 % \nocite{*}
