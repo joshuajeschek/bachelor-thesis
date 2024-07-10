@@ -1,17 +1,18 @@
 \subsection{Szenarios}
 \label{sec:study-szenarios}
-Die drei Szenarien der Usabilitystudie sind so konzipiert, dass der Anspruch im Verlauf der Testsitzungen zunimmt. So sollte sichergestellt werden, dass die Teilnehmer:innen nicht mit zu vielen neuen Funktionalitäten auf einmal konfrontiert werden. Eckdaten zu den Szenarien können in Anhang \ref{app:handout} nachvollzogen werden.
+Die drei Szenarien der Usability-Studie sind so konzipiert, dass der Anspruch im Verlauf der Testsitzungen zunimmt. So sollte sichergestellt werden, dass die Teilnehmer:innen nicht mit zu vielen neuen Funktionalitäten auf einmal konfrontiert werden. Eckdaten zu den Szenarien können in Anhang \ref{app:handout} nachvollzogen werden.
 
 Das erste Szenario entspricht der Definition einer Konvertierung in Simplex4Data. Dabei soll eine Quelltabelle, gefüllt mit Daten von Bundesländern, in das Realitätsmodell übertragen werden. Dazu wurden die Rohdaten bereits im Vorhinein in die Quelltabelle geladen, und eine Objektklasse mit den benötigten Attributen erstellt. \todo[noline]{Bild Start und Ende, beschreiben}\todo[noline]{vielleicht Verknüpfung mit abschnitt block editor} Da die Daten hier bereits alle im richtigen Format vorliegen, besteht die Konvertierung nur aus Zuweisungen der Quelltabellspalten zu den Attributen der Objektklasse. \todo[noline]{schmales Bild Tabelle Ende}
 
-Beim zweiten Szenario handelt es sich ebenso um eine Konvertierung, die Quelldaten liegen jedoch noch nicht komplett im richtigen Format vor. Die Teilnehmer:innen mussten deshalb einen zusammengesetzten Schlüssel erstellen und eine Punktgeometrie aus Längen- und Breitengrad unter der Verwendung von \texttt{ST\_MakePoint} erstellen. Des Weiteren mussten die Daten mit einem Filter auf ausschließlich Bundesländer reduziert werden. Das Filter-Feld stellt in diesem Szenario ein neues Konzept dar, was erst mit diesem Szenario freigeschalten wurde.
+Beim zweiten Szenario handelt es sich ebenso um eine Konvertierung, die Quelldaten liegen jedoch noch nicht komplett im richtigen Format vor. Die Teilnehmer:innen mussten deshalb einen zusammengesetzten Schlüssel erstellen und eine Punktgeometrie aus Längen- und Breitengrad unter der Verwendung von \texttt{ST\_MakePoint} erstellen. Des Weiteren mussten die Daten mit einem Filter auf ausschließlich Bundesländer reduziert werden. Das Filter-Feld stellt in diesem Szenario ein neues Konzept dar, was erst mit diesem Szenario freigeschaltet wurde.
 
 Im dritten Szenario soll der Block-Editor in der Bearbeitung von Simplex-Szenarien getestet werden. Dazu wurde ein Beispiel mit drei Objektklassen gewählt: Adressen, Straßen und Ortsteile. Diese sollten von den Teilnehmer:innen zu einer Übersicht aller Adressen im Ortsteil Lindenau zusammengestellt werden. Die Attribute können von der Auswahl auf der linken Seite übernommen werden, müssen aber zunächst als neue Felder hinzugefügt und benannt werden. Das Benennen von Feldern und mehrere Objektklassen, die Attribute bereitstellen, bilden hier neue Konzepte. Auch hier muss wieder gefiltert werden.
 
-Am Ende jedes Szenarios sollten die Teilnehmer:innen ihre Arbeit mit dem "Speichern"-Button oben rechts bestätigen. Dieser leitet zu einer Tabelle weiter, wie sie in \ref{szenario-result} zu sehen ist. In dieser Vorschauansicht können die konvertierten oder in Simplex-Szenarien enthaltenen Objekte überprüft werden. Sollten Änderungen von Nöten sein, kann zur vorherigen Ansicht mit dem "Zurück"-Button zum Block-Editor zurücknavigiert werden, und Änderungen vorgenommen werden.
+Am Ende jedes Szenarios sollten die Teilnehmer:innen ihre Arbeit mit dem "Speichern"-Button oben rechts bestätigen. Dieser leitet zu einer Tabelle weiter, wie sie in \ref{fig:scenario-result} zu sehen ist. In dieser Vorschauansicht können die konvertierten oder in Simplex-Szenarien enthaltenen Objekte überprüft werden. Sollten Änderungen von Nöten sein, kann mit dem "Zurück"-Button zum Block-Editor zurück navigiert werden, und die zuvor getroffene Auswahl angepasst werden.
 
 \begin{figure}
-  \todo[inline]{Bild Resultattabelle, 2 Zeilen mit Geometrie (Bundesländer?)}
+  \centering
+  \includegraphics[width=.95\textwidth]{assets/results-szenario-2.png}
   \caption{Abschluss des zweiten Szenarios: Es wird eine Tabelle mit den resultierenden Objekten angezeigt.}
   \label{fig:scenario-result}
 \end{figure}
