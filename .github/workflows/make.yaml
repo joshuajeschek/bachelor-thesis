@@ -10,12 +10,11 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
 
-    - name: Install Inkscape
-      run: sudo apt install inkscape
-      
     - uses: xu-cheng/texlive-action/full@v1
       with:
-        run: VERBOSE=true make
+        run: |
+          sudo apt install inkscape
+          VERBOSE=true make
 
     - name: Rename PDF
       run: mv main.pdf thesis.pdf
