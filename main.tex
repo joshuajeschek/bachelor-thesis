@@ -1,4 +1,4 @@
-\documentclass[oneside,a4paper,11pt,openright]{scrreprt}
+\documentclass[a4paper,11pt,openright,numbers=noenddot]{scrreprt}
 
 \usepackage[utf8]{inputenc} % Einstellung der Eingabekodierung
 \usepackage[ngerman]{babel} % Deutsche Trennmuster
@@ -64,6 +64,8 @@
 \addbibresource{bibliography.bib}
 
 \MakeOuterQuote{"} % könnte zu Problemen führen
+
+\raggedbottom
 
 \begin{document}
 \pagenumbering{roman}
@@ -234,9 +236,6 @@
 \printbibliography[filter=software, title=Software, heading=subbibliography]
 \printbibliography[filter=other, title=sonstige, heading=subbibliography]
 \endgroup
-
-% TODO: Index
-% TODO: Glossar
 
 \cleardoublepage
 \input{misc/danksagung}
