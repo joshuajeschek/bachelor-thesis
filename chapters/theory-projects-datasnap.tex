@@ -1,68 +1,88 @@
+\newcommand{\Scratch}{\textit{Scratch}}
+\newcommand{\Snap}{\textit{Snap!}}
+
 \subsection{Scratch, Snap! und DataSnap}
 \subsubsection{Scratch}
-Scratch ist eine visuelle Programmierumgebung, in der Nutzer:innen spielerisch Programmieren erlernen können, indem sie interaktive, visuelle Projekte erstellen. Die Anwendung ist primär an 8- bis 16-jährige Kinder gerichtet \parencite{maloneyScratchProgramming2010}. Grundsätzlich können in Scratch Figuren bewegt werden, welche auf einem Hintergrund (Bühne) angezeigt werden. Durch die definierten Skripte können so beispielsweise Spiele oder animierte Videos erstellt werden.
-
-Abbildung \ref{fig:scratch} zeigt den Scratch-Editor und ein Beispielprogramm. Die Ansicht kann in 3 Spalten unterteilt werden. Links können die Blöcke ausgewählt werden, die in der Mitte zusammengesetzt werden sollen. Der rechte Abschnitt ist unterteilt, in einen Ausgabebereich, und ein Verwaltungsbereich für Figuren und Bühnen. Die Blöcke im Auswahlmenü sind thematisch sortiert. Die Farbgebung spiegelt dies wieder (Vgl. Abbildung \ref{fig:scratch-types}). Um Blöcke im Skriptbereich zu verwenden, müssen sie mittels \textit{Drag and Drop} nach rechts gezogen werden. Skripte sind an Figuren gebunden. Im Beispielprogramm wird die Tiger-Figur nach Start des Programms bewegt und rotiert, sobald die Leertaste gedrückt wird.
-\parencite{maloneyScratchProgramming2010}
+\todo[noline]{abgerundete box und sechseckige box statt rund und spitz}
+\Scratch{} ist eine visuelle Programmierumgebung, in der Nutzer:innen spielerisch Programmieren erlernen können, indem sie interaktive, visuelle Projekte erstellen. Die Anwendung ist primär an 8- bis 16-jährige Kinder gerichtet \parencite{maloneyScratchProgramming2010}. Grundsätzlich können in Scratch Figuren bewegt werden, welche auf einem Hintergrund (Bühne) angezeigt werden. Durch die definierten Skripte können so beispielsweise Spiele oder animierte Videos erstellt werden.
 
 \begin{figure}[!ht]
   \begin{center}
     \includegraphics[width=0.95\textwidth]{assets/scratch.png}
   \end{center}
-  \caption{Beispielprogramm in Scratch. \parencite{scratchfoundationScratch}}
+  \caption{Beispielprogramm in \Scratch{}. \parencitealias{scratchfoundationScratch}}
   \label{fig:scratch}
 \end{figure}
 
-Scratch definiert grundsätzlich vier Blockformen \parencite{maloneyScratchProgramming2010}. In Abbildung \ref{fig:scratch-blocks} werden sie verglichen. \textbf{Befehle} führen Programmlogik aus, die beispielsweise Figuren bewegen oder Variablen anpassen. Sie besitzen typischerweise eine Kerbe am oberen Rand und Verbindungsstelle am unteren Rand. \textbf{Funktionen} geben Werte zurück, die errechnet werden können oder in Variablen gespeichert wurden. Es ist nicht möglich, Funktionen an Blöcke mit Kerben anzufügen, sie können aber in korrespondierende Felder innerhalb von Blöcken eingesetzt werden. \textbf{Auslöser} besitzen keine Kerbe am oberen Rand, und stellen den Anfang der Ausführung des angehängten Konstrukts dar. \textbf{Kontrollstruktur-Blöcke} haben die gleiche Form wie Befehle und können wie sie angewendet werden. Sie beeinflussen den Ablauf des Programms und bilden Programmierkonzepte wie Schleifen und Bedingungen ab. Abbildung \ref{fig:scratch} zeigt eine "wiederhole fortlaufend"-Schleife. Es ist zu sehen, dass diese Art von Block auch weitere Blöcke annehmen kann, die im Schleifenkörper ausgeführt werden.
+Abbildung \ref{fig:scratch} zeigt den \Scratch{}-Editor und ein Beispielprogramm. Die Ansicht kann in 3 Spalten unterteilt werden. Links können die Blöcke ausgewählt werden, die in der Mitte zusammengesetzt werden sollen. Der rechte Abschnitt ist unterteilt, in einen Ausgabebereich, und ein Verwaltungsbereich für Figuren und Bühnen. Die Blöcke im Auswahlmenü sind thematisch sortiert. Die Farbgebung spiegelt dies wieder (Vgl. Abbildung \ref{fig:scratch-types}). Um Blöcke im Skriptbereich zu verwenden, müssen sie mittels \textit{Drag and Drop} nach rechts gezogen werden. Skripte sind an Figuren gebunden. Im Beispielprogramm wird die Tiger-Figur nach Start des Programms bewegt und rotiert, sobald die Leertaste gedrückt wird.
 \parencite{maloneyScratchProgramming2010}
 
 \begin{figure}
   \begin{center}
     \includegraphics[width=0.95\textwidth]{assets/scratch-blocks.png}
   \end{center}
-  \caption{Blockformen in Scratch (v. l. n. r.): Befehl, Funktion, Auslöser, Kontrollstruktur. \parencite{scratchfoundationScratch}}
+  \caption{Blockformen in \Scratch{} (v. l. n. r.): Befehl, Funktion, Auslöser, Kontrollstruktur. \parencitealias{scratchfoundationScratch}}
   \label{fig:scratch-blocks}
 \end{figure}
 
-Die Programmiersprache Scratch beschränkte sich zunächst auf drei Datentypen \parencite{maloneyScratchProgramming2010}. Dabei handelt es sich um Text, Zahl und Wahrheitswerte. Texte und Zahlen werden mit abgerundeten Ecken dargestellt, während Wahrheitswerte spitze Ecken besitzen. In Abbildung \ref{fig:scratch-types} werden zwei Funktionen mit unterschiedlichen Datentypen gezeigt, sowie Blöcke die diese als Eingabewerte entgegennehmen können. In den blauen und lila-farbigen Blöcken können auch manuell Werte eingegeben werden, der blaue Block nimmt jedoch nur Zahlen an. Die Datentypen in Scratch wurden mit Nachfolgeversionen erweitert, Version 1.3 führte beispielsweise Listen ein \parencite{harveyBringingNo2010}.
+\Scratch{} definiert grundsätzlich vier Blockformen \parencite{maloneyScratchProgramming2010}. In Abbildung \ref{fig:scratch-blocks} werden sie verglichen. \textbf{Befehle} führen Programmlogik aus, die beispielsweise Figuren bewegen oder Variablen anpassen. Sie besitzen typischerweise eine Kerbe am oberen Rand und Verbindungsstelle am unteren Rand. \textbf{Funktionen} geben Werte zurück, die errechnet werden können oder in Variablen gespeichert wurden. Es ist nicht möglich, Funktionen an Blöcke mit Kerben anzufügen, sie können aber in korrespondierende Felder innerhalb von Blöcken eingesetzt werden. \textbf{Auslöser} besitzen keine Kerbe am oberen Rand, und stellen den Anfang der Ausführung des angehängten Konstrukts dar. \textbf{Kontrollstruktur-Blöcke} haben die gleiche Form wie Befehle und können wie sie angewendet werden. Sie beeinflussen den Ablauf des Programms und bilden Programmierkonzepte wie Schleifen und Bedingungen ab. Abbildung \ref{fig:scratch} zeigt eine "wiederhole fortlaufend"-Schleife. Es ist zu sehen, dass diese Art von Block auch weitere Blöcke annehmen kann, die im Schleifenkörper ausgeführt werden.
+\parencite{maloneyScratchProgramming2010}
 
 \begin{figure}[!ht]
   \minipage[t]{.49\textwidth}
   \includegraphics[width=\linewidth]{assets/scratch-types.png}
-  \caption{Drei der Blockkategorien in Scratch: Steuerung (Orange), Bewegung (Blau), Aussehen (Lila). Datentypen in Scratch: Boolean (zugespitzte Blöcke), Zahlen und Text (abgerundete Blöcke). \parencite{scratchfoundationScratch}}
+  \caption{Drei der Blockkategorien in \Scratch{}: Steuerung (Orange), Bewegung (Blau), Aussehen (Lila). Datentypen in \Scratch{}: Boolean (zugespitzte Blöcke), Zahlen und Text (abgerundete Blöcke). \parencitealias{scratchfoundationScratch}}
   \label{fig:scratch-types}
   \endminipage
   \hfill
   \minipage[t]{.49\textwidth}
   \includegraphics[width=\linewidth]{assets/scratch-drop.png}
-  \caption{Blöcke können nur ineinander gesetzt werden, wenn der Datentyp übereinstimmt. Dies wird durch einen weißen Indikator vermittelt. \parencite{scratchfoundationScratch}\todo{ersetzen durch DIY Bild}}
+  \caption{Blöcke können nur ineinander gesetzt werden, wenn der Datentyp übereinstimmt. Dies wird durch einen weißen Indikator vermittelt. \parencitealias{scratchfoundationScratch}\todo{ersetzen durch DIY Bild}}
   \label{fig:scratch-drop}
   \endminipage
 \end{figure}
 
-Scratch signalisiert über die Form der Blöcke, ob sie zusammengesetzt werden können. Zusätzlich wird beim \textit{Drag and Drop} über einen weißen Indikator gezeigt, ob Blöcke an der aktuellen Stelle eingesetzt werden können. In Abbildung \ref{fig:scratch-drop} ist zu sehen, wie so signalisiert wird, dass eine Wenn-Abfrage nur Wahrheitswerte annehmen kann.
+Die Programmiersprache \Scratch{} beschränkte sich zunächst auf drei Datentypen \parencite{maloneyScratchProgramming2010}. Dabei handelt es sich um Text, Zahl und Wahrheitswerte. Texte und Zahlen werden mit abgerundeten Ecken dargestellt, während Wahrheitswerte spitze Ecken besitzen. In Abbildung \ref{fig:scratch-types} werden zwei Funktionen mit unterschiedlichen Datentypen gezeigt, sowie Blöcke die diese als Eingabewerte entgegennehmen können. In den blauen und lila-farbigen Blöcken können auch manuell Werte eingegeben werden, der blaue Block nimmt jedoch nur Zahlen an. Die Datentypen in \Scratch{} wurden mit Nachfolgeversionen erweitert, Version 1.3 führte beispielsweise Listen ein \parencite{harveyBringingNo2010}.
 
-Eine grundlegende Überlegung die bei der Entwicklung von Scratch getroffen wurde, war das Verzichten auf Fehlermeldungen \parencite{maloneyScratchProgramming2010}. Nutzer:innen sollten anhand der Form der Blöcke erkennen, ob es möglich ist, Elemente miteinander zu kombinieren und durch probieren herausfinden, was funktioniert \parencite{maloneyScratchProgramming2010}.
+\Scratch{} signalisiert über die Form der Blöcke, ob sie zusammengesetzt werden können. Zusätzlich wird beim \textit{Drag and Drop} über einen weißen Indikator gezeigt, ob Blöcke an der aktuellen Stelle eingesetzt werden können. In Abbildung \ref{fig:scratch-drop} ist zu sehen, wie so signalisiert wird, dass eine Wenn-Abfrage nur Wahrheitswerte annehmen kann.
 
-Scratch wird auch im Bildungsbereich genutzt, sowohl im schulischen Bereich \parencite{ortiz-colonTeachingScratch2016}, als auch an Universitäten \parencite{dekerekiScratchApplications2008, harveyBringingNo2010, martinez-valdesRelativelyUnsatisfactory2017}. Der Erfolg dieser Anwendung variiert, führt jedoch oft zu Motivationssteigerungen \parencite{dekerekiScratchApplications2008, martinez-valdesRelativelyUnsatisfactory2017}. Dies ist besonders bei jüngeren Zielgruppen der Fall \parencite{ortiz-colonTeachingScratch2016}.
+Eine grundlegende Überlegung die bei der Entwicklung von \Scratch{} getroffen wurde, war das Verzichten auf Fehlermeldungen \parencite{maloneyScratchProgramming2010}. Nutzer:innen sollten anhand der Form der Blöcke erkennen, ob es möglich ist, Elemente miteinander zu kombinieren und durch probieren herausfinden, was funktioniert \parencite{maloneyScratchProgramming2010}.
 
-\subsubsection{Snap}
-- \parencite{harveySnapBuild}
-- \parencite{harveySnapReference2020}
-- \parencite{ballSnapLook2019}
-- \parencite{harveyBringingNo2010} (schauen was nicht geht und wie BYOB zu snap führte)
-- inspired by scratch
-- names: blocks, scripts and sprites erklären
-- layout erklären, dabei funktionsweise
-- formen um zu zeigen was geht
-- drag and drop indicators um zu zeigen dass sachen nicht gehen (reference p. 11)
+\Scratch{} wird auch im Bildungsbereich genutzt, sowohl in Schulen \parencite{ortiz-colonTeachingScratch2016}, als auch an Universitäten \parencite{dekerekiScratchApplications2008}. Der Erfolg dieser Anwendung variiert, führt jedoch oft zu Motivationssteigerungen \parencite{dekerekiScratchApplications2008, martinez-valdesRelativelyUnsatisfactory2017}. Dies ist besonders bei jüngeren Zielgruppen der Fall \parencite{ortiz-colonTeachingScratch2016}.
 
-% \begin{figure}[!ht]
-%   \centering
-%     \includegraphics[width=0.95\textwidth]{assets/snap-regions.png}
-%   \caption{Regionen im Snap Editor: \textit{Tool Bar}, \textit{Palette}, \textit{Scripting Area}, \textit{Stage}, \textit{Sprite Corral}. Gezeigt ist ein Beispiel aus der Dokumentation. \parencite{harveySnapReference2020}}
-%   \label{fig:snap-regions}
-% \end{figure}
+\subsubsection{Snap!}
+\Snap{} stellt eine Neuimplementierung von \Scratch{} mit neuen Funktionen dar. \textcite{harveyBringingNo2010} stellte in zeitigen Versionen von \Scratch{} Einschränkungen fest, die es für die Benutzung zur Lehre in der höheren Bildung ungeeignet macht. Einerseits gab es keine Funktionen und konnte somit keine Rekursion abbilden, andererseits wurden komplexe Datenstrukturen nicht unterstützt \parencite{harveyBringingNo2010}.
+
+\begin{figure}[!ht]
+  \minipage[t]{.57\textwidth}
+  \includegraphics[width=\linewidth]{assets/snap-edit.png}
+  \caption{Definition einer rekursiven Funktion in \Snap{}, am Beispiel von \textcite{harveyBringingNo2010}.}
+  \label{fig:snap-edit}
+  \endminipage
+  \hfill
+  \begin{minipage}[t]{.41\textwidth}
+  \includegraphics[width=\linewidth]{assets/snap-tree.png}
+  \caption{Ergebnis der Funktion, wenn der Pfad aufgezeichnet wird.}
+  \label{fig:snap-tree}
+  \end{minipage}
+\end{figure}
+
+Um Rekursion in \Scratch{} umzusetzten, wurde eine Erweiterung namens \ac{BYOB} entwickelt, die es Nutzer:innen erlaubt, eigene Blöcke zu definieren \parencite{harveyBringingNo2010}. Später wurde diese Erweiterung zu einer eigenständigen Anwendung, \Snap{}, welche diese und weitere Funktionalitäten enthält. Abbildungen \ref{fig:snap-edit} und \ref{fig:snap-tree} zeigen die Definition und das Ergebnis einer rekursiven Funktion, die als Block definiert wurde, und sich somit selbst aufrufen kann.
+
+\Snap{} verallgemeinert die Datentypen von \Scratch{} und ermöglicht somit tiefgreifenderen Zugriff auf Variablen. So ist es zum Beispiel möglich, über den Listen-Block Listen zu erstellen, die nicht zuvor als Variable definiert werden müssen. Das ermöglicht Listen in Listen und komplexere Datentypen \parencite{harveySnapReference2020}.
+
+Außerdem unterstützt \Snap{} Ansätze der funktionalen Programmierung, indem Funktionen als Daten übergeben werden können. Ein Beispiel dafür stellt der "Wende ... an auf ...", welches eine Funktion im ersten Parameter entgegennimmt und auf alle Elemente der Liste im zweiten Parameter anwendet \parencite{harveySnapReference2020}. Diese Möglichkeit, gekoppelt mit Blöcken zum Klonen von Figuren und Funktionen, ermöglicht wiederum objektorientierte Programmierung innerhalb von \Snap{} \parencite{harveySnapReference2020}. Figuren werden in \Snap{} auch als Objekte bezeichnet.
+
+\begin{figure}
+  \centering
+    \includegraphics[width=0.57\textwidth]{assets/snap-input-types.png}
+  \caption{Ausführlicher Dialog zur Definition eines Parameters.}
+  \label{fig:snap-input-types}
+\end{figure}
+
+Wie in Abbildung \ref{fig:snap-input-types} zu sehen, unterstützt der Editor für Eingabeparameter von Blöcken unterschiedliche Parametertypen. Somit können während der Erstellung eines Blocks die Einstellungen so gewählt werden, dass die Bedienung des Blocks erleichtert wird. \Snap{} kennt die Eingabetypen des Blocks und kann somit sicherstellen, dass nur passende Blöcke in die Eingabefelder eingesetzt werden \parencite{harveySnapReference2020}. \Snap{} erweitert den in Abbildung \ref{fig:scratch-drop} gezeigten Ansatz, indem beim \textit{Drag and Drop} ein roter Indikator angezeigt wird, wenn der Typ nicht übereinstimmt \parencite{harveySnapReference2020}.
+
+Während das Aussehen der \Snap{}-Programmierumgebung \Scratch stark ähnelt, wurde \Snap{} mit einigen Funktionalitäten angereichert, die dazu führen, dass komplexe Konzepte der Programmierung in einem blockbasierten Editor erlernt werden können \parencite{ballSnapLook2019}. Eingesetzt wird es beispielsweise im Kurs \textit{"The Beauty and Joy of Computing"} der \citeauthor{universityofcaliforniaberkeleySnapBuild}, welcher sich an Studiengänge außerhalb der Informatik richtet \parencite{universityofcaliforniaberkeleySnapBuild}.
 
 \subsubsection{DataSnap}
 - 4 eigenschaften des papers erklären (p. 19) (und zwei abschnitte oben drüber)
