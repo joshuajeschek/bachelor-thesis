@@ -35,6 +35,9 @@
 \usepackage{xcolor} % for colorlet command
 \usepackage{svg} % includesvg
 \usepackage{subcaption} % subfigures
+\usepackage{tikz}
+\usetikzlibrary{shapes, calc, positioning}
+\usepackage{environ} % scale tikz picture to width
 
 \usepackage[style=apa,backend=biber,backref,natbib]{biblatex}
 
@@ -58,6 +61,7 @@
 \input{latex/bib} % bib utils
 \input{latex/listings} % listings setup
 \input{latex/colors} % colors
+\input{latex/tikz}
 
 \input{misc/acronyms} % acronyms
 \input{misc/variables} % acronyms
@@ -111,25 +115,11 @@
 
 \chapter{Theoretische Grundlagen}
 
-\section{Simplex4Data}
-\parencite{rudolfUmweltdatenmanagementGeoInspiration2018}
-\parencite{grossmannEnvVisioUniverselle2021}
-\parencite{grossmannEnvVisioService2022}
-\subsection{Das Realitätsmodell}
-\label{sec:theory-s4d-reality}
-\subsubsection{Allgemeine Erklärung von envVisio}
-\subsubsection{Vielleicht Aufteilung in mehrere Abschnitte?}
-\subsubsection{was ist alles wichtig?}
-\subsection{Laden und Konvertieren}
-\label{sec:simplex-importer}
-\subsubsection{auf Loader und insbesondere Converter eingehen}
-\subsubsection{da in Converter Formular eingesetzt werden soll}
-\subsubsection{wichtig, Prozesse zu verstehen}
-\subsection{SimplexSzenarios}
-\label{sec:simplex-scenarios}
-\subsection{SimplexService}
-\label{sec:simplex-service}
-\todo[inline]{drauf eingehen wie szenarios mit simplex service funktionieren}
+\input{chapters/theory-s4d}
+\input{chapters/theory-s4d-reality}
+\input{chapters/theory-s4d-importer}
+\input{chapters/theory-s4d-scenarios}
+\input{chapters/theory-s4d-service}
 
 \cleardoublepage
 \input{chapters/theory-ogc}
