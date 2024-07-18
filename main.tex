@@ -38,7 +38,6 @@
 \usepackage{tikz}
 \usetikzlibrary{shapes, calc, positioning}
 \usepackage{environ} % scale tikz picture to width
-% \usepackage{amssymb} % blacktriangleright
 
 \usepackage[style=apa,backend=biber,natbib]{biblatex}
 
@@ -107,11 +106,9 @@
 \pagenumbering{arabic}
 
 \chapter{Einleitung}
-
-\section{Hintergrund und Motivation}
-\section{Ziele und Umfang}
-\todo[inline]{These benennen!}
-\section{Aufbau der Arbeit}
+\input{chapters/intro-motivation}
+\input{chapters/intro-goals}
+\input{chapters/intro-structure}
 
 
 \chapter{Theoretische Grundlagen}
@@ -166,6 +163,7 @@
 \input{chapters/study-conclusion}
 
 \chapter{Fazit}
+\input{chapters/conclusion}
 
 %
 % Anhang
