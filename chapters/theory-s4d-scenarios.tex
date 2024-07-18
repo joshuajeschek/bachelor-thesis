@@ -1,2 +1,26 @@
 \subsection{SimplexSzenarios}
 \label{sec:simplex-scenarios}
+
+SimplexSzenarios bieten einen Weg, um im Realitätsmodell enthaltene Daten zu neuen Sichten zusammenzustellen \parencite{grossmannEnvVisioUniverselle2021}. Diese Sichten ermöglichen sowohl neue Erkenntnisse aus den gesammelten Daten zu gewinnen, als auch standardisierte Formate zu bedienen. Nachdem einmal die Bildungsvorschrift für ein SimplexSzenario festgelegt wurde, kann es beliebig oft neu ausgespielt werden, selbst wenn sich das Format der Ausgangsdaten ändert. Da die Definition der SimplexSzenarios nur von den definierten Objekt- und Verbindungsklassen abhängt, werden Import und Auswertung voneinander getrennt. Werden neue Daten importiert, für die bereits eine fachspezifische Auswertung definiert wurde, sind diese Daten sofort auch als SimplexSzenario verfügbar \parencite{rudolfUmweltdatenIntelligenz2021}.
+
+\begin{figure}[!ht]
+  \centering
+  \resizebox{.95\textwidth}{!}{%
+    \begin{tikzpicture}
+      \node (gemeinde) at (0,0) [draw] {Gemeinde};
+      \node (kreis) at ($(gemeinde.east) + (3, 0)$) [draw] {Kreis};
+      \node (land) at ($(kreis.east) + (3, 0)$) [draw] {Bundesland};
+      \draw
+      (gemeinde) edge node (gk) {} (kreis)
+      (kreis) edge node (kl) {} (land);
+      \node at (gk) [anchor=south, scale=.8] {$\blacktriangleright$};
+      \node at (kl) [anchor=south, scale=.8] {$\blacktriangleright$};
+      \node at (gk) [anchor=north, scale=.75] {liegt in};
+      \node at (kl) [anchor=north, scale=.75] {liegt in};
+    \end{tikzpicture}
+  }
+  \caption{Beispiel für drei Objektklassen (Gemeinde, Kreis, Bundesland) in Simplex4TwIS. Gemeinden sind mit dem Kreis verbunden, in dem sie liegen. Kreise sind mit dem Bundesland verbunden, in dem sie liegen.}
+  \label{fig:s4d-szenario-example}
+\end{figure}
+
+Die Definition eines SimplexSzenarios erfolgt in zwei Schritten. Zuerst werden die benötigten Objektklassen ausgewählt, beginnend bei einer Ausgangsklasse. Über Verbindungen können Objektklassen ausgewählt werden, die mit dieser Ausgangsklasse verbunden sind. Dies kann auch über mehrere Verbindungen hinweg passieren, wie in Abbildung \ref{fig:s4d-szenario-example} dargestellt. Wird die Objektklasse "Gemeinde" als Ausgangsklasse gewählt, ist es möglich, sowohl Kreise, als auch Bundesländer im SimplexSzenario auszuwählen. Es ist jedoch auch möglich, eine Sicht zu erstellen, die nur Gemeinden und Bundesländer enthält. Wurden nun die gewünschten Objektklassen gewählt, müssen die Attribute ausgewählt werden, die für die Auswertung relevante sind. In diesem zweiten Schritt können einerseits Standardfelder oder Attribute der Objektklassen ausgewählt werden. Andererseits ist es auch möglich, diese miteinander zu kombinieren und Berechnungen durchzuführen. Im eben genannten Beispiel könnte beispielsweise der Anteil der Fläche einer Gemeinde an der Gesamtfläche des Bundeslandes festgestellt werden, falls beide Objektklassen ein Attribut mit der jeweiligen Fläche besitzen.

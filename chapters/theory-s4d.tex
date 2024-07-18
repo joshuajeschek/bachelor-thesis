@@ -1,15 +1,13 @@
 \newcommand{\SimplexData}{\textit{Simplex4Data}}
 \section{Simplex4Data}
-% \parencite{rudolfUmweltdatenmanagementGeoInspiration2018}
-% \parencite{rudolfUmweltdatenIntelligenz2021}
-% \parencite{grossmannEnvVisioUniverselle2021}
-% \parencite{grossmannEnvVisioService2022}
-% \parencite{grossmannFachsystemeSchemaevolution2024}
+\todo[inline]{Simplex4Data \textrightarrow Simplex4TwIS}
+\todo[inline]{Quelltabelle \textrightarrow Importtabelle}
 
-Bei \SimplexData{} handelt es sich um ein Data Warehouse, welches den von \textcite{rudolfUmweltdatenmanagementGeoInspiration2018} für Umweltdaten vorgestellten Modellierungsansatz umsetzt \parencite{grossmannFachsystemeSchemaevolution2024}. Die allgemeine Struktur des Systems wird in Abbildung \ref{fig:s4d} dargestellt. Dabei besteht der Kern der Datenhaltungskomponente aus simplen Strukturen, die objektorientiert Datensätze abbilden. Datenobjekte werden harmonisiert und atomar verwaltet. Dieses Modell wird unter dem Name Realitätsmodell in \ref{sec:simplex-reality} vorgestellt. \SimplexData{} bildet ein Sekundärsystem, in das Daten aus Fachapplikationen eingespielt werden. Dieser Schritt wird Import genannt und in \ref{sec:simplex-importer} erläutert. Durch SimplexSzenarios können die gesammelten Datenobjekte ausgewertet und zu fachspezifischen Sichten zusammengestellt werden (\ref{sec:simplex-scenarios}). Sowohl die Daten im Realitätsmodell, als auch die SimplexSzenarios werden über den SimplexService als \acs{API}-Schnittstelle ausgegeben (\ref{sec:simplex-service}).
+Bei \SimplexData{} handelt es sich um ein Data Warehouse, welches den von \textcite{rudolfUmweltdatenmanagementGeoInspiration2018} für Umweltdaten vorgestellten Modellierungsansatz umsetzt \parencite{grossmannFachsystemeSchemaevolution2024}. Die allgemeine Struktur des Systems wird in Abbildung \ref{fig:s4d} dargestellt. Dabei besteht der Kern der Datenhaltungskomponente aus simplen Strukturen, die objektorientiert Datensätze abbilden. Datenobjekte werden harmonisiert und atomar verwaltet. Dieses Modell wird unter dem Name \textbf{Realitätsmodell} in \ref{sec:simplex-reality} vorgestellt. \SimplexData{} bildet ein Sekundärsystem, in das Daten aus Fachapplikationen eingespielt werden. Dieser Schritt wird \textbf{Import} genannt und in \ref{sec:simplex-importer} erläutert. Durch \textbf{SimplexSzenarios} können die gesammelten Datenobjekte ausgewertet und zu fachspezifischen Sichten zusammengestellt werden (\ref{sec:simplex-scenarios}). Sowohl die Daten im Realitätsmodell, als auch die SimplexSzenarios werden über den \textbf{SimplexService} als \acs{API}-Schnittstelle ausgegeben \parencite{grossmannEnvVisioService2022}. Diese wird in \ref{sec:simplex-service} beschrieben.
 
 \begin{figure}
   \tikzstyle{s4dArrow}=[->, line width=1.5mm, s4d-blue]
+  \centering
   \resizebox{.95\textwidth}{!}{%
     \begin{tikzpicture}
       \node (s4d) at (8, -6) [inner sep=0, outer sep=0]

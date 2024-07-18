@@ -1,10 +1,30 @@
 \subsection{Das Realitätsmodell}
 \label{sec:simplex-reality}
-\subsubsection{Allgemeine Erklärung von envVisio}
-\subsubsection{Vielleicht Aufteilung in mehrere Abschnitte?}
-\subsubsection{was ist alles wichtig?}
 
-- objekte
-- attribute
-- verbindungen
-\parencite[4.2 Geradlinige Datenmodellierung]{grossmannFachsystemeSchemaevolution2024}
+Das Realitätsmodell bildet das zentrale Element von Simplex4Data. In der Datenbank werden die gesammelten Daten gemäß dieses Modells homogen abgelegt. Dabei erfolgt Speicherung erfolgt harmonisiert, das heißt alle Daten werden in einem gleichmäßigen Datenbankschema abgelegt - es werden keine fachspezifischen Modelle benötigt. So werden Auswertungen vereinfacht und Interoperabilität gewährt. Außerdem werden fachspezifische Strukturen in Einzelteil zerlegt und nur atomare Objekte abgespeichert.
+
+Die Grundelemente des Modells bilden Objekte, Attribute und Verbindungen, welche immer gleiche Datenstrukturen besitzen \parencite{grossmannFachsystemeSchemaevolution2024}. Objekte bilden einzelne Datenelemente ab und sind Teil von Objektklassen, die diese beschreiben. Jede verfügbare Dateneinheit wird als Objektklasse abgebildet, seien es reale Dinge wie Bäume, Häuser oder Gemeinden, oder Prozesse und Handlungen die für einen Datensatz von Relevanz sind. Jede Objektklasse besitzt die gleichen Standardfelder, die oft benötigt werden. Tabelle \ref{tab:s4d-fields} listet die verfügbaren Standardfelder auf. Da auch die Standardfelder über das gleiche Modell beschrieben werden, können Metadaten wie Name, Kurzbeschreibung und Kommentar der Standardfelder je nach Objektklasse angepasst werden. Weitere Informationen können über Attribute angefügt werden, die separat verwaltet werden und mit ihren Objekten verbunden werden \parencite{grossmannFachsystemeSchemaevolution2024}. Attribute können verschiedene Datentypen annehmen, einschließlich Gleitkommazahlen und geometrische Werte.
+
+\begin{table}[!ht]
+  \centering
+  \begin{tabular}{|| l | l | l ||}
+    \hline
+    Schlüssel & Name               & Datentyp   \\[0.5ex]
+    \hline\hline
+    ndx       & Interner Schlüssel & Text       \\
+    key       & Fachschlüssel      & Text       \\
+    typ       & Typ                & Text       \\
+    nam       & Name               & Text       \\
+    dsc       & Kurzbeschreibung   & Text       \\
+    cmt       & Kommentar          & Text       \\
+    beg       & Anfang             & Datum/Zeit \\
+    fin       & Ende               & Datum/Zeit \\
+    \hline
+  \end{tabular}
+  \caption{Standardfelder in Simplex4Data. Sie sind in jeder Objektklasse mit den gleichen Schlüsseln vorhanden, Metadaten wie Name und Kurzbeschreibung der Felder kann jedoch angepasst werden. \parencite{simplex4datagmbhSimplex4TwIS}}
+  \label{tab:s4d-fields}
+\end{table}
+
+Über Objekte und Attribute können die meisten Daten abgebildet werden, einen großen Mehrwert schaffen jedoch Verbindungen \parencite{rudolfUmweltdatenIntelligenz2021}. Verbindungen können zwischen zwei Objekten angelegt werden, um Beziehungen auszudrücken, deren Bedeutung beim Anlegen der Verbindungsklasse festgelegt wird. Somit können komplexe und fachübergreifende Sachverhalte mit einfachen Strukturen abgebildet werden \parencite{grossmannFachsystemeSchemaevolution2024}.
+
+Das Realitätsmodell wird auf allen Ebenen der Datenhaltung benutzt und ist selbstbeschreibend. Auch die Metadaten werden mit dem gleichen Modell beschrieben \parencite{grossmannFachsystemeSchemaevolution2024}. Die Standardfelder aus Tabelle \ref{tab:s4d-fields} findet beispielsweise auch bei der Definition von Objektklassen, Verbindungsklassen, Standardfeldern und Attributen Verwendung.

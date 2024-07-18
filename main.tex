@@ -38,8 +38,9 @@
 \usepackage{tikz}
 \usetikzlibrary{shapes, calc, positioning}
 \usepackage{environ} % scale tikz picture to width
+% \usepackage{amssymb} % blacktriangleright
 
-\usepackage[style=apa,backend=biber,backref,natbib]{biblatex}
+\usepackage[style=apa,backend=biber,natbib]{biblatex}
 
 % auf Einbindungsreihenfolge achten
 \usepackage{hyperref}
@@ -61,7 +62,6 @@
 \input{latex/bib} % bib utils
 \input{latex/listings} % listings setup
 \input{latex/colors} % colors
-\input{latex/tikz}
 
 \input{misc/acronyms} % acronyms
 \input{misc/variables} % acronyms
@@ -87,10 +87,10 @@
 \addcontentsline{toc}{chapter}{\listfigurename}
 \listoffigures
 
-% \cleardoublepage
-% \phantomsection
-% \addcontentsline{toc}{chapter}{\listtablename}
-% \listoftables
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{\listtablename}
+\listoftables
 
 \cleardoublepage
 \phantomsection

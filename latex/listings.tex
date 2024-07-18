@@ -80,6 +80,17 @@
                 {\ -\ }{{\mdseries\ -\ }}3,
 }
 
+\lstdefinelanguage{simplexservice}{
+  breaklines=true,
+  frame=lines,
+  backgroundcolor=\color{background},
+  numbers=none,
+  basicstyle=\footnotesize\ttfamily,
+  keywordstyle=\color{s4d-blue},
+  keywords={},
+  otherkeywords={/scenarios,/\{scenarioId\}}
+}
+
 \makeatletter
 % switch to key style at EOL
 \lst@AddToHook{EveryLine}{\ifx\lst@language\language@yaml\YAMLkeystyle\fi}

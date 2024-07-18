@@ -1,3 +1,14 @@
 \subsection{SimplexService}
 \label{sec:simplex-service}
-\todo[inline]{drauf eingehen wie szenarios mit simplex service funktionieren}
+
+Der SimplexService ist eine gibt die Daten, die im Simplex4TwIS abgelegt wurden als \textit{OGC API - Features}-Dienst aus. Dabei stellt jede Objektklasse eine \textit{collection} dar, die darin enthaltenen Objekte sind \textit{items}. Aufgrund der wiederkehrenden Strukturen werden sowohl Nutz- als auch Metadaten in diesem Format ausgeliefert \parencite{grossmannEnvVisioService2022}. Quelltext \ref{lst:simplex-service} gibt eine Liste von wichtigen Endpunkten des SimplexService an. Dabei wird in blau dargestellt, welche Teile nicht dem \textit{API - Features}-Standard entspringen. Diese zusätzlichen Endpunkte werden dafür genutzt, für Simplex4TwIS spezifische Sachverhalte darzustellen \parencite{grossmannEnvVisioService2022}. Dabei handelt es sich einerseits um die SimplexSzenarios: Jedes SimplexSzenario bildet einen eigenen \textit{API - Features}-Dienst. Das Realitätsmodell wird als Szenario mit der \texttt{scenarioID} 1 ausgeliefert. Außerdem beinhaltet der SimplexService weitere Schnittstellen, welche Verbindungen, Metadaten über Verbindungen und verbundene Objekte ausgeben.
+
+\begin{lstlisting}[float=!ht,language=simplexservice,caption={Ausgewählte Endpunkte des SimplexService. Schwarz dargestellte Abschnitte sind Teil des \textit{OGC API - Features}-Standard, während die blauen Teile vom SimplexService hinzugefügt wurden. \parencite{simplex4datagmbhSimplexServiceDokumenation}},label=lst:simplex-service]
+/scenarios
+/scenarios/{scenarioId}/functions
+/scenarios/{scenarioId}/collections
+/scenarios/{scenarioId}/collections/{collectionId}
+/scenarios/{scenarioId}/collections/{collectionId}/queryables
+/scenarios/{scenarioId}/collections/{collectionId}/items
+/scenarios/{scenarioId}/collections/{collectionId}/items/{featureId}
+\end{lstlisting}
