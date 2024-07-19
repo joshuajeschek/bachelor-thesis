@@ -11,7 +11,7 @@
   \begin{center}
     \includegraphics[width=0.95\textwidth]{assets/scratch.png}
   \end{center}
-  \caption{Beispielprogramm in \Scratch{}. \parencitealias{scratchfoundationScratch}}
+  \caption{Die Programmierumgebung \Scratch{} mit einem Beispielprogramm. Im linken Bereich können Blöcke ausgewählt werden, die in der Mitte genutzt werden um Skripte zusammenzusetzen. Rechts befindet sich das Ausgabefenster und die Möglichkeit, Figuren und Bühnen zu verwalten.}
   \label{fig:scratch}
 \end{figure}
 
@@ -24,7 +24,7 @@ Abbildung \ref{fig:scratch} zeigt den \Scratch{}-Editor und ein Beispielprogramm
   \begin{center}
     \includegraphics[width=0.95\textwidth]{assets/scratch-blocks.png}
   \end{center}
-  \caption{Blockformen in \Scratch{} (v. l. n. r.): Befehl, Funktion, Auslöser, Kontrollstruktur. \parencitealias{scratchfoundationScratch}}
+  \caption{Blockformen in \Scratch{} (v.\,l.\,n.\,r.): Befehl, Funktion, Auslöser, Kontrollstruktur.}
   \label{fig:scratch-blocks}
 \end{figure}
 
@@ -33,13 +33,13 @@ Die Programmiersprache \Scratch{} beschränkte sich zunächst auf drei Datentype
 \begin{figure}[!ht]
   \minipage[t]{.49\textwidth}
   \includegraphics[width=\linewidth]{assets/scratch-types.png}
-  \caption{Drei der Blockkategorien in \Scratch{}: Steuerung (Orange), Bewegung (Blau), Aussehen (Lila). Datentypen in \Scratch{}: Boolean (sechseckige Blöcke), Zahlen und Text (abgerundete Blöcke). \parencitealias{scratchfoundationScratch}}
+  \caption{Drei der Blockkategorien in \Scratch{}: Steuerung (Orange), Bewegung (Blau), Aussehen (Lila). Datentypen in \Scratch{}: Boolean (sechseckige Blöcke), Zahlen und Text (abgerundete Blöcke).}
   \label{fig:scratch-types}
   \endminipage
   \hfill
   \minipage[t]{.49\textwidth}
   \includegraphics[width=\linewidth]{assets/scratch-drop.png}
-  \caption{Blöcke können nur ineinander gesetzt werden, wenn der Datentyp übereinstimmt. Dies wird durch einen weißen Indikator vermittelt. \parencitealias{scratchfoundationScratch}}
+  \caption{Blöcke in \Scratch{} können nur ineinander gesetzt werden, wenn der Datentyp übereinstimmt. Dies wird durch einen weißen Indikator vermittelt.}
   \label{fig:scratch-drop}
   \endminipage
 \end{figure}
@@ -51,18 +51,18 @@ Eine grundlegende Überlegung die bei der Entwicklung von \Scratch{} getroffen w
 \Scratch{} wird auch im Bildungsbereich genutzt, sowohl in Schulen \parencite{ortiz-colonTeachingScratch2016}, als auch an Universitäten \parencite{dekerekiScratchApplications2008}. Der Erfolg dieser Anwendung variiert, führt jedoch oft zu Motivationssteigerungen \parencite{dekerekiScratchApplications2008, martinez-valdesRelativelyUnsatisfactory2017}. Dies ist besonders bei jüngeren Zielgruppen der Fall \parencite{ortiz-colonTeachingScratch2016}.
 
 \subsubsection{Snap!}
-\Snap{} stellt eine Neuimplementierung von \Scratch{} mit neuen Funktionen dar. \textcite{harveyBringingNo2010} stellte in zeitigen Versionen von \Scratch{} Einschränkungen fest, die es für die Benutzung zur Lehre in der höheren Bildung ungeeignet macht. Einerseits gab es keine Funktionen und konnte somit keine Rekursion abbilden, andererseits wurden komplexe Datenstrukturen nicht unterstützt \parencite{harveyBringingNo2010}.
+\Snap{} stellt eine Neuimplementierung von \Scratch{} mit neuen Funktionen dar. \textcite{harveyBringingNo2010} stellte in zeitigen Versionen von \Scratch{} Einschränkungen fest, die es für die Benutzung zur Lehre in der höheren Bildung ungeeignet macht. Einerseits gab es keine Funktionen, wodurch keine Rekursion abgebildet werden konnte, andererseits wurden komplexe Datenstrukturen nicht unterstützt \parencite{harveyBringingNo2010}.
 
 \begin{figure}[!ht]
   \minipage[t]{.575\textwidth}
   \includegraphics[width=\linewidth]{assets/snap-edit.png}
-  \caption{Definition einer rekursiven Funktion in \Snap{}, am Beispiel von \textcite{harveyBringingNo2010}.}
+  \caption{Definition einer rekursiven Funktion in \Snap{}, am Beispiel von \textcite{harveyBringingNo2010}. Die Definition bewegt die Figur entlang eines Pfades, der die Form eines binären Baums mit der spezifizierten Tiefe und Größe besitzt.}
   \label{fig:snap-edit}
   \endminipage
   \hfill
   \begin{minipage}[t]{.405\textwidth}
     \includegraphics[width=\linewidth]{assets/snap-tree.png}
-    \caption{Ergebnis der Funktion, wenn der Pfad aufgezeichnet wird.}
+    \caption{Ergebnis der Funktion aus Abbildung \ref{fig:snap-edit}. Vor dem Funktionsaufruf wurde das Zeichnen des Pfades angeschaltet.}
     \label{fig:snap-tree}
   \end{minipage}
 \end{figure}
@@ -74,7 +74,7 @@ Um Rekursion in \Scratch{} umzusetzten, wurde eine Erweiterung namens \ac{BYOB} 
 \begin{figure}
   \centering
   \includegraphics[width=0.57\textwidth]{assets/snap-input-types.png}
-  \caption{Ausführlicher Dialog zur Definition eines Parameters.}
+  \caption{Ausführlicher Dialog zur Definition eines Parameters in \Snap{}. Die Auswahlmöglichkeiten kontrollieren das spätere Verhalten des Blocks.}
   \label{fig:snap-input-types}
 \end{figure}
 
@@ -98,28 +98,28 @@ Während das Aussehen der \Snap{}-Programmierumgebung \Scratch{} stark ähnelt, 
 
 Da \Snap{} keine Möglichkeit zum Importieren von großen Datensätzen bietet, führt \DataSnap{} Blöcke zum Import von Daten an. Die Implementation beschränkt sich auf den Import von \acs{CSV}-Dateien, welche unter einer URL erreichbar sind. Da es sich um potentiell große Datensätze handelt, werden diese Daten nicht im Browser der Anwender:innen gespeichert, sondern auf einem Server \parencite{hellmannDataSnapEnabling2015}. Für den Zugriff auf die sogenannten \textit{"cloud variables"} wurde eigens Blöcke erstellt, die sich von den Blöcken für lokale Variablen unterscheiden \parencite{hellmannDataSnapEnabling2015}.
 
-Zur Verarbeitung der Daten können die nativen \Snap{}-Blöcke nur begrenzt verwendet werden. Zur Unterstützung von tabellarischen CSV-Datenstrukturen wurden eigens Blöcke definiert, die \acs{SQL}-Abfragen ähneln und auf dem Server ausgewertet werden \parencite{hellmannDataSnapEnabling2015}. Abbildung \ref{fig:datasnap-method-edit} zeigt die Nutzung solcher \textit{"cloud methods"}, um eine wiederverwendbare Abfrage als Block zu definieren. Die von \DataSnap{} hinzugefügten Blöcke werden rosa und pink dargestellt. Im Beispiel werden die Daten von einer \acs{CSV}-Datei abgerufen, die bei der Verwendung des Blocks (Abbildung \ref{fig:datasnap-method-use}) angegeben wird.
-
 \begin{figure}[!ht]
-  \begin{minipage}[t]{.54\textwidth}
+  \begin{minipage}[t]{.52\textwidth}
     \includegraphics[width=\linewidth]{assets/datasnap-method-edit.png}
     \caption{Definition für einen Block in \DataSnap{}, welcher das Alter einer Person aus einer \acs{CSV}-Datei aussucht, deren Spalten \texttt{Name} und \texttt{Age} sind.}
     \label{fig:datasnap-method-edit}
   \end{minipage}
   \hfill
-  \begin{minipage}[t]{.44\textwidth}
+  \begin{minipage}[t]{.46\textwidth}
     \includegraphics[width=\linewidth]{assets/datasnap-method-use.png}
-    \caption{Benutzung der in \ref{fig:datasnap-method-edit} definierten Funktion.}
+    \caption{Benutzung der in \ref{fig:datasnap-method-edit} definierten Funktion. Als Parameter werden ein Name und die \acs{URL} einer \acs{CSV}-Datei angegeben.}
     \label{fig:datasnap-method-use}
   \end{minipage}
 \end{figure}
+
+Zur Verarbeitung der Daten können die nativen \Snap{}-Blöcke nur begrenzt verwendet werden. Zur Unterstützung von tabellarischen CSV-Datenstrukturen wurden eigens Blöcke definiert, die \acs{SQL}-Abfragen ähneln und auf dem Server ausgewertet werden \parencite{hellmannDataSnapEnabling2015}. Abbildung \ref{fig:datasnap-method-edit} zeigt die Nutzung solcher \textit{"cloud methods"}, um eine wiederverwendbare Abfrage als Block zu definieren. Die von \DataSnap{} hinzugefügten Blöcke werden rosa und pink dargestellt. Im Beispiel werden die Daten von einer \acs{CSV}-Datei abgerufen, die bei der Verwendung des Blocks (Abbildung \ref{fig:datasnap-method-use}) angegeben wird.
 
 Außerdem definiert \DataSnap{} Blöcke zur Visualisierung von Datensätzen in \Snap{} \parencite{hellmannDataSnapEnabling2015}. Abbildung \ref{fig:datasnap-visualization} zeigt, wie dies mit Daten mit geographischem Bezug stattfinden kann. Das Beispiel nutzt Blöcke, um den Ort und die Größenordnung von Erdbeben in Nordamerika auf einer Karte zu markieren.
 
 \begin{figure}[!ht]
   \centering
   \includegraphics[width=0.95\textwidth]{assets/datasnap-visualization.png}
-  \caption{Visualisierung eines Datensatzes über Erdbeben in \DataSnap{}. \parencite{hellmannDataSnapEnabling2015}}
+  \caption{Visualisierung eines Datensatzes über Erdbeben in \DataSnap{}. Es wird eine Schleife benutzt, um alle Erdbeben auszuwählen, und sie mit einem Kreis an ihrem Ursprungsort zu markieren. Der Radius der Kreise entspricht der Größenordnung der Erdbeben.\\\parencite[28]{hellmannDataSnapEnabling2015}}
   \label{fig:datasnap-visualization}
 \end{figure}
 

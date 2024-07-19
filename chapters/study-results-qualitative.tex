@@ -35,7 +35,6 @@ Die Frage, ob sich die Teilnehmer:innen in der Benutzung der Anwendung effizient
 %   - funktionen nicht mehr suchen und wenn das besser wird auf jeden fall produktiver und einfacher, übersicht was es alles gibt super
 %   - auf jeden Fall schneller, zufriedenheit wächst weil nicht so viel manuelle arbeit
 
-\todo[noline]{Übergang verbessern?}
 Im Rahmen der Testsitzungen wurden 20 verschiedene Usability-Probleme identifiziert. Diese wurden entweder im Zuge von \ac{CTA} von den Teilnehmer:innen bemängelt, oder durch Verwirrung, Zögern und fehlerbehaftete Nutzung festgestellt.
 
 \begin{figure}[!ht]
@@ -140,7 +139,7 @@ Der Datentyp von Feldern im Szenario-Modus \textbf{(C)} kann über ein Dropdown 
 \begin{figure}
   \centering
   \includegraphics[width=.9\textwidth]{assets/datatype-dropdown.png}
-  \caption{Dropdown zum Auswählen des Datentyps von Feldern im Szenario-Modus}
+  \caption{Dropdown-Menü zum Auswählen des Datentyps von Feldern im Szenario-Modus.}
   \label{fig:type-dropdown}
 \end{figure}
 
@@ -159,13 +158,13 @@ Von den Personen, die keine Probleme mit den Parametern von Überladungen hatten
 \begin{figure}[!ht]
   \minipage[t]{.49\textwidth}
   \includegraphics[width=\linewidth]{assets/concat-overload.png}
-  \caption{Überladung der Funktion \texttt{concat} (vier Parameter). Der angezeigte Tooltip lautet "nächste Überladung verwenden".}
+  \caption{Nutzung der Funktion \texttt{concat} mit einer Überladung mit drei Parametern. Der angezeigte Tooltip lautet "nächste Überladung verwenden".}
   \label{fig:concat-overload}
   \endminipage
   \hfill
   \minipage[t]{.49\textwidth}
   \includegraphics[width=\linewidth]{assets/concat-nested.png}
-  \caption{Eine geschachtelte Version der Funktion \texttt{concat}.}
+  \caption{Eine geschachtelte Version der Funktion \texttt{concat}. Eine einfache Schachtelung resultiert in 3 nutzbare Eingabefelder.}
   \label{fig:concat-nested}
   \endminipage
 \end{figure}
@@ -201,7 +200,7 @@ Abbildung \ref{fig:icons} zeigt die vom Block-Editor verwendeten Icons für Date
     \node [label] at (dt.south)    {Datum/Zeit};
     \node [label] at (geom.south)  {Geometrie};
   \end{tikzpicture}
-  \caption{Die im Block-Editor verwendeten Icons für Datentypen \parencitealias{bootstrapIcons}.}
+  \caption{Die im Block-Editor verwendeten Symbole für Datentypen. \\\parencitealias{bootstrapIcons}}
   \label{fig:icons}
 \end{figure}
 
@@ -211,13 +210,13 @@ Die Anzeige von Attributen in der Zielstruktur weicht von der im Auswahlmenü ab
 \begin{figure}[!ht]
   \minipage[t]{.38\textwidth}
   \includegraphics[width=\linewidth]{assets/attribute-source.png}
-  \caption{Ein Attribut im Auswahlmenü.}
+  \caption{Ein Attribut mit Name und Schlüssel im Auswahlmenü.}
   \label{fig:attribute-source}
   \endminipage
   \hfill
   \minipage[t]{.60\textwidth}
   \includegraphics[width=\linewidth]{assets/attribute-target.png}
-  \caption{Ein Attribut in der Zielstruktur - es wird nur der Schlüssel dargestellt.}
+  \caption{Ein Attribut in der Zielstruktur. Im Gegensatz zu Abbildung \ref{fig:attribute-source} wird nur der Schlüssel ("description") angezeigt.}
   \label{fig:attribute-target}
   \endminipage
 \end{figure}
@@ -244,7 +243,7 @@ In einigen Testsitzungen wurde festgestellt, dass ein verbesserter inhaltlicher 
 \begin{figure}[!ht]
   \centering
   \includegraphics[width=.9\textwidth]{assets/st-makepoint.png}
-  \caption{Die Funktion \texttt{ST\_MakePoint} mit korrekt ausgefüllten Parametern.}
+  \caption{Die Funktion \texttt{ST\_MakePoint} mit korrekt ausgefüllten Parametern. Im ersten Parameter muss der Längengrad, und im zweiten Parameter der Breitengrad angegeben werden.}
   \label{fig:parameters}
 \end{figure}
 Im zweiten Szenario musste die Funktion \texttt{ST\_MakePoint} benutzt werden, um aus Längen- und Breitengraden eine Punktgeometrie zu bilden. Hierbei fehlte es an Details zu den benötigten Parametern \textbf{(F)}. Bis auf ein:e Teilnehmer:in war allen klar, dass die Reihenfolge der Parameter von Relevanz ist, fünf konnten jedoch nicht sofort feststellen, in welcher Reihenfolge die Parameter ausgefüllt werden müssen. Abbildung \ref{fig:parameters} zeigt die besagte Funktion, ausgefüllt in der korrekten Reihenfolge. Die Beschreibung nennt die Parameter in der richtigen Reihenfolge. Eine Person sah dies als Hinweis an, drückte jedoch aus, dass die Parameter trotzdem beschriftet werden sollten. Zwei weitere Personen äußerten eine ähnliche Meinung, während in einer anderen Testsitzung der Hinweis innerhalb der Beschreibung bevorzugt wurde. Ein:e Teilnehmer:in schlug ein Pop-Up für eine detailliertere Beschreibung der Parameter vor. Falls die Parameter für \texttt{ST\_MakePoint} falsch gesetzt wurden, fiel dieser Fehler spätestens beim Betrachten der Ergebnisse in der Tabellenansicht auf, und konnte durch ein Austauschen behoben werden. Die Teilnehmer:innen zeigten Unsicherheit in Bezug auf die Reihenfolge der Parameter und erwarteten dies somit als Fehlerquelle.
