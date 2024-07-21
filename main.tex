@@ -82,11 +82,13 @@
 \begin{document}
 \pagenumbering{roman}
 \input{misc/titlepage}
+
 \cleardoublepage
+\currentpdfbookmark{Abstract}{abstract}
 \input{misc/abstract}
 
 \cleardoublepage
-\currentpdfbookmark{Inhaltsverzeichnis}{name}
+\currentpdfbookmark{Inhaltsverzeichnis}{toc}
 \tableofcontents
 
 \cleardoublepage
@@ -186,6 +188,8 @@
 
 
 % \nocite{*}
+\cleardoublepage
+\pdfbookmark[-1]{Literaturverzeichnis}{literature}
 \chapter*{Literaturverzeichnis}
 \begingroup
 \let\clearpage\relax
@@ -196,7 +200,10 @@
 \endgroup
 
 \cleardoublepage
+\pdfbookmark[-1]{Danksagung}{thx}
 \input{misc/danksagung}
+
 \cleardoublepage
+\pdfbookmark[-1]{Selbständigkeitserklärung}{independence}
 \input{misc/declaration}
 \end{document}
