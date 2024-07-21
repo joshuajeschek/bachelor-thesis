@@ -11,7 +11,7 @@
   \begin{center}
     \includegraphics[width=0.95\textwidth]{assets/scratch.png}
   \end{center}
-  \caption{Die Programmierumgebung \Scratch{} mit einem Beispielprogramm. Im linken Bereich können Blöcke ausgewählt werden, die in der Mitte genutzt werden um Skripte zusammenzusetzen. Rechts befindet sich das Ausgabefenster und die Möglichkeit, Figuren und Bühnen zu verwalten.}
+  \caption[Die Programmierumgebung \Scratch{} mit einem Beispielprogramm]{Die Programmierumgebung \Scratch{} mit einem Beispielprogramm. Im linken Bereich können Blöcke ausgewählt werden, die in der Mitte genutzt werden um Skripte zusammenzusetzen. Rechts befindet sich das Ausgabefenster und die Möglichkeit, Figuren und Bühnen zu verwalten.}
   \label{fig:scratch}
 \end{figure}
 
@@ -24,7 +24,7 @@ Abbildung \ref{fig:scratch} zeigt den \Scratch{}-Editor und ein Beispielprogramm
   \begin{center}
     \includegraphics[width=0.95\textwidth]{assets/scratch-blocks.png}
   \end{center}
-  \caption{Blockformen in \Scratch{} (v.\,l.\,n.\,r.): Befehl, Funktion, Auslöser, Kontrollstruktur.}
+  \caption[Blockformen in \Scratch{}]{Blockformen in \Scratch{} (v.\,l.\,n.\,r.): Befehl, Funktion, Auslöser, Kontrollstruktur.}
   \label{fig:scratch-blocks}
 \end{figure}
 
@@ -33,13 +33,13 @@ Die Programmiersprache \Scratch{} beschränkte sich zunächst auf drei Datentype
 \begin{figure}[!ht]
   \minipage[t]{.49\textwidth}
   \includegraphics[width=\linewidth]{assets/scratch-types.png}
-  \caption{Drei der Blockkategorien in \Scratch{}: Steuerung (Orange), Bewegung (Blau), Aussehen (Lila). Datentypen in \Scratch{}: Boolean (sechseckige Blöcke), Zahlen und Text (abgerundete Blöcke).}
+  \caption[Drei der Blockkategorien in \Scratch{}]{Drei der Blockkategorien in \Scratch{}: Steuerung (Orange), Bewegung (Blau), Aussehen (Lila). Datentypen in \Scratch{}: Boolean (sechseckige Blöcke), Zahlen und Text (abgerundete Blöcke).}
   \label{fig:scratch-types}
   \endminipage
   \hfill
   \minipage[t]{.49\textwidth}
   \includegraphics[width=\linewidth]{assets/scratch-drop.png}
-  \caption{Blöcke in \Scratch{} können nur ineinander gesetzt werden, wenn der Datentyp übereinstimmt. Dies wird durch einen weißen Indikator vermittelt.}
+  \caption[Indikator beim Zusammensetzen von Blöcken in \Scratch{}]{Blöcke in \Scratch{} können nur ineinander gesetzt werden, wenn der Datentyp übereinstimmt. Dies wird durch einen weißen Indikator vermittelt.}
   \label{fig:scratch-drop}
   \endminipage
 \end{figure}
@@ -56,13 +56,13 @@ Eine grundlegende Überlegung die bei der Entwicklung von \Scratch{} getroffen w
 \begin{figure}[!ht]
   \minipage[t]{.575\textwidth}
   \includegraphics[width=\linewidth]{assets/snap-edit.png}
-  \caption{Definition einer rekursiven Funktion in \Snap{}, am Beispiel von \textcite{harveyBringingNo2010}. Die Definition bewegt die Figur entlang eines Pfades, der die Form eines binären Baums mit der spezifizierten Tiefe und Größe besitzt.}
+  \caption[Definition einer rekursiven Funktion in \Snap{}]{Definition einer rekursiven Funktion in \Snap{}, am Beispiel von \textcite{harveyBringingNo2010}. Die Definition bewegt die Figur entlang eines Pfades, der die Form eines binären Baums mit der spezifizierten Tiefe und Größe besitzt.}
   \label{fig:snap-edit}
   \endminipage
   \hfill
   \begin{minipage}[t]{.405\textwidth}
     \includegraphics[width=\linewidth]{assets/snap-tree.png}
-    \caption{Ergebnis der Funktion aus Abbildung \ref{fig:snap-edit}. Vor dem Funktionsaufruf wurde das Zeichnen des Pfades angeschaltet.}
+    \caption[Ergebnis der Funktion aus Abbildung \ref*{fig:snap-edit}]{Ergebnis der Funktion aus Abbildung \ref{fig:snap-edit}. Vor dem Funktionsaufruf wurde das Zeichnen des Pfades angeschaltet.}
     \label{fig:snap-tree}
   \end{minipage}
 \end{figure}
@@ -74,7 +74,7 @@ Um Rekursion in \Scratch{} umzusetzten, wurde eine Erweiterung namens \ac{BYOB} 
 \begin{figure}
   \centering
   \includegraphics[width=0.57\textwidth]{assets/snap-input-types.png}
-  \caption{Ausführlicher Dialog zur Definition eines Parameters in \Snap{}. Die Auswahlmöglichkeiten kontrollieren das spätere Verhalten des Blocks.}
+  \caption[Dialog zur Definition eines Parameters in \Snap{}]{Ausführlicher Dialog zur Definition eines Parameters in \Snap{}. Die Auswahlmöglichkeiten kontrollieren das spätere Verhalten des Blocks.}
   \label{fig:snap-input-types}
 \end{figure}
 
@@ -101,13 +101,13 @@ Da \Snap{} keine Möglichkeit zum Importieren von großen Datensätzen bietet, f
 \begin{figure}[!ht]
   \begin{minipage}[t]{.52\textwidth}
     \includegraphics[width=\linewidth]{assets/datasnap-method-edit.png}
-    \caption{Definition für einen Block in \DataSnap{}, welcher das Alter einer Person aus einer \acs{CSV}-Datei aussucht, deren Spalten \texttt{Name} und \texttt{Age} sind.}
+    \caption[Definition eines Blocks in \DataSnap{}]{Definition für einen Block in \DataSnap{}, welcher das Alter einer Person aus einer \acs{CSV}-Datei aussucht, deren Spalten \texttt{Name} und \texttt{Age} sind.}
     \label{fig:datasnap-method-edit}
   \end{minipage}
   \hfill
   \begin{minipage}[t]{.46\textwidth}
     \includegraphics[width=\linewidth]{assets/datasnap-method-use.png}
-    \caption{Benutzung der in \ref{fig:datasnap-method-edit} definierten Funktion. Als Parameter werden ein Name und die \acs{URL} einer \acs{CSV}-Datei angegeben.}
+    \caption[Benutzung der in Abbildung \ref*{fig:datasnap-method-edit} definierten Funktion]{Benutzung der in \ref{fig:datasnap-method-edit} definierten Funktion. Als Parameter werden ein Name und die \acs{URL} einer \acs{CSV}-Datei angegeben.}
     \label{fig:datasnap-method-use}
   \end{minipage}
 \end{figure}
@@ -119,7 +119,7 @@ Außerdem definiert \DataSnap{} Blöcke zur Visualisierung von Datensätzen in \
 \begin{figure}[!ht]
   \centering
   \includegraphics[width=0.95\textwidth]{assets/datasnap-visualization.png}
-  \caption{Visualisierung eines Datensatzes über Erdbeben in \DataSnap{}. Es wird eine Schleife benutzt, um alle Erdbeben auszuwählen, und sie mit einem Kreis an ihrem Ursprungsort zu markieren. Der Radius der Kreise entspricht der Größenordnung der Erdbeben.\\\parencite[28]{hellmannDataSnapEnabling2015}}
+  \caption[Visualisierung eines Datensatzes über Erdbeben in \Snap{}]{Visualisierung eines Datensatzes über Erdbeben in \DataSnap{}. Es wird eine Schleife benutzt, um alle Erdbeben auszuwählen, und sie mit einem Kreis an ihrem Ursprungsort zu markieren. Der Radius der Kreise entspricht der Größenordnung der Erdbeben.\\\parencite[28]{hellmannDataSnapEnabling2015}}
   \label{fig:datasnap-visualization}
 \end{figure}
 
