@@ -1,6 +1,4 @@
 \newcommand{\qref}[2]{(Vgl. \hyperref[#2]{\ref*{sec:qualitative}, \textbf{#1}})}
-\section{Schlussfolgerungen und Zukunftsaussicht}
-\label{study-conclusion}
 
 Die Usability-Studie des Prototyps hat gezeigt, dass die allgemeine Herangehensweise gut angenommen wurde. Tippfehler wurden verhindert, und ein Nachschlagen der Quellstrukturen während dem Abarbeitung von Aufgaben war nicht nötig. Je nach technischer Vorkenntnis und Vertrautheit mit dem System Simplex4TwIS konnten die Teilnehmer:innen schnell mit dem Block-Editor arbeiten und die gewünschten Resultate erzielen. Die getestete Anwendung erweist sich somit in den getesteten Anwendungsfällen als geeignet zur Bearbeitung von Umweltdatensätzen.
 
@@ -82,8 +80,10 @@ Das Auswählen der Datentypen im Szenario-Editor ist aktuell zu umständlich \qr
 
 Die folgenden Fragen wurden im Laufe der Usability-Studie aufgeworfen, konnten aber noch nicht auf zufriedenstellende Art beantwortet werden. Um ein optimales Nutzungserlebnis zu ermöglichen, sollten sie jedoch überdacht werden.
 
+\pskip
 Einige Operatoren, die typischerweise durch Infixnotation ausgedrückt werden (\texttt{+}, \texttt{-}, \texttt{||}, \texttt{AND}, \texttt{OR}), werden im Block-Editor über Funktionen abgebildet \qref{A}{p:bedienreihenfolge}. Zwar ist es möglich, Infix-Operatoren über Funktionen darzustellen, dies scheint jedoch mitunter als nicht intuitiv aufgefasst zu werden und erschwert die Verkettung von mehreren Elementen. Die Anzahl der Parameter kann zwar über Funktionsüberladungen erhöht werden, entspricht aber nicht dem gleichen Nutzungserlebnis von Verkettungen mit Infix-Operatoren. Es ist zu diskutieren, ob mit Operatoren anders umgegangen werden sollte als mit Funktionen, und ob dafür eigene UI-Elemente und -Verhaltensmuster geschaffen werden sollten.
 
+\pskip
 Eine Hürde bei der Benutzung von Funktionsüberladungen bestand darin, dass bereits ausgefüllte Parameter nicht übernommen wurden \qref{I}{p:paramterübernahme}. Wie eine Übernahme von Parametern in andere Funktionsüberladungen auch in Randfällen vorhersehbar durchgeführt werden kann ist noch ungeklärt. Solche Randfälle beinhalten beispielsweise die Veränderung des Datentyps von Parametern, die Veränderung der Bedeutung von Parametern, sowie ein Wegfallen von bereits ausgefüllten Parametern.
 
 Das eben genannte Problem könnte teilweise durch Felder mit variablen Datentypen (begrenzt auf die möglichen Datentypen für einen Parameter in Funktionen) gelöst werden. Dies birgt jedoch weitere Probleme in sich, da so die Möglichkeit besteht, ausgeschlossene Kombinationen von Datentypen zu ermöglichen, die zuvor durch Überladungen voneinander ausgeschlossen wurden. Eine dynamische Anpassung der validen Datentypen für einzelne Parameter könnte sehr komplex werden, eine Fehlermeldung beim Eintragen oder Abschicken wäre jedoch auch nicht optimal.
