@@ -7,7 +7,7 @@ Im Folgenden werden für jedes Szenario drei Bildschirmfotos aufgelistet: Der Au
 \newcommand{\scgraphic}[3][]{%
   \includegraphics[width=\textwidth]{assets/sc-#2.png}
   #1
-  \caption{#3}}
+  \caption[#3]{#3.}}
 
 % compact screenshot graphic
 \newcommand{\cscgraphic}[2]{%
@@ -20,17 +20,17 @@ Im Folgenden werden für jedes Szenario drei Bildschirmfotos aufgelistet: Der Au
     \scgraphic{#1}{#2}
   \end{figure}}
 
-\scfigure{1-start}{Ausgangspunkt von Szenario 1.}
-\scfigure{1-end}{Mögliche Lösung für Szenario 1.}
-\scfigure{2-start}{Ausgangspunkt von Szenario 2.}
-\scfigure{2-end}{Mögliche Lösung für Szenario 2.}
-\scfigure{3-start}{Ausgangspunkt von Szenario 3.}
-\scfigure{3-end}{Mögliche Lösung für Szenario 3.}
+\scfigure{1-start}{Ausgangspunkt von Szenario 1}
+\scfigure{1-end}{Mögliche Lösung für Szenario 1}
+\scfigure{2-start}{Ausgangspunkt von Szenario 2}
+\scfigure{2-end}{Mögliche Lösung für Szenario 2}
+\scfigure{3-start}{Ausgangspunkt von Szenario 3}
+\scfigure{3-end}{Mögliche Lösung für Szenario 3}
 \begin{figure}[hbtp]
   \centering
-  \cscgraphic{1-result}{Ergebnistabelle von Szenario 1.}
+  \cscgraphic{1-result}{Ergebnistabelle von Szenario 1}
   \vspace{4mm}
-  \cscgraphic{2-result}{Ergebnistabelle von Szenario 2.}
+  \cscgraphic{2-result}{Ergebnistabelle von Szenario 2}
   \vspace{4mm}
-  \cscgraphic{3-result}{Ergebnistabelle von Szenario 3.}
+  \cscgraphic{3-result}{Ergebnistabelle von Szenario 3}
 \end{figure}
