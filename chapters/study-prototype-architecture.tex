@@ -1,5 +1,5 @@
 \subsection{Technische Umsetzung}
-Der Block-Editor gliedert sich in die restliche Anwendung Simplex4TwIS ein. Dabei wird die Serveranwendung unter Verwendung von Python und dem Django-Framework \parencite{djangosoftwarefoundationDjango} programmiert. Das Frontend ist eine Browser-Anwendung, die mit \ac{HTML}, JavaScript und \ac{CSS}, bzw. \ac{SASS} umgesetzt wurde.
+Der Block-Editor gliedert sich in die restliche Anwendung Simplex4TwIS ein. Dabei wird die Serveranwendung unter Verwendung von Python und dem Django-Framework \parencite{djangosoftwarefoundationDjango} programmiert. Das Frontend ist eine Browser-Anwendung, die mit \ac{HTML}, JavaScript und \ac{CSS}, beziehungsweise \ac{SASS} umgesetzt wurde.
 
 Das Backend generiert \ac{HTML}, welches an den Client gesendet wird. Da es sich bei dem vorliegenden Editor jedoch um eine sehr dynamische Anwendung handelt, wird nur ein Grundgerüst auf dem Server gebildet. Auf dem Client wird dann per \ac{API} abgerufen, welche abfragbaren Felder, Funktionen und auszufüllende Felder existieren. Aus dem so erhaltenen \ac{JSON} werden dann UI-Elemente mit Nunjucks \parencite{mozillaNunjucks} generiert. Des Weiteren wurde die JavaScript-Bibliothek jQuery \parencite{openjsfoundationJQuery} genutzt, um Zustände zu verwalten und auf Interaktionen zu reagieren.
 
