@@ -2,14 +2,17 @@
 
 Ziel ist es, eine Anwendung zu schaffen, welche den Anforderungen der Datenverarbeitung innerhalb von Simplex4TwIS gerecht wird. Dabei gibt es zwei Anwendungsbereiche, welche sich in ihren Grundeigenschaften ähneln: das Erstellen von Konvertierungen beim Importieren in das Realitätsmodell (Vgl. \ref{sec:simplex-importer}) und das Erstellen von SimplexSzenarios (Vgl. \ref{sec:simplex-scenarios}).
 
+\pskip
 Das Erstellen von Konvertierungen findet nach dem Einlesen von Ausgangsdaten in die Datenbank statt (Vgl. \ref{sec:simplex-importer}). Dabei entstehen sogenannte Importtabellen, in denen die Informationen in flachen Strukturen enthalten sind. Die Konvertierungen nutzen die Importtabellen dann, um die Daten in das Realitätsmodell zu übertragen.
 
 Sobald sich die Daten im Realitätsmodell befinden, besteht die Möglichkeit, SimplexSzenarios zu definieren. Diese selektieren und kombinieren Attribute aus Objektklassen, um fachspezifische Auswertungen zu generieren. Die Erstellung der SimplexSzenarios kann in zwei Schritten erfolgen, wobei im Ersten die gewünschten Objektklassen ausgewählt werden, und im Zweiten die Attribute ausgewählt und miteinander kombiniert werden. Diese Arbeit beschränkt sich dabei auf den zweiten Schritt.
 
 Beide Prozesse erfordern manuelle Angaben, die bestimmen wie aus den Ausgangsdaten (Importtabellen oder Objektklassen) Zielstrukturen (Objekte oder SimplexSzenarios) erstellt werden sollen. In beiden Fällen ist das Format der Ausgangsdaten klar definiert, da Attribut-Schlüssel und Datentypen gegeben sind. Im Falle der Konvertierungen ist auch das Zielformat festgelegt, da das Schema der Objektklasse (Standardfelder und Sachattribute) bereits definiert wurde. Bei SimplexSzenarios ist dies nicht der Fall, denn die darin enthaltenen Attribute können während der Erstellung frei angelegt werden. Sowohl in Konvertierungen als auch in SimplexSzenarios ist es möglich, Funktionen auf Attribute, beziehungsweise Datenbankspalten anzuwenden. Dabei handelt es sich um Standard-\ac{SQL}-Funktionen oder solche, die durch Erweiterungen\footnote{wie beispielweise PostGIS, eine PostgreSQL-Erweiterung für Geodaten \parencite{postgispscPostGIS}} zur Verfügung gestellt werden. Außerdem können im Zuge beider Arbeitsschritte Filterbedingungen definiert werden, um nur bestimmte Zeilen der Importtabelle in Objekte umzuwandeln oder um nur bestimmte Objekte in SimplexSzenarios auszuwerten.
 
+\pskip
 Aufgrund der genannten Gemeinsamkeiten soll ein Editor entwickelt werden, welcher sowohl für die Erstellung von Konvertierungen als auch für die Definition von SimplexSzenarios verwendet werden kann. Im zweiten Anwendungsfall unterscheidet sich die Funktionalität dahingehend, dass die Ausgabefelder frei bestimmt und benannt werden können.
 
+\pskip
 Der aktuelle Editor für Konvertierungen besteht aus Textfeldern, in denen Auszüge von \ac{SQL}-Befehlen eingegeben werden können. Ein Beispiel dafür ist in Abbildung \ref{fig:conversion-gemeinde} gegeben. Die eingegebenen Ausdrücke werden dann in einen \texttt{SELECT}-Befehl eingesetzt. Diese Herangehensweise ist äußerst flexibel, weist jedoch in der Benutzung einige Usability-Probleme auf. Eine wesentliche Rolle spielt, dass die Ausgangsdaten nicht innerhalb des Editors dokumentiert sind. Die Benutzer:innen müssen somit immer nachschlagen, welche Werte sie eintragen können. Das manuelle Eintippen birgt außerdem die Gefahr, sowohl Tippfehler als auch Fehler im \ac{SQL}-Syntax zu verursachen. Auch die inhaltliche Sinnhaftigkeit der Befehle wird nicht sichergestellt, und Nutzer:innen, die nicht mit SQL vertraut sind, benötigen aufwendige Einführungen und können komplexe Aufgaben schlechter bewältigen. Im einfachsten Fall muss für das Beispiel (Abbildung \ref{fig:conversion-gemeinde}) die Struktur der Importtabelle bekannt sein, um den Spaltenname \texttt{q.gemeindename} anzugeben. In komplexeren Fällen müssen zudem die Funktion \texttt{LPAD}, der Textverkettungs-Operator \texttt{||}, \texttt{CASE}-Ausdrücke und allgemeiner \ac{SQL}-Syntax bekannt sein, sowie fehlerfrei angewendet werden.
 
 \begin{figure}[ht]
@@ -19,6 +22,8 @@ Der aktuelle Editor für Konvertierungen besteht aus Textfeldern, in denen Ausz�
   \label{fig:conversion-gemeinde}
 \end{figure}
 
+Die aktuell genutzte Herangehensweise hat außerdem den Nachteil, dass es sich als aufwändig erweißt, gegen \ac{SQL}-Injektion vorzugehen. Dabei kann es sich sowohl um bösartigen Eingaben, als auch um versehentliche Eingabefehler handeln, die unvorhergesehene Konsequenzen besitzen. Sollte auf die manuelle Eingabe von \ac{SQL}-Befehlen verzichtet werden, könnte im gleichen Schritt \ac{SQL}-Injektion vermieden werden.
+
 \pskip
 Der entwickelte Editor sollte bezüglich seiner Nutzbarkeit eine Verbesserung gegenüber der aktuellen Lösung darstellen. Zusammenfassend können folgende Ziele formuliert werden:
 \begin{itemize}
@@ -26,4 +31,5 @@ Der entwickelte Editor sollte bezüglich seiner Nutzbarkeit eine Verbesserung ge
   \item Der Editor soll häufiges Nachschlagen verhindern.
   \item Der Editor soll Tippfehler vermeiden.
   \item Der Editor soll auch ohne \ac{SQL}-Kenntnisse bedienbar sein.
+  \item Der Editor soll \ac{SQL}-Injektion verhindern.
 \end{itemize}
