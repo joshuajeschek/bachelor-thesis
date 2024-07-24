@@ -1,19 +1,19 @@
 \subsection{Queryables}
 \label{sec:queryables}
 
-\citetitle{ogcFiltering} beschreibt \textit{Queryables} als Token, welche ein eine Eigenschaft einer Ressource darstellen, die in einem Filterausdruck verwendet werden können \parencitealias{ogcFiltering}. Der vorläufige Standard sieht vor, dass ein \ac{API}-Endpunkt angeboten wird, der über die existierenden Queryables, deren Namen und Typen informiert.
-\parencitealias{ogcFiltering}
+\citetitle{ogcFiltering} beschreibt \textit{Queryables} als Token, welche Eigenschaften einer Ressource darstellen, die in einem Filterausdruck verwendet werden können \parencitealias{ogcFiltering}. Der vorläufige Standard sieht vor, dass ein \ac{API}-Endpunkt angeboten wird, der über die existierenden Queryables, deren Namen und Typen informiert
+\parencitealias{ogcFiltering}.
 
-Dabei existieren zwei Pfade. Unter \texttt{/queryables} werden die Attribute zurückgegeben , die für alle \textit{collections} existieren\parencitealias{ogcFiltering}. Jede \textit{collection} verfügt des Weiteren über einen Unterpfad \texttt{/collections/\{collectionId\}/queryables}, welcher die spezifischen Attribute für die \textit{collection} angibt\parencitealias{ogcFiltering}.
+Dabei existieren zwei Pfade. Unter \texttt{/queryables} werden die Attribute zurückgegeben , die für alle \textit{collections} existieren \parencitealias{ogcFiltering}. Jede \textit{collection} verfügt des Weiteren über einen Unterpfad \texttt{/collections/\{collectionId\}/queryables}, welcher die spezifischen Attribute für die \textit{collection} angibt \parencitealias{ogcFiltering}.
 
-Der vorläufige Standard \parencitealias{ogcFiltering}, schlägt vor, dass jedes ausgelieferte Attribut über einen Titel und, wenn nötig, über eine Beschreibung verfügt. Des Weiteren sollte jedes Attribut einen Typ angeben, außer es handelt sich um einen räumlichen Typ. Diese werden mittels einer Referenzierung des passenden \ac{JSON}-Schema des Geometrietyps gekennzeichnet. Zeitliche Typen sollen als \texttt{string} beschrieben werden und mit einem entsprechenden Format spezifiziert. Des Weiteren wird definiert, wie mit Aufzählungen und Wertebereichen umgegangen werden sollte \parencitealias{ogcFiltering}. Räumliche und zeitliche Typen werden bei der Definition der Queryables anders dargestellt, als bei den Funktionen. Da beide über ein zusätzlich definiertes Format oder Schema verfügen, werden somit mehr Funktionen übermittelt, als bei Funktionsparametern und Rückgabetypen der Fall ist. Bei der kombinierten Benutzung beider Endpunkte ist somit eine Übersetzung von einem Format in das andere nötig, bei dem nicht alle Informationen, die von Queryables verfügbar sind, in Funktionen benutzt werden können. Beispielsweise wäre es möglich anzugeben, dass ein Queryable vom Typ Flächengeomtrie ist, nicht aber eine Funktion zu definieren, die nur Flächengeometrie annimmt.
+Der vorläufige Standard \parencitealias{ogcFiltering}, schlägt vor, dass jedes ausgelieferte Attribut über einen Titel und, wenn nötig, über eine Beschreibung verfügt. Des Weiteren sollte jedes Attribut einen Typ angeben, außer es handelt sich um einen räumlichen Typ. Diese werden mittels einer Referenzierung des passenden \ac{JSON}-Schema des Geometrietyps gekennzeichnet. Zeitliche Typen sollen als \texttt{string} beschrieben und mit einem entsprechenden Format spezifiziert werden. Des Weiteren wird definiert, wie mit Aufzählungen und Wertebereichen umgegangen werden sollte \parencitealias{ogcFiltering}. Räumliche und zeitliche Typen werden bei der Definition der Queryables anders dargestellt, als bei den Funktionen. Da beide über ein zusätzlich definiertes Format oder Schema verfügen, werden somit mehr Funktionen übermittelt, als bei Funktionsparametern und Rückgabetypen der Fall ist. Bei der kombinierten Benutzung beider Endpunkte ist somit eine Übersetzung von einem Format in das andere nötig, bei dem nicht alle Informationen, die von Queryables verfügbar sind, in Funktionen benutzt werden können. Beispielsweise wäre es möglich anzugeben, dass ein Queryable vom Typ Flächengeomtrie ist, nicht aber eine Funktion zu definieren, die nur Flächengeometrie annimmt.
 
 \subsubsection{Queryables im SimplexService}
 
 \lstinputlisting[
   float=!ht,
   label=lst:queryables,
-  caption={[Antwort auf \texttt{/queryables}-Anfrage im SimplexService (Auszug)]Antwort auf \texttt{/queryables}-Anfrage für die Objektklasse "Gemeinde" im SimplexService (Auszug). Unter dem Schlüssel \texttt{properties} befinden sich alle Standardfelder und Attribute, die in der Klassendefinition angelegt wurden.},
+  caption={[Antwort auf \texttt{/queryables}-Anfrage im SimplexService]Antwort auf \texttt{/queryables}-Anfrage für die Objektklasse "Gemeinde" im SimplexService (Auszug). Unter dem Schlüssel \texttt{properties} befinden sich alle Standardfelder und Attribute, die in der Klassendefinition angelegt wurden.},
   language=json,
   escapeinside=``
 ]{assets/queryables.json}
@@ -26,8 +26,12 @@ Abgefragt wird Klasse 100 der Quelle 9 im Realitätsmodell (SimplexSzenario 1). 
 
 Sowohl die Standardfelder als auch die Attribute von Objektklassen werden über den Queryables-Endpunkt ausgeliefert \parencite{simplex4datagmbhSimplex4TwIS}. Quelltext \ref{lst:queryables} enthält sowohl ein Standardfeld vom Typ string, als auch ein Geometrieattribut. Zu sehen ist, dass der Titel des Standardfelds gemäß der in der Objektklasse definierten Metadaten ausgeliefert wird und das Geometrieattribut nicht über \texttt{type}  definiert wird, sondern über \texttt{format} und eine Referenz zum zugehörigen \ac{JSON}-Schema.
 
-Da in Simplex4TwIS Objektklassen miteinander verbunden sind, wurde der SimplexService um die Möglichkeit erweitert, Objektklasse-übergreifende Abfragen zu definieren. Diese geschieht über den \texttt{joins}-Parameter:
-\begin{quote}
-  \texttt{?joins=<9-1-100:9-3-106-obj-0:nn,>9-3-106-obj-0:9-1-102-obj-land}
-\end{quote}
-In diesem Fall wird die Verbindung 106 angesprochen, um mit der Abfrage außerdem die Informationen aus Klasse 102 abzufragen. Dabei handelt es sich um die Objektklasse "Bundesland". Wird der Parameter \texttt{joins} An eine Queryables-Abfrage angehangen, werden sowohl die Standardfelder und Attribute des der Basisklasse (in diesem Fall "Gemeinde"), als auch die der hinzugefügten Klassen zurückgegeben \parencite{simplex4datagmbhSimplex4TwIS}. Im zweiten Fall führt dies dazu, dass die Schlüssel der Elemente um einen Präfix erweitert werden, der angepasst werden kann. Im genannten Beispiel würde dann das Standardfeld der Klasse "Bundesland" \texttt{key} den Schlüssel \texttt{land.key} bekommen, während das gleiche Standardfelder der Klasse "Gemeinde" weiterhin \texttt{key} heißt.
+Da in Simplex4TwIS Objektklassen miteinander verbunden sind, wurde der SimplexService um die Möglichkeit erweitert, Objektklassen-übergreifende Abfragen zu definieren. Diese geschieht über den \texttt{joins}-Parameter, über den Verbindungen und deren Zielklassen angegeben werden können. Wird der Parameter \texttt{joins} an eine Queryables-Abfrage angehangen, werden sowohl die Standardfelder und Attribute des der Basisklasse, als auch die der hinzugefügten Klassen zurückgegeben \parencite{simplex4datagmbhSimplex4TwIS}. Im zweiten Fall führt dies dazu, dass die Schlüssel der Elemente um einen Präfix erweitert werden, der angepasst werden kann. Quelltext \ref{lst:queryables-joined} zeigt dies beispielhaft für die Basisklasse "Gemeinde" und die Klasse "Bundesland". Zu sehen ist, dass den Attributen, die zum Bundesland gehören, der Präfix \texttt{land} angefügt wurde.
+
+\lstinputlisting[
+  float=!ht,
+  label=lst:queryables-joined,
+  caption={[Antwort auf Objektklassen-übergreifende \texttt{/queryables}-Anfrage]Antwort auf eine Objektklassen-übergreifende \texttt{/queryables}-Anfrage im SimplexService (Auszug). Die Objektattribute beider Klassen werden ausgegeben. Die Attribute der Klasse "Bundesland" besitzen den Präfix \texttt{land}, während die der Basisklasse ("Gemeinde") keinen Präfix besitzen.},
+  language=json,
+  escapeinside=``
+]{assets/queryables-joined.json}

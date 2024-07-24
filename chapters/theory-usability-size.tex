@@ -9,7 +9,7 @@ Für diese Arbeit werden formative Studien von Relevanz sein. Dabei sollte die A
 $n$ Teilnehmer:innen als wie folgt:
 \begin{equation}
   \label{equ:finding-usability-problems}
-  N(1-(1-\lambda{})^n),
+  N(1-(1-\lambda{})^n)\text{,}
 \end{equation}
 wobei $N$ die Gesamtanzahl der Probleme und $\lambda{}$ der Anteil der Probleme die bei einem einzigen Testdurchlauf gefunden werden. Mit dem von ihm über mehrere Projekte beobachtete Wert von $\lambda{}=31\%$ kommt \textcite{nielsenWhyYou2000} zum Resultat, dass mit fünf Teilnehmer:innen 85\% aller Probleme festgestellt werden können. \cite{nielsenWhyYou2000} Weitere Testdurchläufe sind weniger lohnenswert, da nicht genug neue Probleme aufgedeckt werden. Um alle Probleme mit einer Studie zu finden, wären 15 Teilnehmer:innen nötig, die gegen Ende jedoch nur noch vereinzelt neue Erkenntnisse liefern. Da Teilnehmer:innen oft die gleichen, oberflächlichen Fehler finden und dadurch abgelenkt werden, ist es von Vorteil nach den ersten fünf Durchläufen die gefundenen 85\% zu beheben, und dann eine weitere Studie durchzuführen. Eine dreifache Wiederholung der Tests mit fünf Durchläufen und einem verbesserten Produkt führt zu umfangreicheren Resultat als ein einziger Test mit 15 Durchläufen \parencite{nielsenWhyYou2000}.
 
@@ -20,7 +20,7 @@ Die als Faustregel adaptierte Zahl Fünf wurde in mehreren Publikationen untersu
 
 Laut \textcite{woolrychWhyWhen2001} ist die Wahrscheinlichkeit, dass ein Problem entdeckt wird, nicht konstant sondern hängt von Schweregrad, Benutzermerkmalen, Produkttyp und Strukturierungsgrad des Testes ab. Sie erweitern deshalb Gleichung \ref{equ:finding-usability-problems} um $\lambda{}_j$, welches die Wahrscheinlichkeit für jedes Usability Problem darstellt, dass das Problem von einer zufällig ausgewählten Teilnehmer:in gefunden wird. Die erwartete Nummer an gefundenen Problemen beträgt dann laut \textcite{woolrychWhyWhen2001}:
 \begin{equation}
-  \sum_{j=1}^n 1-(1-\lambda{}_j)^n
+  \sum_{j=1}^n 1-(1-\lambda{}_j)^n\text{.}
 \end{equation}
 Um Gleichung \ref{equ:finding-usability-problems} zu reproduzieren, müsste $\lambda{}_j = \lambda{}$ für alle $j$ gelten. Das bedeutet, dass die Wahrscheinlichkeiten, einzelner Probleme gefunden zu werden, eine geringe Variabilität besitzen. Die von \textcite{nielsenMathematicalModel1993} eingeführte Gleichung \ref{equ:finding-usability-problems} wird \textcite{woolrychWhyWhen2001} zufolge unzuverlässiger, sobald eine größere Varianz im System und bei den Teilnehmer:innen existiert. Sich unterscheidende Interaktionen mit dem System und die Auswahl der Aufgaben beinflussen die Zuverlässigkeit eines einzigen Wertes $\lambda{}$ \parencite{woolrychWhyWhen2001}.
 

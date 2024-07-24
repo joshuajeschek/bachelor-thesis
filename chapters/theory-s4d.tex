@@ -1,5 +1,5 @@
 \section{Simplex4TwIS}
-\label{sec:s4d}
+\label{sec:simplex}
 
 Bei Simplex4TwIS handelt es sich um ein Data Warehouse, welches den von \textcite{rudolfUmweltdatenmanagementGeoInspiration2018} für Umweltdaten vorgestellten Modellierungsansatz umsetzt \parencite{grossmannFachsystemeSchemaevolution2024}. Die allgemeine Struktur des Systems wird in Abbildung \ref{fig:s4d} dargestellt. Dabei besteht der Kern der Datenhaltungskomponente aus simplen Strukturen, die Datensätze objektorientiert abbilden. Datenobjekte werden harmonisiert und atomar verwaltet. Dieses Modell wird unter dem Namen \textbf{Realitätsmodell} in \ref{sec:simplex-reality} vorgestellt. Simplex4TwIS bildet ein Sekundärsystem, in das Daten aus Fachapplikationen eingespielt werden. Dieser Schritt wird \textbf{Import} genannt und in \ref{sec:simplex-importer} erläutert. Durch \textbf{SimplexSzenarios} können die gesammelten Datenobjekte ausgewertet und zu fachspezifischen Sichten zusammengestellt werden (\ref{sec:simplex-scenarios}). Sowohl die Daten im Realitätsmodell, als auch die SimplexSzenarios werden über den \textbf{SimplexService} als \acs{API}-Schnittstelle ausgegeben \parencite{grossmannEnvVisioService2022}. Diese wird in \ref{sec:simplex-service} beschrieben.
 
@@ -8,24 +8,42 @@ Bei Simplex4TwIS handelt es sich um ein Data Warehouse, welches den von \textcit
   \centering
   \resizebox{.95\textwidth}{!}{%
     \begin{tikzpicture}
-      \node (s4d) at (8, -6) [inner sep=0, outer sep=0]
+      \node (s4dImg) at (8, -6)
+      [inner sep=0, outer sep=0]
       {\includegraphics[height=4cm]{assets/s4d.png}};
-      \coordinate (btm) at ($(s4d.south west)!0.58!(s4d.south east)$);
-      \node (s4dT) at (s4d.north)
-      [regular polygon, regular polygon sides=3, minimum size=5.35cm,
-        anchor=south, rotate around={180:(s4d.north)}]
-      {};
-      \node (s4dR) at (btm)
-      [regular polygon, regular polygon sides=3, minimum size=4.5cm,
-        anchor=corner 3, rotate around={304:(btm)}]
-      {};
-      \node (s4dL) at (btm)
-      [regular polygon, regular polygon sides=3, minimum size=4.5cm,
-        anchor=corner 2, rotate around={64:(btm)}]
+
+      \node (s4d) at ($(s4dImg.center) + (0.15,0)$)
+      [align=center, minimum width=3.1cm, minimum height=4.25cm]
       {};
 
-      \node (s4dImport) at ($(s4dL.center) - (8,0)$) [align=center]
+      \node (s4dReality) at (s4d.north east)
+      [anchor=south east, align=center]
+      {\huge Realitäts-\\\huge modell};
+
+      \node (s4dImport) at ($(s4d.west) - (5,0)$)
+      [anchor=east, align=center]
       {\huge Import};
+
+      \node (s4dScenarios) at ($(s4d.east) + (5,0)$)
+      [anchor=west, align=center, minimum width=3.5cm]
+      {\huge Simplex\\\huge Szenarios};
+
+      \node (s4dService) at (s4dScenarios |- s4dReality.base)
+      [anchor=base, align=center, minimum width=3.5cm]
+      {\huge Simplex\\\huge Service};
+
+      \draw [s4dArrow]
+      (s4dImport) edge node (importArrow) {} (s4d)
+      (s4d) edge node (scenarioArrow) {} (s4dScenarios)
+      (s4dReality) edge (s4dService)  (s4dScenarios) edge (s4dService);
+
+      \node (block1) at ($(importArrow.center) - (0,2)$)
+      [align=center]
+      {\Large Konvertierung zu\\\Large Realitätsmodell};
+
+      \node (block2) at ($(scenarioArrow.center) - (0,2)$)
+      [align=center]
+      {\Large Zusammenstellung von\\\Large Anwendungsfällen};
 
       \node (importCircle) at (s4dImport.center)
       [shape=circle, minimum width=7cm]
@@ -43,29 +61,6 @@ Bei Simplex4TwIS handelt es sich um ein Data Warehouse, welches den von \textcit
       (i3) edge (s4dImport)
       (i4) edge (s4dImport)
       (i5) edge (s4dImport);
-
-      \node (s4dScenarios) at ($(s4dR.center) + (8,0)$) [align=center]
-      {\huge Simplex\\\huge Szenarios};
-
-      \draw [s4dArrow]
-      (s4dImport) edge node (importArrow) {} (s4dL)
-      (s4dR) edge node (scenarioArrow) {} (s4dScenarios);
-
-      \node (s4dReality) at (s4dT.south) [anchor=south, align=center]
-      {\huge Realitäts-\\\huge modell};
-
-      \node (block1) at ($(importArrow.center) - (0,2)$) [align=center]
-      {\Large Konvertierung zu\\\Large Realitätsmodell};
-
-      \node (block2) at ($(scenarioArrow.center) - (0,2)$) [align=center]
-      {\Large Zusammenstellung von\\\Large Anwendungsfällen};
-
-      \node (s4dService) at (s4dScenarios |- s4dReality.base)
-      [anchor=base, align=center]
-      {\huge Simplex\\\huge Service};
-
-      \draw[s4dArrow]
-      (s4dReality) edge (s4dService)  (s4dScenarios) edge (s4dService);
 
     \end{tikzpicture}
   }

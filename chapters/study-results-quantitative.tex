@@ -7,7 +7,7 @@ Ein Unterschied zwischen internen und externen Testpersonen konnte nur sehr begr
 
 \subsubsection{Bewertung der Szenarios}
 
-Im Anschluss an jedes Szenario wurde die \ac{SEQ} gestellt. Damit sollte überprüft werden, wie die Teilnehmer:innen die Schwierigkeit der einzelnen Aufgaben sehen und im Vergleich zueinander einschätzen. Es war explizit erwünscht, die drei Einschätzungen zueinander stimmig abzugeben. Die Frage wurden von allen Teilnehmer:innen beantwortet, das heißt für jedes Szenario wurden insgesamt 10 Werte erfragt. Abbildung \ref{fig:seq} zeigt die gesammelten Antworten für jedes Szenario, dargestellt als Box-Plot. Gezeigt werden die Extremwerte (obere und untere Antenne), das obere und untere Quartil (Box) und der Median (dicke Linie).
+Im Anschluss an jedes Szenario wurde die \ac{SEQ} gestellt. Damit sollte überprüft werden, wie die Teilnehmer:innen die Schwierigkeit der einzelnen Aufgaben sehen und im Vergleich zueinander einschätzen. Es war explizit erwünscht, die drei Einschätzungen zueinander stimmig abzugeben. Die Frage wurden von allen Teilnehmer:innen beantwortet, das heißt für jedes Szenario wurden insgesamt 10 Werte erfragt. Abbildung \ref{fig:seq} zeigt die gesammelten Antworten für jedes Szenario, dargestellt als Box-Plot.
 
 \begin{figure}[!ht]
   \pgfplotstableread[col sep=comma]{assets/study-results.csv}\datatable
@@ -27,7 +27,7 @@ Im Anschluss an jedes Szenario wurde die \ac{SEQ} gestellt. Damit sollte überpr
       \addplot+ [boxplot, plot3] table [y=c] {\datatable};
     \end{axis}
   \end{tikzpicture}
-  \caption[Antworten auf die SEQ nach jedem Szenario]{Antworten auf die \acs{SEQ} nach jedem Szenario (1: sehr schwer, 7: sehr einfach).}
+  \caption[Antworten auf die SEQ nach jedem Szenario]{Antworten auf die \acs{SEQ} nach jedem Szenario (1: sehr schwer, 7: sehr einfach). Gezeigt werden die Extremwerte (obere und untere Antenne), das obere und untere Quartil (Box) und der Median (dicke Linie).}
   \label{fig:seq}
 \end{figure}
 

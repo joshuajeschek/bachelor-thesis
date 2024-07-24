@@ -77,7 +77,7 @@ Im Rahmen der Testsitzungen wurden 20 verschiedene Usability-Probleme identifizi
             {\hyperref[p:rechts]{Benennung rechter Bereich (K)}},
             {\hyperref[p:speichern]{Benennung des Speichern-Buttons (J)}},
             {\hyperref[p:parameterübernahme]{Parameterübernahme bei Überladungen (I)}},
-            {\hyperref[p:drag]{Drag \& Drop (H)}},
+            {\hyperref[p:drag]{Drag and Drop (H)}},
             {\hyperref[p:ersetzen]{Ersetzen von Einträgen (G)}},
             {\hyperref[p:parameter]{Details zu Parametern (F)}},
             {\hyperref[p:meta]{Metadaten von Szenario-Feldern (E)}},
@@ -108,7 +108,7 @@ Im Rahmen der Testsitzungen wurden 20 verschiedene Usability-Probleme identifizi
       \addplot[presentation] coordinates {(4,10)}; % Benennung rechter Bereich
       \addplot[presentation] coordinates {(4,11)}; % Benennung des Speichern-Buttons
       \addplot[interaction]  coordinates {(4,12)}; % Parameterübernahme bei Überladungen
-      \addplot[interaction]  coordinates {(4,13)}; % Drag \& Drop
+      \addplot[interaction]  coordinates {(4,13)}; % Drag and Drop
       \addplot[interaction]  coordinates {(4,14)}; % Ersetzen von Einträgen
       \addplot[content]      coordinates {(5,15)}; % Details zu Parametern
       \addplot[presentation] coordinates {(5,16)}; % Metadaten von Szenario-Feldern
@@ -118,7 +118,7 @@ Im Rahmen der Testsitzungen wurden 20 verschiedene Usability-Probleme identifizi
       \addplot[interaction]  coordinates {(6,20)}; % Bedienreihenfolge von Funktionen
     \end{axis}
   \end{tikzpicture}
-  \caption[Häufigkeit des Auftretens verschiedener Usability-Probleme]{Häufigkeit des Auftretens verschiedener Probleme während der Usability-Studie. Gezählt wird die Anzahl der Testsitzungen, in der das jeweilige Problem aufgetaucht ist.}
+  \caption[Häufigkeit des Auftretens verschiedener Usability-Probleme]{Häufigkeit des Auftretens verschiedener Probleme während der Usability-Studie. Gezählt wird die Anzahl der Testsitzungen, in der das jeweilige Problem aufgetaucht ist. Vier verschiedene Kategorien konnten identifiziert werden: Interaktionsprobleme werden blau dargestellt, Darstellungsprobleme grün, inhaltliche Probleme lila und technische Probleme orange.}
   \label{fig:problems}
 \end{figure}
 
@@ -131,7 +131,7 @@ Die aufgetretenen Probleme können in vier Kategorien unterteilt werden. Diese s
 Probleme dieser Art sind dadurch charakterisiert, dass sie Hürden beim Bedienen der Oberfläche darstellen. Die Nutzer:innen erwarteten beispielsweise eine unterschiedliche Art der Benutzung, oder hatten Schwierigkeiten bestimmte Aktionen auszuführen. Insgesamt wurden acht Interaktionsprobleme festgestellt.
 
 \plabel{p:bedienreihenfolge}
-Am Häufigsten wurde die Bedienreihenfolge von Funktionen \textbf{(A)} kritisiert. Der Block-Editor ist so konzipiert, dass zuerst die gewünschte Funktion gewählt, in das Zielfeld eingefügt wird und dann die dazugehörigen Parameter ausgesucht werden. In sechs Testsitzungen wurde dies thematisiert. Zu beachten ist, dass dieses Problem meistens im Zuge der Textverkettung im zweiten Szenario angesprochen wurde (Vgl. Anhang \ref{app:handout}). Ob dies daran liegt, dass es sich beim Großteil der Testsitzungen hierbei um den ersten Kontakt mit Funktionen handelt, oder dass die gleiche Aufgabe oft mithilfe von Operatoren in der Infixnotation (\texttt{+} oder \texttt{||}) gelöst wird, ist unklar. Vier Teilnehmer:innen äußerten sich nicht zur Art und Weise wie Funktionen im Editor eingesetzt werden und kamen ohne Probleme damit zurecht. Sie hatten alle Programmier- oder \ac{SQL}-Kenntnisse. Die restlichen sechs Personen konnten die Aufgabe zwar lösen, wählten zunächst jedoch andere Herangehensweisen oder merkten an, dass sie es gerne auch anders umgesetzt hätten. Drei von ihnen setzten zunächst den ersten Parameter ein, und wollten dann die Funktion darauf anwenden, während eine weitere Person im Nachhinein den Wunsch ausdrückte, dass es zusätzlich zum aktuellen Prinzip auch so funktionieren sollte. Eine von ihnen begründete diese Herangehensweise mit dem von ihr genutzten \ac{GIS}. Für sie war es nicht auf sofort ersichtlich, wie sie zwei Attribute miteinander verknüpfen kann. Zwei weitere Personen wollten im Rahmen der Textverkettung zunächst komplett auf Funktionen verzichten und die benötigten Attribute nacheinander in das Zielfeld klicken. Nachdem dies nicht möglich war, wollte eine von ihnen manuell die Schlüssel aus der Importtabelle in das Zielfeld schreiben und mithilfe des Textverkettungs-Operator (\texttt{||})\footnote{\url{https://www.postgresql.org/docs/9.1/functions-string.html}} verketten.
+Am Häufigsten wurde die Bedienreihenfolge von Funktionen \textbf{(A)} kritisiert. Der Block-Editor ist so konzipiert, dass zuerst die gewünschte Funktion gewählt, in das Zielfeld eingefügt wird und dann die dazugehörigen Parameter ausgesucht werden. In sechs Testsitzungen wurde dies thematisiert. Zu beachten ist, dass dieses Problem meistens im Zuge der Textverkettung im zweiten Szenario angesprochen wurde (Vgl. Anhang \ref{app:handout}). Ob dies daran liegt, dass es sich beim Großteil der Testsitzungen hierbei um den ersten Kontakt mit Funktionen handelt, oder dass die gleiche Aufgabe in anderen Kontexten mithilfe von Operatoren in der Infixnotation (\texttt{+} oder \texttt{||}) gelöst wird, ist unklar. Vier Teilnehmer:innen äußerten sich nicht zur Art und Weise wie Funktionen im Editor eingesetzt werden und kamen ohne Probleme damit zurecht. Sie hatten alle Programmier- oder \ac{SQL}-Kenntnisse. Die restlichen sechs Personen konnten die Aufgabe zwar lösen, wählten zunächst jedoch andere Herangehensweisen oder merkten an, dass sie es gerne auch anders umgesetzt hätten. Drei von ihnen setzten zunächst den ersten Parameter ein, und wollten dann die Funktion darauf anwenden, während eine weitere Person im Nachhinein den Wunsch ausdrückte, dass es zusätzlich zum aktuellen Prinzip auch so funktionieren sollte. Eine von ihnen begründete diese Herangehensweise mit dem von ihr genutzten \ac{GIS}. Für sie war es nicht auf sofort ersichtlich, wie sie zwei Attribute miteinander verknüpfen kann. Zwei weitere Personen wollten im Rahmen der Textverkettung zunächst komplett auf Funktionen verzichten und die benötigten Attribute nacheinander in das Zielfeld klicken. Nachdem dies nicht möglich war, wollte eine von ihnen manuell die Schlüssel aus der Importtabelle in das Zielfeld schreiben und mithilfe des Textverkettungs-Operator (\texttt{||})\footnote{\url{https://www.postgresql.org/docs/9.1/functions-string.html}} verketten.
 
 \plabel{p:datentyp}
 Der Datentyp von Feldern im Szenario-Modus \textbf{(C)} kann über ein Dropdown beim Button zum Hinzufügen von Feldern angepasst werden. Der Standardtyp ist Text. Im dritten Szenario werden Hausnummer abgefragt, welche als Ganzzahl vorliegen, es muss also ein passendes Feld erstellt werden. In fünf Testsitzungen kam es dadurch zu Verwirrungen, da die Teilnehmer:innen ein Textfeld ausgewählt hatten, und somit die Hausnummer nicht einfügen konnten. Das Dropdown zur Typ-Auswahl wurde nicht sofort wahrgenommen, oder mit dieser Funktionalität verbunden. Eine Person bezeichnete das Dropdown zur Typ-Auswahl als "unintuitiv" und schlug vor, die Anpassung des Typs erst nach Hinzufügen des Feldes durchzuführen. Ein weiterer Vorschlag bestand darin, Funktionen zum Konvertieren von Attributen bereitzustellen, oder dies automatisch durchzuführen. In Abbildung \ref{fig:type-dropdown} ist das beschriebene Dropdown zu sehen. Ein:e Teilnehmer:in wünschte sich, die im Rest der Anwendung genutzten Icons auch in diesem Menü wiederzufinden. Während einer Testsitzung wurde der Button für das Hinzufügen von Textfeldern als zu groß empfunden, und vorgeschlagen, alle Datentypen in einem Dropdown unterzubringen, oder den Datentyp des großen Buttons dynamisch anzupassen.
@@ -139,7 +139,7 @@ Der Datentyp von Feldern im Szenario-Modus \textbf{(C)} kann über ein Dropdown 
 \begin{figure}
   \centering
   \includegraphics[width=.9\textwidth]{assets/datatype-dropdown.png}
-  \caption[Dropdown-Menü zum Auswählen des Datentyps von Feldern]{Dropdown-Menü zum Auswählen des Datentyps von Feldern im Szenario-Modus.}
+  \caption[Dropdown-Menü zum Auswählen des Datentyps von Feldern]{Dropdown-Menü zum Auswählen des Datentyps von Feldern.}
   \label{fig:type-dropdown}
 \end{figure}
 
@@ -147,7 +147,7 @@ Der Datentyp von Feldern im Szenario-Modus \textbf{(C)} kann über ein Dropdown 
 In der Zielstruktur eingetragene Attribute können nicht ersetzt werden \textbf{(G)}. Dies fiel vier Teilnehmer:innen auf. Sie versuchten, durch ein erneutes Anklicken eines bestehenden Eintrages den Inhalt mit einer Auswahl aus dem linken Menü zu überschreiben. Aktuell muss zuerst der Button zum Löschen gedrückt werden, wodurch das Feld wieder frei ist und erneut befüllt werden kann. Eine Person versuchte immer wieder eingetragene Attribute zu ersetzen, obwohl sie bereits festgestellt hatte, das dies nicht möglich ist. Zu beachten ist, dass ausschließlich versucht wurde, Attribute zu ersetzen, aber keine Funktionen. Dies könnte der Art und Weise geschuldet sein, wie eingetragene Attribute dargestellt sind - sie ähneln einem leeren Feld. In Abbildung \ref{fig:buffet-simple} ist der Unterschied zwischen einem leeren Feld, einer eingetragenen Funktion und einem eingetragenen Attribut zu sehen.
 
 \plabel{p:drag}
-Ebenso oft trat es auf, dass Teilnehmer:innen mittels \textit{Drag \& Drop} \textbf{(H)} Elemente von links nach rechts ziehen wollten. In jedem der vier Fälle war es die erste Intuition und wurde entsprechend ausgetestet. Nach der Realisierung, dass \textit{Drag \& Drop} noch nicht implementiert ist, konnte der Großteil zur konzipierten Bedienweise (Auswahl erfolgt von links nach rechts) übergehen. Die Umstellung auf diese Arbeitsweise stellte für eine Person eine Herausforderung dar.
+Ebenso oft trat es auf, dass Teilnehmer:innen mittels \textit{Drag and Drop} \textbf{(H)} Elemente von links nach rechts ziehen wollten. In jedem der vier Fälle war es die erste Intuition und wurde entsprechend ausgetestet. Nach der Realisierung, dass \textit{Drag and Drop} noch nicht implementiert ist, konnte der Großteil zur konzipierten Bedienweise (Auswahl erfolgt von links nach rechts) übergehen. Die Umstellung auf diese Arbeitsweise stellte für eine Person eine Herausforderung dar.
 
 \plabel{p:parameterübernahme}
 Beim Auswählen von Funktionsüberladungen werden die Parameter von einer Überladung nicht in die nächste übernommen \textbf{(I)}. Vier Personen waren davon verwirrt, dass die ersten Parameter, die bereits ausgefüllt wurden, leer sind, sobald eine Überladung mit mehr Parametern ausgewählt wird. Zwei von ihnen merkten an, dass die Anzahl der Parameter auch nach dem Ausfüllen anpassbar sein sollte, wobei eine von ihnen darauf einging dass es schwierig sein könnte, dies konsistent umzusetzen. Ein:e Teilnehmer:in erkannte, dass die zuvor eingetragenen Parameter in der Überladung mit weniger Parametern bestehen bleiben, und entfernte diese manuell, aus Angst dass dies Fehler verursachen könnte.
@@ -180,7 +180,7 @@ Der Block-Editor filter automatisch relevante Auswahlmöglichkeiten basierend au
 Auch die Darstellung von Informationen innerhalb des Block-Editors führte zu Problemen. Es wurden acht Darstellungsprobleme identifiziert.
 
 \plabel{p:icons}
-Abbildung \ref{fig:icons} zeigt die vom Block-Editor verwendeten Icons für Datentypen \textbf{(B)}. Diese werden wie in Abbildung \ref{fig:attribute-source} und \ref{fig:attribute-target} verwendet, um über den Datentyp von Attributen, Funktionen und Feldern zu informieren. Im Rahmen von fünf Testsitzungen wurden die Icons missverstanden oder führten zu Verwirrungen. Da sich die Icons für Ganz- und Gleitkommazahlen nicht voneinander unterscheiden, kam es zu Verwechslungen. Eine Person wählte beispielsweise im dritten Szenario ein Gleitkommazahl-Feld aus (im Dropdown als "numerisch" bezeichnet, siehe Abbildung \ref{fig:type-dropdown}), um eine Hausnummer einzusetzen, obwohl es sich bei der Hausnummer um eine Ganzzahl handelt.  Drei Teilnehmer:innen sahen das Icon für Booleans als zwei interaktive Schalter an, und versuchten, diese zu bedienen. Eine Person empfand das Icon für den Datentyp Text als Button, über den mehr Informationen über ein Attribut oder eine Funktion abgerufen werden könnten. Eine weitere Person empfand die Icons als guten Ort, um einen Ausschnitt aus der Importtabelle abzurufen.
+Abbildung \ref{fig:icons} zeigt die vom Block-Editor verwendeten Icons für Datentypen \textbf{(B)}. Diese werden wie in Abbildung \ref{fig:attribute-source-target} verwendet, um über den Datentyp von Attributen, Funktionen und Feldern zu informieren. Im Rahmen von fünf Testsitzungen wurden die Icons missverstanden oder führten zu Verwirrungen. Da sich die Icons für Ganz- und Gleitkommazahlen nicht voneinander unterscheiden, kam es zu Verwechslungen. Eine Person wählte beispielsweise im dritten Szenario ein Gleitkommazahl-Feld aus (im Dropdown als "numerisch" bezeichnet, siehe Abbildung \ref{fig:type-dropdown}), um eine Hausnummer einzusetzen, obwohl es sich bei der Hausnummer um eine Ganzzahl handelt.  Drei Teilnehmer:innen sahen das Icon für Booleans als zwei interaktive Schalter an, und versuchten, diese zu bedienen. Eine Person empfand das Icon für den Datentyp Text als Button, über den mehr Informationen über ein Attribut oder eine Funktion abgerufen werden könnten. Eine weitere Person empfand die Icons als guten Ort, um einen Ausschnitt aus der Importtabelle abzurufen.
 
 \begin{figure}
   \centering
@@ -205,20 +205,22 @@ Abbildung \ref{fig:icons} zeigt die vom Block-Editor verwendeten Icons für Date
 \end{figure}
 
 \plabel{p:attribute}
-Die Anzeige von Attributen in der Zielstruktur weicht von der im Auswahlmenü ab \textbf{(D)}. Im Auswahlmenü wird sowohl der Name, als auch der Schlüssel von Attributen angezeigt, während im rechten Bereich nur noch der Schlüssel angezeigt wird. Dies fiel fünf Teilnehmer:innen auf, zumeist im dritten Szenario, wahrscheinlich weil sich dort die Inhalte mehr unterschieden. Abbildung \ref{fig:attribute-source} und \ref{fig:attribute-target} stellen dies beispielhaft dar. "strassenname" ist der Name des Attributs der Objektklasse, während "description" der Schlüssel ist. Sobald das Attribut im Ziel erscheint, wird nur noch der Schlüssel angezeigt. Besonders im Fall der Standardfelder \footnote{\texttt{ndx, key, typ, nam, dsc, cmt, beg, fin}, Vgl. \ref{sec:simplex-reality}}, kann dieser stark vom Name abweichen. Fünf Personen waren davon verwirrt.
+Die Anzeige von Attributen in der Zielstruktur weicht von der im Auswahlmenü ab \textbf{(D)}. Im Auswahlmenü wird sowohl der Name, als auch der Schlüssel von Attributen angezeigt, während im rechten Bereich nur noch der Schlüssel angezeigt wird. Dies fiel fünf Teilnehmer:innen auf, zumeist im dritten Szenario, wahrscheinlich weil sich dort die Inhalte mehr unterschieden. Abbildung \ref{fig:attribute-source-target} stellen dies beispielhaft dar. "strassenname" ist der Name des Attributs der Objektklasse, während "description" der Schlüssel ist. Sobald das Attribut im Ziel erscheint, wird nur noch der Schlüssel angezeigt. Besonders im Fall der Standardfelder \footnote{\texttt{ndx, key, typ, nam, dsc, cmt, beg, fin}, Vgl. \ref{sec:simplex-reality}}, kann dieser stark vom Name abweichen. Fünf Personen waren davon verwirrt.
 
 \begin{figure}[!ht]
-  \minipage[t]{.38\textwidth}
-  \includegraphics[width=\linewidth]{assets/attribute-source.png}
-  \caption[Ein Attribut im Auswahlmenü]{Ein Attribut mit Name und Schlüssel im Auswahlmenü.}
-  \label{fig:attribute-source}
-  \endminipage
-  \hfill
-  \minipage[t]{.60\textwidth}
-  \includegraphics[width=\linewidth]{assets/attribute-target.png}
-  \caption[Ein Attribut in der Zielstruktur]{Ein Attribut in der Zielstruktur. Im Gegensatz zu Abbildung \ref{fig:attribute-source} wird nur der Schlüssel ("description") angezeigt.}
-  \label{fig:attribute-target}
-  \endminipage
+  \centering
+  \begin{subfigure}{.35\textwidth}
+    \includegraphics[width=\linewidth]{assets/attribute-source.png}
+    \caption{Attribut im Auswahlmenü.}
+  \end{subfigure}
+  \hspace{.05\textwidth}
+  \begin{subfigure}{.55\textwidth}
+    \includegraphics[width=\linewidth]{assets/attribute-target.png}
+    \caption{Attribut in der Zielstruktur.}
+    \label{fig:attribute-target}
+  \end{subfigure}
+    \caption[Ein Attribut im Auswahlmenü und in der  Zielstruktur]{Das Attribut mit dem Schlüssel \texttt{description} im Auswahlmenü und in der  Zielstruktur. Im Auswahlmenü werden sowohl der Name als auch der Schlüssel angezeigt, während in der Zielstruktur nur der Schlüssel angezeigt wird.}
+    \label{fig:attribute-source-target}
 \end{figure}
 
 \plabel{p:meta}
@@ -240,13 +242,14 @@ Eine Person empfand die Liste der Funktionen im linken Menü als zu unübersicht
 In einigen Testsitzungen wurde festgestellt, dass ein verbesserter inhaltlicher Kontext zum erfolgreichen Abschließen von Aufgaben hilfreich sein kann. Im Gegensatz zur vorherigen Kategorie werden Inhalte hier nicht unbedingt verwirrend dargestellt, sondern existieren gar nicht in der Oberfläche.
 
 \plabel{p:parameter}
+Im zweiten Szenario musste die Funktion \texttt{ST\_MakePoint} benutzt werden, um aus Längen- und Breitengraden eine Punktgeometrie zu bilden. Hierbei fehlte es an Details zu den benötigten Parametern \textbf{(F)}. Bis auf ein:e Teilnehmer:in war allen klar, dass die Reihenfolge der Parameter von Relevanz ist, fünf konnten jedoch nicht sofort feststellen, in welcher Reihenfolge die Parameter ausgefüllt werden müssen. Abbildung \ref{fig:parameters} zeigt die besagte Funktion, ausgefüllt in der korrekten Reihenfolge. Die Beschreibung nennt die Parameter in der richtigen Reihenfolge. Eine Person sah dies als Hinweis an, drückte jedoch aus, dass die Parameter trotzdem beschriftet werden sollten. Zwei weitere Personen äußerten eine ähnliche Meinung, während in einer anderen Testsitzung der Hinweis innerhalb der Beschreibung bevorzugt wurde. Ein:e Teilnehmer:in schlug ein Pop-Up für eine detailliertere Beschreibung der Parameter vor. Falls die Parameter für \texttt{ST\_MakePoint} falsch gesetzt wurden, fiel dieser Fehler spätestens beim Betrachten der Ergebnisse in der Tabellenansicht auf, und konnte durch ein Austauschen behoben werden. Die Teilnehmer:innen zeigten Unsicherheit in Bezug auf die Reihenfolge der Parameter und erwarteten dies somit als Fehlerquelle.
+
 \begin{figure}[!ht]
   \centering
-  \includegraphics[width=.9\textwidth]{assets/st-makepoint.png}
-  \caption[Die Funktion \texttt{ST\_MakePoint} im Block-Editor]{Die Funktion \texttt{ST\_MakePoint} mit korrekt ausgefüllten Parametern. Im ersten Parameter muss der Längengrad, und im zweiten Parameter der Breitengrad angegeben werden.}
+  \includegraphics[width=.825\textwidth]{assets/st-makepoint.png}
+  \caption[Die Funktion \texttt{ST\_MakePoint} im Block-Editor]{Die Funktion \texttt{ST\_MakePoint} mit korrekt ausgefüllten Parametern. Im ersten Parameter muss der Längengrad, und im zweiten Parameter der Breitengrad angegeben werden. Die relevanten Spalten in der Importtabelle heißen \texttt{mittelpunkt\_langengrad} und \texttt{mittelpunkt\_breitengrad} und wurden hier in die korrespondierenden Parameter eingesetzt.}
   \label{fig:parameters}
 \end{figure}
-Im zweiten Szenario musste die Funktion \texttt{ST\_MakePoint} benutzt werden, um aus Längen- und Breitengraden eine Punktgeometrie zu bilden. Hierbei fehlte es an Details zu den benötigten Parametern \textbf{(F)}. Bis auf ein:e Teilnehmer:in war allen klar, dass die Reihenfolge der Parameter von Relevanz ist, fünf konnten jedoch nicht sofort feststellen, in welcher Reihenfolge die Parameter ausgefüllt werden müssen. Abbildung \ref{fig:parameters} zeigt die besagte Funktion, ausgefüllt in der korrekten Reihenfolge. Die Beschreibung nennt die Parameter in der richtigen Reihenfolge. Eine Person sah dies als Hinweis an, drückte jedoch aus, dass die Parameter trotzdem beschriftet werden sollten. Zwei weitere Personen äußerten eine ähnliche Meinung, während in einer anderen Testsitzung der Hinweis innerhalb der Beschreibung bevorzugt wurde. Ein:e Teilnehmer:in schlug ein Pop-Up für eine detailliertere Beschreibung der Parameter vor. Falls die Parameter für \texttt{ST\_MakePoint} falsch gesetzt wurden, fiel dieser Fehler spätestens beim Betrachten der Ergebnisse in der Tabellenansicht auf, und konnte durch ein Austauschen behoben werden. Die Teilnehmer:innen zeigten Unsicherheit in Bezug auf die Reihenfolge der Parameter und erwarteten dies somit als Fehlerquelle.
 
 \plabel{p:quelle}
 Im Zuge von drei Testsitzungen wurde der Wunsch geäußert, eine Vorschau der Quelldaten zu sehen \textbf{(O)}. Dies würde den Teilnehmer:innen helfen, die Ausgangsdaten zu verstehen und zu wissen, dass die ausgewählten Datentransformationen korrekt sind. Die genannte Hürde trat beispielsweise während des zweiten Szenarios auf, als der amtliche Regionalschlüssel (\acs{ARS}) gebildet wurde. Es stand die Frage im Raum, ob führende Nullen aufgefüllt werden müssen, oder ob diese bereits existieren. Eine Person wünschte sich, Werte der einzelnen Attribute abrufen zu können, während eine weitere Person eine tabellarische Darstellung über alle Attribute bevorzugen würde. Zu guter Letzt fasste ein:e Teilnehmer:in die Möglichkeiten zusammen: Es könnte eine Schnittmenge aller Daten gezeigt werden, oder nur verschiedene Werte von den einzelnen Attributen. Die zuletzt genannte Person schlug auch das Icon für den Datentyp als Ort vor, um solche Informationen abzurufen.
@@ -255,13 +258,14 @@ Im Zuge von drei Testsitzungen wurde der Wunsch geäußert, eine Vorschau der Qu
 Zwei Personen wünschten sich eine detailliertere Beschreibung der Funktionen \textbf{(R)}. Als Grund wurde genannt, dass manche Funktionsnamen nicht aussagekräftig genug sein könnten, insbesondere für Personen mit weniger Fachwissen oder Programmiererfahrung. Genannte Lösungsvorschläge beinhalten Tooltips und Pop-Ups, zum Beispiel über einen Button mit dem Buchstabe \textit{i} als Symbol.
 
 \plabel{p:präfix}
+Im Szenario-Modus besitzen die Attribute von verbundenen Objektklassen einen Präfix \textbf{(S)}. Nur die zentrale Objektklasse folgt diesem Schema nicht - die Attribute werden ohne Präfix ausgeliefert. Dies führte bei zwei Personen zur Verwirrung, da im dritten Szenario die Klasse "Adresse" keinen Präfix hatte, und somit nicht so leicht identifizierbar wie die anderen Klassen war. Außerdem konnte eine der beiden Teilnehmer:innen die Bezeichnung "base" im Filtermenü für den rechten Bereich nicht der zentralen Objektklasse zuordnen. Abbildung \ref{fig:scenario-prefixes} zeigt für die Objektklassen im dritten Szenario, wie das gleiche Standardfeld in verschiedenen Klassen dargestellt wird. Im oberen Bereich ist auch das Filtermenü sichtbar.
+
 \begin{figure}[!ht]
   \centering
-  \includegraphics[width=.5\textwidth]{assets/scenario-prefixes.png}
-  \caption[Darstellung des Standardfelds \texttt{ndx} für drei Objektklassen im dritten Szenario]{Das Standardfeld \texttt{ndx} für drei Objektklassen im dritten Szenario. Die Objektklasse "Adresse" ist Ausgangspunkt des SimplexSzenarios und verfügt über keinen Präfix. Im Filtermenü (oben) wird diese Klasse als \textit{base} bezeichnet.}
+  \includegraphics[width=.425\textwidth]{assets/scenario-prefixes.png}
+  \caption[Darstellung des Standardfelds \texttt{ndx} für drei Objektklassen im dritten Szenario]{Das Standardfeld \texttt{ndx} für drei Objektklassen im dritten Szenario. Die Basisklasse "Adresse" verfügt über keinen Präfix. Im Filtermenü (oben) wird diese Klasse als \textit{base} bezeichnet.}
   \label{fig:scenario-prefixes}
 \end{figure}
-Im Szenario-Modus besitzen die Attribute von verbundenen Objektklassen einen Präfix \textbf{(S)}. Nur die zentrale Objektklasse folgt diesem Schema nicht - die Attribute werden ohne Präfix ausgeliefert. Dies führte bei zwei Personen zur Verwirrung, da im dritten Szenario die Klasse "Adresse" keinen Präfix hatte, und somit nicht so leicht identifizierbar wie die anderen Klassen war. Außerdem konnte eine der beiden Teilnehmer:innen die Bezeichnung "base" im Filtermenü für den rechten Bereich nicht der zentralen Objektklasse zuordnen. Abbildung \ref{fig:scenario-prefixes} zeigt für die Objektklassen im dritten Szenario, wie das gleiche Standardfeld in verschiedenen Klassen dargestellt wird. Im oberen Bereich ist auch das Filtermenü sichtbar.
 
 \subsubsection{Technische Probleme}
 Im Laufe der Usability-Studie traten kaum technische Probleme auf. Falls die allgemeine Funktionsweise des Block-Editors beeinträchtigt wurde, konnte dies vor Anfang der Szenarios gelöst werden, beispielsweise durch das Ausschalten eines aktiven \acs{VPN}s.

@@ -1,0 +1,18 @@
+{`\lstsetnumber{\dots}`
+  ...`\lstresetnumber\setcounter{lstnumber}{4}`
+  "properties": {`\lstsetnumber{\dots}`
+    ...`\lstresetnumber\setcounter{lstnumber}{27}`
+    "title": {
+      "title": "Name",
+      "description": "Amtlicher Name der Gemeinde",
+      "type": "string"
+    },`\lstsetnumber{\dots}`
+    ...`\lstresetnumber\setcounter{lstnumber}{131}`
+    "land.title": {
+      "title": "Name",
+      "description": "Amtlicher Name des Bundeslands",
+      "type": "string"
+    },`\lstsetnumber{\dots}`
+    ...`\lstresetnumber\setcounter{lstnumber}{137}`
+  }
+}

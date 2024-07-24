@@ -10,6 +10,8 @@ Beide Prozesse erfordern manuelle Angaben, die bestimmen wie aus den Ausgangsdat
 
 Aufgrund der genannten Gemeinsamkeiten soll ein Editor entwickelt werden, welcher sowohl für die Erstellung von Konvertierungen als auch für die Definition von SimplexSzenarios verwendet werden kann. Im zweiten Anwendungsfall unterscheidet sich die Funktionalität dahingehend, dass die Ausgabefelder frei bestimmt und benannt werden können.
 
+Der aktuelle Editor für Konvertierungen besteht aus Textfeldern, in denen Auszüge von \ac{SQL}-Befehlen eingegeben werden können. Ein Beispiel dafür ist in Abbildung \ref{fig:conversion-gemeinde} gegeben. Die eingegebenen Ausdrücke werden dann in einen \texttt{SELECT}-Befehl eingesetzt. Diese Herangehensweise ist äußerst flexibel, weist jedoch in der Benutzung einige Usability-Probleme auf. Eine wesentliche Rolle spielt, dass die Ausgangsdaten nicht innerhalb des Editors dokumentiert sind. Die Benutzer:innen müssen somit immer nachschlagen, welche Werte sie eintragen können. Das manuelle Eintippen birgt außerdem die Gefahr, sowohl Tippfehler als auch Fehler im \ac{SQL}-Syntax zu verursachen. Auch die inhaltliche Sinnhaftigkeit der Befehle wird nicht sichergestellt, und Nutzer:innen, die nicht mit SQL vertraut sind, benötigen aufwendige Einführungen und können komplexe Aufgaben schlechter bewältigen. Im einfachsten Fall muss für das Beispiel (Abbildung \ref{fig:conversion-gemeinde}) die Struktur der Importtabelle bekannt sein, um den Spaltenname \texttt{q.gemeindename} anzugeben. In komplexeren Fällen müssen zudem die Funktion \texttt{LPAD}, der Textverkettungs-Operator \texttt{||}, \texttt{CASE}-Ausdrücke und allgemeiner \ac{SQL}-Syntax bekannt sein, sowie fehlerfrei angewendet werden.
+
 \begin{figure}[ht]
   \centering
   \includegraphics[width=.95\textwidth]{assets/conversion-gemeinde.png}
@@ -17,11 +19,7 @@ Aufgrund der genannten Gemeinsamkeiten soll ein Editor entwickelt werden, welche
   \label{fig:conversion-gemeinde}
 \end{figure}
 
-Der aktuelle Editor für Konvertierungen besteht aus Textfeldern, in denen Auszüge von \ac{SQL}-Befehlen eingegeben werden können. Ein Beispiel dafür ist in Abbildung \ref{fig:conversion-gemeinde} gegeben. Die eingegebenen Ausdrücke werden dann in einen \texttt{SELECT}-Befehl eingesetzt. Diese Herangehensweise ist äußerst flexibel, weist jedoch in der Benutzung einige Usability-Probleme auf. Eine wesentliche Rolle spielt, dass die Ausgangsdaten nicht innerhalb des Editors dokumentiert sind. Die Benutzer:innen müssen somit immer nachschlagen, welche Werte sie eintragen können. Das manuelle Eintippen birgt außerdem die Gefahr, sowohl Tippfehler als auch Fehler im \ac{SQL}-Syntax zu verursachen. Auch die inhaltliche Sinnhaftigkeit der Befehle wird nicht sichergestellt, und Nutzer:innen, die nicht mit SQL vertraut sind, benötigen aufwendige Einführungen und können komplexe Aufgaben schlechter bewältigen. Im einfachsten Fall muss für das Beispiel (Abbildung \ref{fig:conversion-gemeinde}) die Struktur der Importtabelle bekannt sein, um den Spaltenname \texttt{q.gemeindename} anzugeben. In komplexeren Fällen müssen zudem die Funktion \texttt{LPAD}, der Textverkettungs-Operator \texttt{||}, \texttt{CASE}-Ausdrücke und allgemeiner \ac{SQL}-Syntax bekannt sein, sowie fehlerfrei angewendet werden.
-
-\vspace{\baselineskip}
-
-\noindent
+\pskip
 Der entwickelte Editor sollte bezüglich seiner Nutzbarkeit eine Verbesserung gegenüber der aktuellen Lösung darstellen. Zusammenfassend können folgende Ziele formuliert werden:
 \begin{itemize}
   \item Entwicklung eines Editors für Konvertierungen und SimplexSzenarios.
