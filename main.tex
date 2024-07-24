@@ -1,4 +1,4 @@
-\documentclass[a4paper,11pt,openright,numbers=noenddot]{scrreprt}
+\documentclass[twoside,a4paper,11pt,openright,numbers=noenddot]{scrreprt}
 
 \usepackage[utf8]{inputenc} % Einstellung der Eingabekodierung
 \usepackage[ngerman]{babel} % Deutsche Trennmuster
@@ -77,13 +77,14 @@
 
 \MakeOuterQuote{"} % könnte zu Problemen führen
 
-\raggedbottom
+% \raggedbottom
 
 \begin{document}
-\pagenumbering{roman}
+\pagenumbering{gobble}
 \input{misc/titlepage}
 
 \cleardoublepage
+\pagenumbering{roman}
 \currentpdfbookmark{Abstract}{abstract}
 \input{misc/abstract}
 
@@ -93,21 +94,21 @@
 
 \cleardoublepage
 \begingroup
-\let\clearpage\relax
-\let\cleardoublepage\relax
+% \let\clearpage\relax
+% \let\cleardoublepage\relax
 \phantomsection
 \addcontentsline{toc}{chapter}{\listfigurename}
 \listoffigures
 
 % \cleardoublepage
 \phantomsection
-\addcontentsline{toc}{chapter}{\listtablename}
-\listoftables
+\addcontentsline{toc}{chapter}{\lstlistlistingname}
+\lstlistoflistings
 
 % \cleardoublepage
 \phantomsection
-\addcontentsline{toc}{chapter}{\lstlistlistingname}
-\lstlistoflistings
+\addcontentsline{toc}{chapter}{\listtablename}
+\listoftables
 \endgroup
 
 \cleardoublepage

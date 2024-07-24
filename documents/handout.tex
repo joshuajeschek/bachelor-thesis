@@ -13,13 +13,13 @@ Gegeben ist eine Importtabelle mit Daten zu den Bundesländern. Sie wollen diese
 Die Importtabelle sieht in etwa so aus:
 
 \begin{flushleft}
-  \begin{tabular}{||c | c | c | c | c | c | c | c | c ||}
+  \begin{tabular}{||c | c | c | c | c | c | c | c ||}
     \hline
-    bezeichnung & name      & ars    & nuts   & nbd    & ibz    & bemerkung & wirksamkeit & geom       \\ [0.5ex]
+    bezeichnung & name      & ars    & nuts   & nbd    & ibz    & wirksamkeit & geom       \\ [0.5ex]
     \hline\hline
-    'Freistaat' & 'Sachsen' & '14'   & 'DED'  & 'ja'   & 20     & '--'      & 2014-02-01  & <geometry> \\
+    'Freistaat' & 'Sachsen' & '14'   & 'DED'  & 'ja'   & 20     & 2014-02-01  & <geometry> \\
     \hline
-    \vdots      & \vdots    & \vdots & \vdots & \vdots & \vdots & \vdots    & \vdots      & \vdots     \\
+    \vdots      & \vdots    & \vdots & \vdots & \vdots & \vdots & \vdots      & \vdots     \\
     \hline
   \end{tabular}
 \end{flushleft}
@@ -61,13 +61,13 @@ können daran erkannt werden, dass \texttt{gemeinde\_id} nicht angegeben ist, un
 \pskip
 Hier ein Auszug aus der Importtabelle:
 \begin{flushleft}
-  \begin{tabular}{|| c | c | c | c | c | c | c | c ||}
+  \begin{tabular}{|| c | c | c | c | c | c | c ||}
     \hline
-    gemeindename  & breitengrad & \dots  & bevoelkerung & flaeche & gemeinde\_id & \dots  & land\_id \\ [0.5ex]
+    gemeindename  & breitengrad & \dots  & flaeche & gemeinde\_id & \dots  & land\_id \\ [0.5ex]
     \hline\hline
-    'Saarbrücken' & 49.236608   & \dots  & 179634       & 167.52  & '10'         & \dots  & '10'     \\
+    'Saarbrücken' & 49.236608   & \dots  & 167.52  & '10'         & \dots  & '10'     \\
     \hline
-    \vdots        & \vdots      & \vdots & \vdots       & \vdots  & \vdots       & \vdots & \vdots   \\
+    \vdots        & \vdots      & \vdots & \vdots  & \vdots       & \vdots & \vdots   \\
     \hline
   \end{tabular}
 \end{flushleft}
