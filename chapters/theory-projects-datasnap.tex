@@ -13,6 +13,7 @@
 
 Abbildung \ref{fig:scratch} zeigt den \Scratch{}-Editor und ein Beispielprogramm. Die Ansicht kann in 3 Spalten unterteilt werden. Links können die Blöcke ausgewählt werden, die in der Mitte zusammengesetzt werden sollen. Der rechte Abschnitt ist unterteilt, in einen Ausgabebereich, und ein Verwaltungsbereich für Figuren und Bühnen. Die Blöcke im Auswahlmenü sind thematisch sortiert. Die Farbgebung spiegelt dies wieder (Vgl. Abbildung \ref{fig:scratch-types}). Um Blöcke im Skriptbereich zu verwenden, müssen sie mittels \textit{Drag and Drop} nach rechts gezogen werden. Skripte sind an Figuren gebunden. Im Beispielprogramm wird die Tiger-Figur nach Start des Programms bewegt und rotiert, sobald die Leertaste gedrückt wird.
 
+\pskip
 \Scratch{} definiert grundsätzlich vier Blockformen \parencite{maloneyScratchProgramming2010}. In Abbildung \ref{fig:scratch-blocks} werden sie verglichen. \textbf{Befehle} führen Programmlogik aus, die beispielsweise Figuren bewegen oder Variablen anpassen. Sie besitzen typischerweise eine Kerbe am oberen Rand und Verbindungsstelle am unteren Rand. \textbf{Funktionen} geben Werte zurück, die errechnet werden können oder in Variablen gespeichert wurden. Es ist nicht möglich, Funktionen an Blöcke mit Kerben anzufügen, sie können aber in korrespondierende Felder innerhalb von Blöcken eingesetzt werden. \textbf{Auslöser} besitzen keine Kerbe am oberen Rand, und stellen den Anfang der Ausführung des angehängten Konstrukts dar. \textbf{Kontrollstruktur-Blöcke} haben die gleiche Form wie Befehle und können wie sie angewendet werden. Sie beeinflussen den Ablauf des Programms und bilden Programmierkonzepte wie Schleifen und Bedingungen ab. Abbildung \ref{fig:scratch} zeigt eine "wiederhole fortlaufend"-Schleife. Es ist zu sehen, dass diese Art von Block auch weitere Blöcke annehmen kann, die im Schleifenkörper ausgeführt werden \parencite{maloneyScratchProgramming2010}.
 
 \begin{figure}[!ht]
@@ -23,6 +24,7 @@ Abbildung \ref{fig:scratch} zeigt den \Scratch{}-Editor und ein Beispielprogramm
   \label{fig:scratch-blocks}
 \end{figure}
 
+\pskip
 Die Programmiersprache \Scratch{} beschränkte sich zunächst auf drei Datentypen \parencite{maloneyScratchProgramming2010}. Dabei handelt es sich um Text, Zahl und Wahrheitswerte. Texte und Zahlen werden als abgerundete Blöcke dargestellt, während Wahrheitswerte sechseckig sind. In Abbildung \ref{fig:scratch-types} werden zwei Funktionen mit unterschiedlichen Datentypen gezeigt, sowie Blöcke die diese als Eingabewerte entgegennehmen können. In den blauen und lila-farbigen Blöcken können auch manuell Werte eingegeben werden, der blaue Block nimmt jedoch nur Zahlen an. Die Datentypen in \Scratch{} wurden mit Nachfolgeversionen erweitert, Version 1.3 führte beispielsweise Listen ein \parencite{harveyBringingNo2010}.
 
 \Scratch{} signalisiert über die Form der Blöcke, ob sie zusammengesetzt werden können. Zusätzlich wird beim \textit{Drag and Drop} über einen weißen Indikator gezeigt, ob Blöcke an der aktuellen Stelle eingesetzt werden können. In Abbildung \ref{fig:scratch-drop} ist zu sehen, wie so signalisiert wird, dass eine Wenn-Abfrage nur Wahrheitswerte annehmen kann.
@@ -91,19 +93,19 @@ Während das Aussehen der \Snap{}-Programmierumgebung \Scratch{} stark ähnelt, 
 
 \DataSnap{} stellt eine Erweiterung dar, die genannten Ziele in \Snap{} ermöglicht. Mit der Erweiterung können Daten auf dem Server importiert werden, die dann auf Basis einer mit Blöcken definierten Vorschrift ausgewertet werden können. Auch dies kann auf dem Server passieren. Die resultierenden Daten werden dann an den Browser zurückgeschickt und können dort visualisiert werden \parencite{hellmannDataSnapEnabling2015}.
 
-Da \Snap{} keine Möglichkeit zum Importieren von großen Datensätzen bietet, führt \DataSnap{} Blöcke zum Import von Daten an. Die Implementation beschränkt sich auf den Import von \acs{CSV}-Dateien, welche unter einer URL erreichbar sind. Da es sich um potentiell große Datensätze handelt, werden diese Daten nicht im Browser der Anwender:innen gespeichert, sondern auf einem Server \parencite{hellmannDataSnapEnabling2015}. Für den Zugriff auf die sogenannten \textit{"cloud variables"} wurde eigens Blöcke erstellt, die sich von den Blöcken für lokale Variablen unterscheiden \parencite{hellmannDataSnapEnabling2015}.
+Da \Snap{} keine Möglichkeit zum Importieren von großen Datensätzen bietet, führt \DataSnap{} Blöcke zum Import von Daten an. Die Implementation beschränkt sich auf den Import von \acs{CSV}-Dateien, welche unter einer \acs{URL} erreichbar sind. Da es sich um potentiell große Datensätze handelt, werden diese Daten nicht im Browser der Anwender:innen gespeichert, sondern auf einem Server \parencite{hellmannDataSnapEnabling2015}. Für den Zugriff auf die sogenannten \textit{"cloud variables"} wurde eigens Blöcke erstellt, die sich von den Blöcken für lokale Variablen unterscheiden \parencite{hellmannDataSnapEnabling2015}.
 
 Zur Verarbeitung der Daten können die nativen \Snap{}-Blöcke nur begrenzt verwendet werden. Zur Unterstützung von tabellarischen CSV-Datenstrukturen wurden eigens Blöcke definiert, die \acs{SQL}-Abfragen ähneln und auf dem Server ausgewertet werden \parencite{hellmannDataSnapEnabling2015}. Abbildung \ref{fig:datasnap-method-edit} zeigt die Nutzung solcher \textit{"cloud methods"}, um eine wiederverwendbare Abfrage als Block zu definieren. Die von \DataSnap{} hinzugefügten Blöcke werden rosa und pink dargestellt. Im Beispiel werden die Daten von einer \acs{CSV}-Datei abgerufen, die bei der Verwendung des Blocks (Abbildung \ref{fig:datasnap-method-use}) angegeben wird.
 
 \begin{figure}[!ht]
   \centering
-  \begin{subfigure}{.45\textwidth}
+  \begin{subfigure}{.4625\textwidth}
     \includegraphics[width=\linewidth]{assets/datasnap-method-edit.png}
     \caption{Definition des Blocks.}
     \label{fig:datasnap-method-edit}
   \end{subfigure}
-  \hspace{.05\textwidth}
-  \begin{subfigure}{.45\textwidth}
+  \hspace{.025\textwidth}
+  \begin{subfigure}{.4625\textwidth}
     \includegraphics[width=\linewidth]{assets/datasnap-method-use.png}
     \caption{Benutzung des Blocks.}
     \label{fig:datasnap-method-use}
