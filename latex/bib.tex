@@ -15,10 +15,15 @@
 }
 
 \defbibfilter{other}{
-  type=misc or
-  type=thesis or
-  type=online or
-  type=legislation
+  not (
+    type=article or
+    type=inproceedings or
+    type=report or
+    type=book or
+    type=inbook or
+    type=incollection or
+    type=software
+  )
 }
 
 \DefineBibliographyStrings{ngerman}{

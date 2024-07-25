@@ -68,13 +68,14 @@ Um Rekursion in \Scratch{} umzusetzen, wurde eine Erweiterung namens \ac{BYOB} e
 
 \Snap{} verallgemeinert die Datentypen von \Scratch{} und ermöglicht somit tiefgreifenderen Zugriff auf Variablen. So ist es zum Beispiel möglich, über den Listen-Block Listen zu erstellen, die nicht zuvor als Variable definiert werden müssen. Das ermöglicht Listen in Listen und komplexere Datentypen \parencite{harveySnapReference2020}.
 
+\pskip
 Außerdem unterstützt \Snap{} Ansätze der funktionalen Programmierung, indem Funktionen als Daten übergeben werden können. Ein Beispiel dafür stellt der "Wende ... an auf ...", welches eine Funktion im ersten Parameter entgegennimmt und auf alle Elemente der Liste im zweiten Parameter anwendet \parencite{harveySnapReference2020}. Diese Möglichkeit, gekoppelt mit Blöcken zum Klonen von Figuren und Funktionen, ermöglicht wiederum objektorientierte Programmierung innerhalb von \Snap{} \parencite{harveySnapReference2020}. Figuren werden in \Snap{} auch als Objekte bezeichnet.
 
 Wie in Abbildung \ref{fig:snap-input-types} zu sehen, unterstützt der Editor für Eingabeparameter von Blöcken unterschiedliche Parametertypen. Somit können während der Erstellung eines Blocks die Einstellungen so gewählt werden, dass die Bedienung des Blocks erleichtert wird. \Snap{} kennt die Eingabetypen des Blocks und kann somit sicherstellen, dass nur passende Blöcke in die Eingabefelder eingesetzt werden \parencite{harveySnapReference2020}. Des Weiteren ist es möglich Dropdown-Menüs zur Auswahl bestimmter Werte für ein Eingabefeld zu definieren. \Snap{} erweitert den in Abbildung \ref{fig:scratch-drop} gezeigten Ansatz, indem beim \textit{Drag and Drop} ein roter Indikator angezeigt wird, wenn der Typ nicht übereinstimmt \parencite{harveySnapReference2020}.
 
 \begin{figure}
   \centering
-  \includegraphics[width=0.57\textwidth]{assets/snap-input-types.png}
+  \includegraphics[width=0.8\textwidth]{assets/snap-input-types.png}
   \caption[Dialog zur Definition eines Parameters in \Snap{}]{Ausführlicher Dialog zur Definition eines Parameters in \Snap{}. Die Auswahlmöglichkeiten kontrollieren das spätere Verhalten des Blocks.}
   \label{fig:snap-input-types}
 \end{figure}
@@ -110,7 +111,7 @@ Zur Verarbeitung der Daten können die nativen \Snap{}-Blöcke nur begrenzt verw
     \caption{Benutzung des Blocks.}
     \label{fig:datasnap-method-use}
   \end{subfigure}
-  \caption[Definition und Nutzung eines Blocks in \DataSnap{}]{Definition und Nutzung eines Blocks in \DataSnap{}, welcher das Alter einer Person aus einer \acs{CSV}-Datei aussucht, deren Spalten \texttt{Name} und \texttt{Age} sind. Der Block nimmt die parameter \texttt{name} und \texttt{csv\_url} an.}
+  \caption[Definition und Nutzung eines Blocks in \DataSnap{}]{Definition und Nutzung eines Blocks in \DataSnap{}, welcher das Alter einer Person aus einer \acs{CSV}-Datei aussucht, deren Spalten \texttt{Name} und \texttt{Age} sind. Der Block nimmt die parameter \texttt{name} und \texttt{csv\_url} an.\\\parencite[26]{hellmannDataSnapEnabling2015}}
 \end{figure}
 
 Außerdem definiert \DataSnap{} Blöcke zur Visualisierung von Datensätzen in \Snap{} \parencite{hellmannDataSnapEnabling2015}. Abbildung \ref{fig:datasnap-visualization} zeigt, wie dies mit Daten mit geographischem Bezug stattfinden kann. Das Beispiel nutzt Blöcke, um den Ort und die Größenordnung von Erdbeben in Nordamerika auf einer Karte zu markieren.
